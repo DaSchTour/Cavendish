@@ -1,0 +1,9 @@
+/* Stylesheet for Printing*/
+body {
+	margin-left: 5em;
+	margin-right: 5em;
+	font-size: 9pt;
+}
+#p-personal, #side, #header, #skin-info {
+    display:none;
+}

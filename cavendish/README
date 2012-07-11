@@ -1,0 +1,32 @@
+There are different options that can be set in LocalSettings.php
+
+$cavendishLogoURL
+Link to the Logo that should be displayed in the header
+
+$cavendishLogoWidth
+width of the logo as a number in px
+ 
+$cavendishLogoHeight
+height of the logo as a number in px
+ 
+$cavendishLogoMargin
+offset on top of the logo
+ 
+$cavendishSiteWith
+fixed width of the content area, if not set it's dynamic
+
+$cavendishExtensionCSS
+set this to false if you do not want to use Cavendish CSS for Extensions
+
+$cavendishGGplusone
+add Google +1 button
+
+$cavendishTwitter
+add Twitter button
+
+$cavendishFacebook
+add facebook like button
+
+
+Bug reports can be made here
+http://sourceforge.net/apps/trac/wecowi
