@@ -97,7 +97,7 @@ class CavendishTemplate extends MonoBookTemplate {
 	 */
 	function execute() {
 		global $wgRequest, $wgLang;
-		$styleversion = '1.6.0';
+		$styleversion = '1.6.1';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
