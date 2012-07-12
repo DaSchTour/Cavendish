@@ -2,8 +2,47 @@
 body {
 	margin-left: 5em;
 	margin-right: 5em;
-	font-size: 9pt;
+	font-size: 11pt;
 }
-#p-personal, #side, #header, #skin-info {
-    display:none;
+
+#p-personal, #side, #header, #skin-info, #f-numberofwatchingusers, #f-viewcount, #f-privacy, #f-about, #f-disclaimer{
+	display:none;
+}
+
+#f-list li#f-credits {
+	white-space:normal;
+}
+
+#footer li {
+	list-style-type: none;
+}
+
+#catlinks  {
+	border-top: 1px solid #AAAAAA;
+	margin-top: 1em;
+	padding-top: 1em;
+}
+
+#catlinks ul li {
+	font-style:italic;
+}
+
+table.float-right, table.floatright, div.float-right, div.floatright {
+	clear: right;
+	float: right;
+	margin-left: 0.7em;
+	margin-right: 0;
+	position: relative;
+}
+
+table.float-left, table.floatleft, div.float-left, div.floatleft{
+	clear: left;
+	float: left;
+	margin-right: 0.7em;
+	margin-left: 0;
+	position: relative;
+}
+
+table p {
+	margin: 0;
 }
