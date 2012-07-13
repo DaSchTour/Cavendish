@@ -1784,15 +1784,15 @@ special external link styling */
 
 #header form label,#header label {
     color: #DDD;
-    font-size: 0.85em;
+    font-size: 8.5pt;
 }
 
 #header form input {
-    font-size: 0.85em;
+    font-size: 8.5pt;
 }
 
 #header form #submit {
-    font-size: 0.85em;
+    font-size: 8.5pt;
     background: #6A7389;
     color: #fff;
     padding: 1px 4px;
@@ -1818,7 +1818,7 @@ special external link styling */
 
 #searchform input.searchbutton {
     margin-top: 1px;
-    font-size: 0.85em;
+    font-size: 8.5pt;
 }
 #searchform div {
 	display:inline
@@ -1832,7 +1832,7 @@ special external link styling */
 
 #header form #searchInput {
     width: 270px;
-    font-size: 0.85em;
+    font-size: 8.5pt;
     border: 1px solid #9097A2;
     background-color: #D9DBE1;
     padding: 2px;
@@ -1843,6 +1843,9 @@ special external link styling */
 	box-shadow: 2px inset;
 }
 
+#searchInputResult {
+	font-size: 8.5pt;
+}
 
 /*
  ** the remaining portlets
