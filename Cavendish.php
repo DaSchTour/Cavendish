@@ -245,6 +245,9 @@ class CavendishTemplate extends MonoBookTemplate {
 							}
 					}
 					?></div>
+					<div id="qrcode">
+						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()); ?>&#38;size=60x60" alt="QR Code generator" title="" /></a>
+					</div>
 				</td>
 			</tr>
 			<tr>
