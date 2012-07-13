@@ -18,15 +18,5 @@ fixed width of the content area, if not set it's dynamic
 $cavendishExtensionCSS
 set this to false if you do not want to use Cavendish CSS for Extensions
 
-$cavendishGGplusone
-add Google +1 button
-
-$cavendishTwitter
-add Twitter button
-
-$cavendishFacebook
-add facebook like button
-
-
-Bug reports can be made here
-http://sourceforge.net/apps/trac/wecowi
+$cavendishQRCode
+adding QR-Code to printpage
