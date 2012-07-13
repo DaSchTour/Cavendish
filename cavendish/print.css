@@ -9,12 +9,26 @@ body {
 	display:none;
 }
 
-#f-list li#f-credits {
+.f-iconsection #f-copyrightico {
+	display: block;
+}
+
+#qrcode {
+	display:block;
+	margin-left: 10px;
+	text-align:right;
+}
+
+#footer #f-list li {
 	white-space:normal;
 }
 
 #footer li {
 	list-style-type: none;
+}
+
+#footer table {
+	width: 100%;
 }
 
 #catlinks  {

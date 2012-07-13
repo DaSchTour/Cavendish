@@ -2095,8 +2095,16 @@ span.searchmatch {
     color: red;
 }
 
-.shareduploadnotice {
-    font-style: italic;
+.sharedUploadNotice {
+	font-style: italic;
+	width: 100%; 
+	font-size: 100%; 
+	border: 1px solid #0000DD; 
+	background-color:#DDDDFF; 
+	margin-top: 3pt;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: 0 0 2px #0000DD;
 }
 
 span.updatedmarker { /*    color: black; */
@@ -2419,6 +2427,7 @@ ul#filetoc {
     margin-bottom: 0.5em;
     margin-left: 0;
     margin-right: 0;
+	border-radius: 3px;
 }
 
 #filetoc li {
@@ -2441,4 +2450,8 @@ ul#filetoc {
 
 .mw-line-even {
 	background-color: #E0E9E9;
+}
+
+#qrcode {
+	display:none;
 }
