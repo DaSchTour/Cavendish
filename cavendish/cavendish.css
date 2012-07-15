@@ -1072,6 +1072,7 @@ table.small {
 	border-radius: 3px;
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    padding: 0.5em;
 }
 
 #mw-anon-edit-warning, .mw-warning-with-logexcerpt, .mw-editinginterface {
