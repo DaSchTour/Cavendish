@@ -101,7 +101,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		if (!isset($cavendishQRCode)) {
 			$cavendishQRCode = false;
 		}
-		$styleversion = '1.6.3';
+		$styleversion = '1.6.4';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
@@ -169,7 +169,7 @@ class CavendishTemplate extends MonoBookTemplate {
 	<div id="mBody">
 		<div id="side">
 			<div id="nav">
-<?php
+<?php //sidebar
 		$sidebar = $this->data['sidebar'];
 		if ( !isset( $sidebar['SEARCH'] ) ) $sidebar['SEARCH'] = true;
 		if ( !isset( $sidebar['TOOLBOX'] ) ) $sidebar['TOOLBOX'] = true;
@@ -212,10 +212,10 @@ class CavendishTemplate extends MonoBookTemplate {
 	<div class="visualClear"></div>
 	<div id="footer">
 		<table>
-			<!--<tr><td colspan="3"><a href="#internal">Up</a></td></tr>-->
 			<tr>
 				<td rowspan="2" class="f-iconsection">
-		<?php if($this->data['copyrightico']) { ?><div id="f-copyrightico"><?php $this->html('copyrightico') ?></div><?php } ?>
+		<?php //copytight icon
+		if($this->data['copyrightico']) { ?><div id="f-copyrightico"><?php $this->html('copyrightico') ?></div><?php } ?>
 				</td>
 				<td align="center">
 <?php	// Generate additional footer links
@@ -249,7 +249,9 @@ class CavendishTemplate extends MonoBookTemplate {
 							}
 					}
 					?></div>
-					<?php if ($cavendishQRCode) { ?>
+					<?php 
+					// QR-Code added on option
+					if ($cavendishQRCode) { ?>
 					<div id="qrcode">
 						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()); ?>&#38;size=60x60" alt="QR Code generator" title="" /></a>
 					</div>
@@ -259,7 +261,7 @@ class CavendishTemplate extends MonoBookTemplate {
 			<tr>
 				<td><div id="skin-info">
 					Mozilla Cavendish Theme based on Cavendish style by Gabriel Wicke modified by <a href="http://www.dasch-tour.de" target="_blank">DaSch</a> for the <a href="http://www.wecowi.de/">Web Community Wiki</a><br/>
-					<a href="http://sourceforge.net/projects/wecowi/">Sourceforge Projectpage</a> &ndash; <a href="https://sourceforge.net/tracker/?group_id=256816&atid=3135768">Report Bug</a> &ndash; Skin-Version: <?php echo $styleversion ?>
+					<a href="https://github.com/DaSchTour/Cavendish">github Projectpage</a> &ndash; <a href="https://github.com/DaSchTour/Cavendish/issues">Report Bug</a> &ndash; Skin-Version: <?php echo $styleversion ?>
 				</div></td>
 			</tr>
 		</table>
