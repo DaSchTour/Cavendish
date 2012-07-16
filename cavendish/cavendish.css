@@ -1150,6 +1150,10 @@ table#mw-prefixindex-list-table {
 	color: gray;
 }
 
+span.comment {
+	color:gray;
+}
+
 .mw-specialpagecached {
     font-style: italic;
 }
