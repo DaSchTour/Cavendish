@@ -260,6 +260,12 @@ table .tips-4sq blockquote {
 	margin-left: 20px;
 }
 
+/* yelp */
+table .yelp-reviews blockquote {
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
 /* Social Sidebar*/
 
 #nav div a, #nav div span.social{
