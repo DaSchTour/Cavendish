@@ -35,7 +35,7 @@ class SkinCavendish extends SkinTemplate {
 		}
 	function setupSkinUserCss( OutputPage $out ) {
 		global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion;
-		global $cavendishLogoURL, $cavendishLogoWidth, $cavendishLogoHeight, $cavendishLogoMargin, $cavendishSiteWith, $cavendishExtensionCSS, $cavendishSidebarSearchbox;
+		global $cavendishcolor, $cavendishLogoURL, $cavendishLogoWidth, $cavendishLogoHeight, $cavendishLogoMargin, $cavendishSiteWith, $cavendishExtensionCSS, $cavendishSidebarSearchbox;
 		parent::setupSkinUserCss( $out );
 		// Append to the default screen common & print styles...
 		$out->addStyle( 'cavendish/print.css', 'print' );
@@ -52,6 +52,12 @@ class SkinCavendish extends SkinTemplate {
 		/* README for details */
 		if(!isset($cavendishLogoURL)) {
 			$cavendishLogoURL=$wgStylePath . "/cavendish/wiki_header_logo.gif";
+		}
+		if (isset($cavendishcolor)) {
+			$out->addStyle( 'cavendish/'. $cavendishcolor .'/main.css', 'screen' );
+		}
+		else {
+			$out->addStyle( 'cavendish/blue/main.css', 'screen' );
 		}
 		if(!isset($cavendishLogoWidth)) {
 			$cavendishLogoWidth="322";
@@ -101,7 +107,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		if (!isset($cavendishQRCode)) {
 			$cavendishQRCode = false;
 		}
-		$styleversion = '1.6.4';
+		$styleversion = '2.0.0';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
