@@ -10,6 +10,15 @@
 	background: url("header_tr.gif") no-repeat top right;
 }
 
+#header form label, #header label {
+    color: #DDD;
+}
+
+#header form #searchInput {
+	border: 1px solid #9097A2;
+    background-color: #D9DBE1;
+}
+
 /*p-cactions */
 
 #p-cactions li {

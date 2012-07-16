@@ -10,6 +10,15 @@
 	background: url("header_tr.gif") no-repeat top right;
 }
 
+#header form label, #header label {
+    color: #774F03;
+}
+
+#header form #searchInput {
+	border: 1px solid #774F03;
+    background-color: #FBF4E8;
+}
+
 /*p-cactions */
 
 #p-cactions li {
@@ -26,7 +35,7 @@
 }
 
 #p-cactions li.selected a {
-	color: #CAAF83;
+	color: #780000;
 }
 
 #p-cactions {

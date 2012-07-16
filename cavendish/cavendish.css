@@ -1777,8 +1777,7 @@ special external link styling */
     display: inline;
 }
 
-#header form label,#header label {
-    color: #DDD;
+#header form label, #header label {
     font-size: 8.5pt;
 }
 
@@ -1828,8 +1827,6 @@ special external link styling */
 #header form #searchInput {
     width: 270px;
     font-size: 8.5pt;
-    border: 1px solid #9097A2;
-    background-color: #D9DBE1;
     padding: 2px;
     margin: 0 0.5em 0 0.5em;
     border-radius: 3px;
