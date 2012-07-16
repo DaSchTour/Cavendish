@@ -1,0 +1,36 @@
+#header {
+	background: #455372 url("header_bl.png") bottom left repeat-x;
+}
+
+#p-cactions li {
+	background: url("header_tab.gif") no-repeat scroll 100% -600px transparent;
+	border-bottom: 1px solid #515358;
+}
+
+#p-cactions li a {
+	background: url("header_tab.gif") no-repeat scroll 0 -600px transparent;	
+}
+
+#p-cactions li div.share-wrapper {
+	background: url("header_tab.gif") no-repeat scroll 0 -600px transparent;
+}
+
+#p-cactions li.selected a {
+	color: #455372;
+}
+
+#nav {
+	background: #E0E9E9 url("menu_back.gif") right repeat-y;
+}
+
+#nav div a[href ^="http://"] {
+    background: #EDF2F2 none repeat scroll 0 0;
+}
+
+#nav div a:hover {
+    background: #E0E9E9;
+}
+    
+#nav:after {
+	background: transparent url("menu_br.gif") scroll no-repeat bottom right;
+}

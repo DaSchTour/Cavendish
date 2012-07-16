@@ -450,7 +450,6 @@ hr.hide {
 /* Header */
 #header {
     margin-bottom: 1em;
-    background: #455372 url("header_bl.png") bottom left repeat-x;
     position: relative;
     min-height: 39px;
     height: 5em;
@@ -467,7 +466,7 @@ hr.hide {
 	padding: 0 15px 0 0;
 	overflow: hidden;
 	z-index: 3;
-	background: url(header_br.gif) no-repeat scroll right bottom transparent;
+	background: url("header_br.gif") no-repeat scroll right bottom transparent;
 	white-space: nowrap;
 }
 #p-cactions h5 {
@@ -489,8 +488,6 @@ hr.hide {
 	margin: 0 2px 0 0;
 	padding: 0 6px 0 0;
 	overflow: visible;
-	background: url(header_tab.gif) no-repeat scroll 100% -600px transparent;
-	border-bottom: 1px solid #515358;
 	display: inline;
     white-space: nowrap;
     font-size: 7.5pt;
@@ -502,7 +499,7 @@ hr.hide {
 	margin: 0;
 	padding: 4px 4px 4px 10px;
 	z-index: 0;
-	background: url(header_tab.gif) no-repeat scroll 0 -600px transparent;
+	
 	color: #FFF;
 	border: none;
 	text-decoration: none;
@@ -514,7 +511,6 @@ hr.hide {
 	margin: 0;
 	padding-left: 10px;
 	z-index: 0;
-	background: url(header_tab.gif) no-repeat scroll 0 -600px transparent;
 	color: #FFF;
 	border: none;
 	text-decoration: none;
@@ -539,7 +535,6 @@ hr.hide {
 #p-cactions li.selected a {
 	z-index: 3;
 	background-position: 0 0;
-	color: #455372;
 }
 #p-cactions .new a {
 	color: #FFD955;
@@ -1611,7 +1606,7 @@ special external link styling */
 }
 
 #nav {
-    background: #E0E9E9 url("menu_back.gif") right repeat-y;
+
     line-height: 1em;
     margin-bottom: 1em;
 }
@@ -1624,7 +1619,6 @@ special external link styling */
     content: url("key-point_bl.gif");
     margin: 0 0 0 0;
     height: 8px;
-    background: transparent url("menu_br.gif") scroll no-repeat bottom right;
     border-top: 1px solid #fff;
 }
 
@@ -1660,14 +1654,6 @@ special external link styling */
     display: inline;
     font-weight: normal;
     padding: 0;
-}
-
-#nav div a[href ^="http://"] {
-    background: #EDF2F2 none repeat scroll 0 0;
-}
-
-#nav div a:hover {
-    background: #E0E9E9;
 }
 
 #nav div li span { /* used for un-linked menu items */
