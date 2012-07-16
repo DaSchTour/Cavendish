@@ -34,3 +34,10 @@
 #nav:after {
 	background: transparent url("menu_br.gif") scroll no-repeat bottom right;
 }
+
+#nav div a, #nav div span.social {
+    background: #EDF2F2;
+    border-bottom: 1px solid #ddd;
+	border-top: 1px solid #fff;
+	border-right: 1px solid #ddd;
+}

@@ -35,6 +35,14 @@
 	background: transparent url("menu_br.gif") scroll no-repeat bottom right;
 }
 
+#nav div a, #nav div span.social {
+	background: none #FBF4E8;
+	border-bottom: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	border-top: 1px solid #FFF;	
+}
+
+
 /* different from blue.css */
 
 .portlet li a:link {

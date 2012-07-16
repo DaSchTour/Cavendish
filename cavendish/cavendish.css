@@ -1716,6 +1716,14 @@ special external link styling */
     border: none;
 }
 
+#nav div a, #nav div span.social {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    text-shadow: 0.1em 0.1em 0.1em grey;
+    font-size: 8pt;
+}
+
 /*
  ** Logo properties
  */
