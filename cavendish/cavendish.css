@@ -820,7 +820,6 @@ legend {
     }
 
 fieldset {
-    border: 1px solid #2f6fab;
     margin: 1em 0 1em 0;
     padding: 0 1em 1em;
     line-height: 1.5em;
@@ -828,10 +827,6 @@ fieldset {
     -moz-border-radius: 3px;
     -webkit-border-radius: 3px;	
 }
-
-fieldset fieldset {
-    background-color: #E0E9E9;
-    }
 
 fieldset.nested {
     margin: 0 0 0.5em 0;
@@ -1942,19 +1937,11 @@ special external link styling */
 
 
 #preftoc li.selected {
-/*    border: 1px dashed #AAA; */
     font-weight: bold;
-    background-color: #E0E9E9;
     }
 
-#preftoc li:hover,#preftoc li:focus {
-/*    border: 1px dashed #AAA; */
-    background-color: #E0E9E9;
-}
-
 #preftoc a,#preftoc a:active {
-    margin:1px;
-    
+    margin:1px;    
 }
 
 #preftoc a:hover,#preftoc a:focus {
@@ -2437,14 +2424,6 @@ ul#filetoc {
 
 .minor,.minoredit {
     color: gray;
-}
-
-.mw-line-odd {
-	background-color: #EDF2F2;
-}
-
-.mw-line-even {
-	background-color: #E0E9E9;
 }
 
 #qrcode {

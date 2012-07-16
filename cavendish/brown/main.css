@@ -67,6 +67,30 @@
 	border-top: 1px solid #FFF;	
 }
 
+/* preftoc */
+
+#preftoc li:hover,#preftoc li:focus, #preftoc li.selected  {
+    background-color: #E8DDCA;
+}
+
+/* fieldset */
+
+fieldset {
+	border: 1px solid #774F03;
+}
+
+fieldset fieldset {
+    background-color: #E8DDCA;
+    }
+
+/* mw-line */
+.mw-line-odd {
+	background-color: #FBF4E8;
+}
+
+.mw-line-even {
+	background-color: #E8DDCA;
+}
 
 /* different from blue.css */
 
