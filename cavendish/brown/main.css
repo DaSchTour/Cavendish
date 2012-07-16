@@ -2,6 +2,16 @@
 	background: #D2BA92 url("header_bl.gif") bottom left repeat-x;
 }
 
+#header h6 {
+	background: url("header_tl.gif") no-repeat;
+}
+
+#header #p-search {
+	background: url("header_tr.gif") no-repeat top right;
+}
+
+/*p-cactions */
+
 #p-cactions li {
 	background: url("header_tab.gif") no-repeat scroll 100% -600px transparent;
 	border-bottom: 1px solid #B48A48;
@@ -18,6 +28,12 @@
 #p-cactions li.selected a {
 	color: #CAAF83;
 }
+
+#p-cactions {
+		background: url("header_br.gif") no-repeat scroll right bottom transparent;
+}
+
+/* NAV */
 
 #nav {
 	background: #E8DDCA url("menu_back.gif") right repeat-y;
