@@ -86,7 +86,6 @@ body {
     margin-bottom: 20px;
     padding-top: 0;
     color: #000;
-	font-size: 110%;
 }
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
@@ -113,35 +112,35 @@ h1 .editsection,h2 .editsection,h3 .editsection,h4 .editsection,h5 .editsection,
 }
 
 h1 {
-    font-size: 160%;
+    font-size: 16pt;
     font-weight: normal;
 }
 
 #firstHeading {
 	margin-top: 0.1em;
 	padding-top: 0.2em;
-	text-shadow: 0.1em 0.1em 0.2em grey;
+	text-shadow: 0.1em 0.1em 0.2em gray;
 }
 
 h2 {
-    font-size: 140%;
+    font-size: 14pt;
     font-weight: normal;
 }
 
 h3 {
-    font-size: 120%;
+    font-size: 13pt;
 }
 
 h4 {
-    font-size: 100%;
+    font-size: 11.5pt;
 }
 
 h5 {
-    font-size: 90%;
+    font-size: 10.5pt;
 }
 
 h6 {
-    font-size: 90%;
+    font-size: 10pt;
     border: 0;
 }
 
@@ -293,10 +292,8 @@ table {
 }
 
 #content table {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    }
+	border-radius: 4px;
+}
     
 table.data {
     border-collapse: collapse;
@@ -342,9 +339,7 @@ table.wikitable {
     border-color: #AAA;
     padding: 0;
     line-height: 1.6em;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 }
 
 table.wikitable th {
@@ -370,9 +365,7 @@ table.wikitable caption {
 }
 
 .NavFrame {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+	border-radius: 4px;
     }
 /* Meta */
 address {
@@ -463,7 +456,7 @@ hr.hide {
 	bottom: 0;
 	right: 0;
 	margin: 0;
-	padding: 0 15px 0 0;
+	padding: 0 10px 0 0;
 	overflow: hidden;
 	z-index: 3;
 	white-space: nowrap;
@@ -496,7 +489,7 @@ hr.hide {
 	display: block;
 	float: left;
 	margin: 0;
-	padding: 4px 4px 4px 10px;
+	padding: 4px 2px 4px 8px;
 	z-index: 0;	
 	color: #FFF;
 	border: none;
@@ -642,13 +635,13 @@ div#header {
     display: inline;
     background: url("top-mid.png") repeat-x;
     padding-top: 5px;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 3px;
+    padding-right: 3px;
     padding-bottom: 8px;
     margin-left: -4px;
     margin-right: -4px;
     font-size: 10px;
-    text-shadow: 0.1em 0.1em 0.1em grey;
+    text-shadow: 0.1em 0.1em 0.1em gray;
 }
 
 #pt-userpage a,#pt-mytalk a {
@@ -711,24 +704,6 @@ div#header {
  */
 
 /*
-html.msie body #container #p-personal .top-nav-mid {
-	padding-top: 5px;
-	padding-bottom: 10px;
-}
-
-html.msie body #container #p-personal .top-nav-left {
-	padding-top: 5px;
-	padding-bottom: 10px;
-}
-
-html.msie body #container #p-personal .top-nav-right {
-	padding-top: 5px;
-	padding-bottom: 10px;
-}
-*/
-
-
-/*
  ** the main content area
  */
 h3#siteSub {
@@ -738,7 +713,7 @@ h3#siteSub {
 }
 
 #contentSub, #contentSub2 {
-    font-size: 84%;
+    font-size: 8pt;
     line-height: 1.2em;
     margin: 0 0 0.8em 0;
     color: #7d7d7d;
@@ -823,9 +798,7 @@ fieldset {
     margin: 1em 0 1em 0;
     padding: 0 1em 1em;
     line-height: 1.5em;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;	
+    border-radius: 4px;
 }
 
 fieldset.nested {
@@ -924,9 +897,7 @@ pre {
     background-color: #f9f9f9;
     line-height: 1.1em;
     padding: 15px 20px 15px 20px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 }
 
 pre.code {
@@ -955,9 +926,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     margin: 2em 0em 1em 0em;
     padding: 0.5em 1em;
     vertical-align: middle;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 }
 
 #sitenotice {
@@ -982,9 +951,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     padding-left: 5px;
     margin-top: 1em;
     clear: both;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 }
 
 /* emulate center */
@@ -1012,9 +979,7 @@ table.small {
  */
 .successbox, .errorbox, .warningbox {
     border-width:1px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
     margin-bottom: 1em;
     padding-left:5em;
     padding-right:5em;
@@ -1047,33 +1012,28 @@ table.small {
     border: 1px solid #aaa;
     background-color: #f9f9f9;
     padding: 5px;
-    font-size: 95%;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    font-size: 9pt;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px #ccc;
 }
 
 #editpage-copywarn {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+	border-radius: 4px;
     padding: 0.5em;
 }
 
 #mw-anon-edit-warning, .mw-warning-with-logexcerpt, .mw-editinginterface {
- 	border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+ 	border-radius: 4px;
     border-width: 1px;
 }
 
-#toc h2,.toc h2 {
+#toctitle h2 {
     display: inline;
     border: none;
     padding: 0;
-    font-size: 100%;
+    font-size: 9.5pt;
     font-weight: bold;
 }
 
@@ -1093,8 +1053,8 @@ table.small {
     margin: 0 0 0 2em;
 }
 
-#toc .toctoggle,.toc .toctoggle {
-    font-size: 94%;
+#toctitle .toctoggle {
+    font-size: 8pt;
 }
 
 .mw-warning {
@@ -1108,7 +1068,7 @@ table.small {
 }
 
 .mw-plusminus-null {
-    color: #aaaaaa; /* grey */
+    color: #aaaaaa; /* gray */
 }
 
 .mw-plusminus-neg {
@@ -1188,7 +1148,7 @@ div.thumb {
 
 div.thumb div {
     background-color: #f9f9f9;
-    font-size: 94%;
+    font-size: 8.5pt;
     text-align: center;
     overflow: hidden;
 }
@@ -1197,22 +1157,15 @@ div.thumbinner {
     border: 1px solid #cccccc;
     padding: 3px !important;
     background-color: #f9f9f9;
-    font-size: 94%;
+    font-size: 8.5pt;
     text-align: center;
     overflow: hidden;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 }
 
 li.gallerybox div.thumb {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    
+    border-radius: 4px;
     box-shadow: 5px 5px 5px #ccc;
-    -moz-box-shadow: 5px 5px 5px #ccc;
-    -webkit-box-shadow: 5px 5px 5px #ccc;
 }
 
 div.thumb div a img {
@@ -1330,9 +1283,7 @@ div.townbox dl dd {
 }
 
 div.sideBox {
-	border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+	border-radius: 4px;
 }
 
 /*
@@ -1361,7 +1312,7 @@ div.sideBox {
 #pagehistory li {
     border: 1px solid white;
 	padding: 2px;
-	border-radius: 3px;
+	border-radius: 4px;
 }
 
 #pagehistory li:focus, #pagehistory li:hover {
@@ -1371,7 +1322,7 @@ div.sideBox {
 #pagehistory li.selected {
     background-color: #f9f9f9;
     border: 1px dashed #aaaaaa;
-	border-radius: 3px;
+	border-radius: 4px;
 }
 
 /*
@@ -1539,7 +1490,7 @@ special external link styling */
     padding: 0em 1em 0em 0.5em;
     /*    text-transform: lowercase; */
     display: inline;
-    font-size: 100%;
+    font-size: 8.5pt;
     height: 1em;
     font-weight: normal;
     white-space: nowrap;
@@ -1631,7 +1582,7 @@ special external link styling */
     padding: 6px 10px;
     font-weight: bold;
     color: #666;
-    text-shadow: 0.1em 0.1em 0.1em grey;
+    text-shadow: 0.1em 0.1em 0.1em gray;
 }
 
 #nav div h5 {
@@ -1639,7 +1590,7 @@ special external link styling */
     padding: 4px 10px;
     font-weight: bold;
     color: #666;
-    text-shadow: 0.1em 0.1em 0.1em grey;
+    text-shadow: 0.1em 0.1em 0.1em gray;
 }
 
 #nav div span#configParent,#nav div span #configuration {
@@ -1712,7 +1663,7 @@ special external link styling */
     display: block;
     padding: 8px 10px;
     text-decoration: none;
-    text-shadow: 0.1em 0.1em 0.1em grey;
+    text-shadow: 0.1em 0.1em 0.1em gray;
     font-size: 8pt;
 }
 
@@ -1824,9 +1775,7 @@ special external link styling */
     font-size: 8.5pt;
     padding: 2px;
     margin: 0 0.5em 0 0.5em;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 	box-shadow: 2px inset;
 }
 
@@ -1929,9 +1878,7 @@ special external link styling */
     border: 1px solid #AAA;
     margin-bottom: 0.9em;
     padding: 3px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 	box-shadow: 2px 2px 2px;
 }
 
@@ -1980,29 +1927,6 @@ td.htmlform-tip {
     color: #666;
 }
 
-/*
- ** IE/Mac fixes, hope to find a validating way to move this
- ** to a separate stylesheet. This would work but doesn't validate:
- ** @import("IEMacFixes.css");
- */
-
-/* tabs: border on the a, not the div */
-
-/*
-*>html #p-cactions li {
-    border: none;
-}
-
-*>html #p-cactions li a {
-    border: 1px solid #aaaaaa;
-    border-bottom: none;
-}
-
-*>html #p-cactions li.selected a {
-    border-color: #fabd23;
-}
-*/
-
 /* footer icons need a fixed width */
 *>html #f-poweredbyico,*>html #f-copyrightico {
     width: 88px;
@@ -2029,21 +1953,6 @@ td.htmlform-tip {
 
 #pagehistory li.selected {
     position: relative;
-}
-
-/* Mac IE 5.0 fix; floated content turns invisible */
-*>html #column-content {
-    float: none;
-}
-
-*>html #column-one {
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-*>html #footer {
-    margin-left: 13.2em;
 }
 
 .redirecttext {
@@ -2358,7 +2267,7 @@ span.highlightred {
 
 .mw-special-Recentchanges ul.special {
 	margin: 0;
-	border-radius: 3px;
+	border-radius: 4px;
 	border: 1px white solid;
 }
 
@@ -2409,7 +2318,7 @@ ul#filetoc {
     margin-bottom: 0.5em;
     margin-left: 0;
     margin-right: 0;
-	border-radius: 3px;
+	border-radius: 4px;
 }
 
 #filetoc li {
