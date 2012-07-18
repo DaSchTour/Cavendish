@@ -500,7 +500,7 @@ hr.hide {
 	display: block;
 	float: left;
 	margin: 0;
-	padding: 4px 2px 4px 8px;
+	padding: 4px 4px 4px 10px;
 	z-index: 0;
 	background: url(header_tab.gif) no-repeat scroll 0 -600px transparent;
 	color: #FFF;
@@ -650,8 +650,8 @@ div#header {
     display: inline;
     background: url("top-mid.png") repeat-x;
     padding-top: 5px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
     padding-bottom: 8px;
     margin-left: -4px;
     margin-right: -4px;
