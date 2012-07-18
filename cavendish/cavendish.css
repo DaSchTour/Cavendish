@@ -789,9 +789,9 @@ sup,sub {
 }
 
 legend {
-    font-size:10pt;
+    font-size: 10pt;
     font-weight: bold;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
     }
 
 fieldset {
@@ -829,6 +829,7 @@ input#wpSummary {
 
 input {
 	margin: 2px;
+	vertical-align:middle;
 }
 
 /*
@@ -856,7 +857,7 @@ td > p, td > div {
 }
 
 select {
-	vertical-align: top;
+	vertical-align: middle;
 }
 
 abbr,acronym,.explain {
@@ -946,7 +947,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     border: 1px solid #aaaaaa;
     background-color: #f9f9f9;
     padding-top: 3px;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     padding-right: 5px;
     padding-left: 5px;
     margin-top: 1em;
@@ -1081,6 +1082,11 @@ table.small {
 
 #mw-pref-clear {
     clear: both;
+}
+
+.mw-prefs-buttons a {
+	padding-top: 4px;
+    vertical-align: middle;
 }
 
 table#mw_metadata {
@@ -1925,6 +1931,10 @@ td.htmlform-tip {
     font-size: x-small;
     padding: .2em 2em;
     color: #666;
+}
+
+td.mw-label {
+	padding-right: 4pt;
 }
 
 /* footer icons need a fixed width */
