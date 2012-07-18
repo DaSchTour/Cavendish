@@ -125,7 +125,7 @@ table.smwtable tr.row-even td{
     border-radius: 4px;
 }
     
-div.smwfact table.smwfacttable {
+#content div.smwfact table.smwfacttable {
 	border-radius: 0px;
 }
     
