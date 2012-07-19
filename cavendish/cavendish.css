@@ -292,7 +292,7 @@ table {
 }
 
 #content table {
-	border-radius: 4px;
+	border-radius: 6px;
 }
     
 table.data {
@@ -339,7 +339,7 @@ table.wikitable {
     border-color: #AAA;
     padding: 0;
     line-height: 1.6em;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 table.wikitable th {
@@ -365,7 +365,7 @@ table.wikitable caption {
 }
 
 .NavFrame {
-	border-radius: 4px;
+	border-radius: 6px;
     }
 /* Meta */
 address {
@@ -788,7 +788,7 @@ fieldset {
     margin: 1em 0 1em 0;
     padding: 0 1em 1em;
     line-height: 1.5em;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 fieldset.nested {
@@ -888,7 +888,7 @@ pre {
     background-color: #f9f9f9;
     line-height: 1.1em;
     padding: 15px 20px 15px 20px;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 pre.code {
@@ -917,7 +917,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     margin: 2em 0em 1em 0em;
     padding: 0.5em 1em;
     vertical-align: middle;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 #sitenotice {
@@ -942,7 +942,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     padding-left: 5px;
     margin-top: 1em;
     clear: both;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 /* emulate center */
@@ -970,7 +970,7 @@ table.small {
  */
 .successbox, .errorbox, .warningbox {
     border-width:1px;
-    border-radius: 4px;
+    border-radius: 6px;
     margin-bottom: 1em;
     padding-left:5em;
     padding-right:5em;
@@ -1004,19 +1004,19 @@ table.small {
     background-color: #f9f9f9;
     padding: 5px;
     font-size: 9pt;
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: 5px 5px 5px #ccc;
 }
 
 #editpage-copywarn {
 	margin-top: 2em;
 	margin-bottom: 2em;
-	border-radius: 4px;
+	border-radius: 6px;
     padding: 0.5em;
 }
 
 #mw-anon-edit-warning, .mw-warning-with-logexcerpt, .mw-editinginterface {
- 	border-radius: 4px;
+ 	border-radius: 6px;
     border-width: 1px;
 }
 
@@ -1156,11 +1156,11 @@ div.thumbinner {
     font-size: 8.5pt;
     text-align: center;
     overflow: hidden;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 li.gallerybox div.thumb {
-    border-radius: 4px;
+    border-radius: 6px;
     box-shadow: 5px 5px 5px #ccc;
 }
 
@@ -1279,7 +1279,7 @@ div.townbox dl dd {
 }
 
 div.sideBox {
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 /*
@@ -1308,7 +1308,7 @@ div.sideBox {
 #pagehistory li {
     border: 1px solid white;
 	padding: 2px;
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 #pagehistory li:focus, #pagehistory li:hover {
@@ -1318,7 +1318,7 @@ div.sideBox {
 #pagehistory li.selected {
     background-color: #f9f9f9;
     border: 1px dashed #aaaaaa;
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 /*
@@ -1537,11 +1537,17 @@ special external link styling */
 #nav {
 	padding-top: 6px;
 	padding-bottom: 6px;
+	padding-left: 0;
+	padding-right: 0;
     line-height: 1em;
     margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0; 
+    border-radius: 6px;
 }
 
-#nav,#nav ul {
+#nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -1751,7 +1757,7 @@ special external link styling */
     font-size: 8.5pt;
     padding: 2px;
     margin: 0 0.5em 0 0.5em;
-    border-radius: 4px;
+    border-radius: 6px;
 	box-shadow: 2px inset;
 }
 
@@ -1854,7 +1860,7 @@ special external link styling */
     border: 1px solid #AAA;
     margin-bottom: 0.9em;
     padding: 3px;
-    border-radius: 4px;
+    border-radius: 6px;
 	box-shadow: 2px 2px 2px;
 }
 
@@ -2247,7 +2253,7 @@ span.highlightred {
 
 .mw-special-Recentchanges ul.special {
 	margin: 0;
-	border-radius: 4px;
+	border-radius: 6px;
 	border: 1px white solid;
 }
 
@@ -2298,7 +2304,7 @@ ul#filetoc {
     margin-bottom: 0.5em;
     margin-left: 0;
     margin-right: 0;
-	border-radius: 4px;
+	border-radius: 6px;
 }
 
 #filetoc li {
