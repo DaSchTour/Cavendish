@@ -1533,32 +1533,12 @@ special external link styling */
 */
 
 /* Sidebar */
-#nav:before {
-    line-height: 0.1;
-    font-size: 1px;
-    background: transparent url("menu_tr.gif") no-repeat top right;
-    margin: 0;
-    height: 9px;
-    display: block;
-    border-bottom: 1px solid #ddd;
-    content: url("key-point_tl.gif");
-}
 
 #nav {
-
+	padding-top: 6px;
+	padding-bottom: 6px;
     line-height: 1em;
     margin-bottom: 1em;
-}
-
-#nav:after {
-    display: block;
-    padding-top: 0;
-    line-height: 0.1;
-    font-size: 1px;
-    content: url("key-point_bl.gif");
-    margin: 0 0 0 0;
-    height: 8px;
-    border-top: 1px solid #fff;
 }
 
 #nav,#nav ul {

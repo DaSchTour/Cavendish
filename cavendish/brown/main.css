@@ -31,23 +31,15 @@
 /* NAV */
 
 #nav {
-	background: #E8DDCA url("menu_back.gif") right repeat-y;
-}
-
-#nav div a[href ^="http://"] {
-    background: #EDF2F2 none repeat scroll 0 0;
+	background: #E8DDCA;
 }
 
 #nav div a:hover {
     background: #E8DDCA;
 }
 
-#nav:after {
-	background: transparent url("menu_br.gif") scroll no-repeat bottom right;
-}
-
 #nav div a, #nav div span.social {
-	background: none #FBF4E8;
+	background-color:#FBF4E8;
 	border-bottom: 1px solid #DDD;
 	border-right: 1px solid #DDD;
 	border-top: 1px solid #FFF;	
