@@ -3,7 +3,7 @@
 }
 
 #header form label, #header label {
-    color: #23712d;
+    color: #89cc92;
 }
 
 #header form #searchInput {
@@ -31,15 +31,15 @@
 /* NAV */
 
 #nav {
-	background: #89cc92;
+	background: #379940;
 }
 
 #nav div a:hover {
-    background: #89cc92;
+    background: #379940;
 }
 
 #nav div a, #nav div span.social {
-    background: #379940;
+    background: #89cc92;
     border-bottom: 1px solid #DDD;
 	border-top: 1px solid #FFF;
 	border-right: 1px solid #DDD;
