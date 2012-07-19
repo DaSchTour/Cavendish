@@ -53,12 +53,11 @@ class SkinCavendish extends SkinTemplate {
 		if(!isset($cavendishLogoURL)) {
 			$cavendishLogoURL=$wgStylePath . "/cavendish/wiki_header_logo.gif";
 		}
-		if (isset($cavendishcolor)) {
-			$out->addStyle( 'cavendish/'. $cavendishcolor .'/main.css', 'screen' );
+		if (!isset($cavendishcolor)) {
+			$cavendishcolor = blue;				
 		}
-		else {
-			$out->addStyle( 'cavendish/blue/main.css', 'screen' );
-		}
+		$out->addStyle( 'cavendish/'. $cavendishcolor .'/main.css', 'screen' );
+		
 		if(!isset($cavendishLogoWidth)) {
 			$cavendishLogoWidth="322";
 		}
@@ -105,7 +104,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		global $wgRequest, $wgLang;
 		global $cavendishQRCode;
 		if (!isset($cavendishQRCode)) {
-			$cavendishQRCode = false;
+			$cavendishQRCode = true;
 		}
 		$styleversion = '2.0.0';
 		$this->skin = $skin = $this->data['skin'];
