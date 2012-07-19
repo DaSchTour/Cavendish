@@ -31,7 +31,8 @@
 #p-cactions li {
 	padding-bottom: 0 !important;
 	border: none;
-	background-color: transparent;
+/*	background-color: transparent; */
+	padding-right: 4px;
 	cursor: default;
 	float: none !important;
 }
