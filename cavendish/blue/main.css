@@ -30,7 +30,7 @@
 }
 
 #p-cactions li:hover {
-	background:color: #747F96;
+	background-color: #747F96;
 }
 /*
 #p-cactions li a {
@@ -38,7 +38,9 @@
 }
 */
 #p-cactions li.selected {
-	border-top-color: #FFC600;	
+	border-top-color: #FFC600;
+	border-top-width: 2px;
+	background-color: #FFFFFF;	
 }
 
 #p-cactions li.selected a {
