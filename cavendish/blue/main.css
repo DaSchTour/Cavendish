@@ -1,0 +1,71 @@
+#header {
+	background: #455372 url("header_back.png") bottom left repeat-x;
+}
+
+#header form label, #header label {
+    color: #DDD;
+}
+
+#header form #searchInput {
+	border: 1px solid #9097A2;
+    background-color: #D9DBE1;
+}
+
+/*p-cactions */
+
+#p-cactions li {
+	border-bottom: 1px solid #515358;
+	background-color: #5F697E;
+	border-top-color: #5F697E;
+}
+
+#p-cactions li:hover {
+	border-top-color: #747F96;
+	background-color: #747F96;
+}
+
+#p-cactions li.selected a {
+	color: #455372;	
+}
+
+/* NAV */
+
+#nav {
+	background: #E0E9E9;
+}
+
+#nav div a:hover {
+    background: #E0E9E9;
+}
+
+#nav div a, #nav div span.social {
+    background: #EDF2F2;
+    border-bottom: 1px solid #DDD;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #DDD;
+}
+
+/* preftoc */
+
+#preftoc li:hover,#preftoc li:focus, #preftoc li.selected  {
+    background-color: #E0E9E9;
+}
+
+/* fieldset */
+
+fieldset {
+	border: 1px solid #2f6fab;
+}
+
+fieldset fieldset {
+    background-color: #E0E9E9;
+}
+
+/* mw-line */
+.mw-line-odd {
+	background-color: #EDF2F2;
+}
+
+.mw-line-even {
+	background-color: #E0E9E9;
+}

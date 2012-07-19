@@ -29,9 +29,7 @@ div.mw-geshi {
     padding: 1em;
     margin: 1em 0;
     border: 1px dashed #2fab6f;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 }
 
 .mw-geshi ol {
@@ -81,9 +79,7 @@ table.smwtable {
     border: 1px #aaa solid;
     border-collapse: collapse;
     empty-cells: show;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
 }
 
 table.smwtable th {
@@ -126,18 +122,16 @@ table.smwtable tr.row-even td{
 }
 
 .smwfact {
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    }
+    border-radius: 4px;
+}
     
-.smwfacttable {
+#content div.smwfact table.smwfacttable {
 	border-radius: 0px;
 }
     
 .smwtt {
 	font-size: 10pt;
-	}
+}
 
 /* Semantic Drilldown */
 div div#drilldown-categories-wrapper {
@@ -202,8 +196,12 @@ div.wikiEditor-ui div.section {
     padding-left: 0;
 }
 
-div.wikiEditor-ui {
+div.wikiEditor-ui div.wikiEditor-ui-top {
 	font-size: 8.5pt;
+}
+
+div.wikiEditor-ui div.wikiEditor-ui-tabs {
+	font-size: 9pt;
 }
 
 /* Liquid Threads */
@@ -216,17 +214,13 @@ div.lqt-thread-toolbar {
 }
 
 .lqt-talkpage-header, .lqt_header_content{
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+    border-radius: 4px;
     border-width: 1px;
     }
 
 /* Flagged Revisions */
 div.flaggedrevs_basic, div.flaggedrevs_quality, div.flaggedrevs_pristine, div.flaggedrevs_notice {
- 	border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+ 	border-radius: 4px;
 }
 	
 /* OpenID */
@@ -236,9 +230,7 @@ div.flaggedrevs_basic, div.flaggedrevs_quality, div.flaggedrevs_pristine, div.fl
 }
 
 .openid_large_link {
-	border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
+	border-radius: 4px;
     border-width: 1px;
 }
 .openid_small_providers_block {
@@ -267,18 +259,6 @@ table .yelp-reviews blockquote {
 }
 
 /* Social Sidebar*/
-
-#nav div a, #nav div span.social{
-    display: block;
-    padding: 8px 10px;
-    text-decoration: none;
-    background: #EDF2F2;
-    border-bottom: 1px solid #ddd;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #ddd;
-    text-shadow: 0.1em 0.1em 0.1em grey;
-    font-size: 8pt;
-}
 
 #nav div li#facebook span span {
 	margin-left: -10px;
