@@ -1,13 +1,5 @@
 #header {
-	background: #455372 url("header_bl.png") bottom left repeat-x;
-}
-
-#header h6 {
-	background: url("header_tl.gif") no-repeat;
-}
-
-#header #p-search {
-	background: url("header_tr.gif") no-repeat top right;
+	background: #455372 url("header_back.png") bottom left repeat-x;
 }
 
 #header form label, #header label {
@@ -22,49 +14,35 @@
 /*p-cactions */
 
 #p-cactions li {
-	background: url("header_tab.gif") no-repeat scroll 100% -600px transparent;
 	border-bottom: 1px solid #515358;
+	background-color: #5F697E;
+	border-top-color: #5F697E;
 }
 
-#p-cactions li a {
-	background: url("header_tab.gif") no-repeat scroll 0 -600px transparent;	
-}
-
-#p-cactions li div.share-wrapper {
-	background: url("header_tab.gif") no-repeat scroll 0 -600px transparent;
+#p-cactions li:hover {
+	border-top-color: #747F96;
+	background-color: #747F96;
 }
 
 #p-cactions li.selected a {
-	color: #455372;
-}
-
-#p-cactions {
-		background: url("header_br.gif") no-repeat scroll right bottom transparent;
+	color: #455372;	
 }
 
 /* NAV */
 
 #nav {
-	background: #E0E9E9 url("menu_back.gif") right repeat-y;
-}
-
-#nav div a[href ^="http://"] {
-    background: #EDF2F2 none repeat scroll 0 0;
+	background: #E0E9E9;
 }
 
 #nav div a:hover {
     background: #E0E9E9;
 }
-    
-#nav:after {
-	background: transparent url("menu_br.gif") scroll no-repeat bottom right;
-}
 
 #nav div a, #nav div span.social {
     background: #EDF2F2;
-    border-bottom: 1px solid #ddd;
-	border-top: 1px solid #fff;
-	border-right: 1px solid #ddd;
+    border-bottom: 1px solid #DDD;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #DDD;
 }
 
 /* preftoc */
