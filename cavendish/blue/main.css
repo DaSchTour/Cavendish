@@ -14,15 +14,12 @@
 /*p-cactions */
 
 #p-cactions li {
-border-bottom: 1px solid #515358;
-}
-
-#p-cactions li, #p-cactions li a {	
+	border-bottom: 1px solid #515358;
 	background-color: #5F697E;
 	border-top-color: #5F697E;
 }
 
-#p-cactions li:hover, #p-cactions li a:hover {
+#p-cactions li:hover {
 	border-top-color: #747F96;
 	background-color: #747F96;
 }
