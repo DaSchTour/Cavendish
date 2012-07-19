@@ -1,13 +1,5 @@
 #header {
-	background: #455372 url("header_bl.png") bottom left repeat-x;
-}
-
-#header h6 {
-	background: url("header_tl.gif") no-repeat;
-}
-
-#header #p-search {
-	background: url("header_tr.gif") no-repeat top right;
+	background: #455372 url("header_back.png") bottom left repeat-x;
 }
 
 #header form label, #header label {

@@ -500,17 +500,16 @@ hr.hide {
 	text-decoration: none;
 }
 
-#p-cactions li.selected {
+#p-cactions li:hover a, #p-cactions li a:hover {
+    text-decoration: none;
+    border-bottom: 0px;
+}
+
+#p-cactions li.selected, #p-cactions li.selected:hover {
 	border-top-color: #FFC600;	
 	background-color: #FFFFFF;	
 }
 
-#p-cactions li:hover a,
-#p-cactions li a:hover, #p-cactions li:hover div.share-wrapper,
-#p-cactions li div.share-wrapper:hover {
-    text-decoration: none;
-    border-bottom: 0px;
-}
 #p-cactions li.selected {
 	border-bottom: 1px solid #FFF;
     font-weight: bold;
@@ -519,6 +518,7 @@ hr.hide {
 #p-cactions .new a {
 	color: #FFD955;
 }
+
 #p-cactions .hiddenStructure {
 	display: none;
 }
@@ -534,6 +534,7 @@ hr.hide {
 
 div#header {
     clear: both;
+    border-radius: 6px;
 }
 
 #header h6 a {
