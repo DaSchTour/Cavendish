@@ -1,13 +1,5 @@
 #header {
-	background: #D2BA92 url("header_bl.gif") bottom left repeat-x;
-}
-
-#header h6 {
-	background: url("header_tl.gif") no-repeat;
-}
-
-#header #p-search {
-	background: url("header_tr.gif") no-repeat top right;
+	background: #D2BA92 url("header_back.png") bottom left repeat-x;
 }
 
 #header form label, #header label {
@@ -22,24 +14,18 @@
 /*p-cactions */
 
 #p-cactions li {
-	background: url("header_tab.gif") no-repeat scroll 100% -600px transparent;
 	border-bottom: 1px solid #B48A48;
+	background-color: #885E1B;
+	border-top-color: #885E1B;
 }
 
-#p-cactions li a {
-	background: url("header_tab.gif") no-repeat scroll 0 -600px transparent;	
-}
-
-#p-cactions li div.share-wrapper {
-	background: url("header_tab.gif") no-repeat scroll 0 -600px transparent;
+#p-cactions li:hover {
+	border-top-color: #B48A48;
+	background-color: #B48A48;
 }
 
 #p-cactions li.selected a {
 	color: #780000;
-}
-
-#p-cactions {
-		background: url("header_br.gif") no-repeat scroll right bottom transparent;
 }
 
 /* NAV */
