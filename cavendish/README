@@ -19,4 +19,7 @@ $cavendishExtensionCSS
 set this to false if you do not want to use Cavendish CSS for Extensions
 
 $cavendishQRCode
-adding QR-Code to printpage
+adding QR-Code to printpage (default is true)
+
+$cavendishcolor
+select color of the theme: blue, brown or green (default is blue)
