@@ -1,0 +1,71 @@
+#header {
+	background: #56a05f url("header_back.png") bottom left repeat-x;
+}
+
+#header form label, #header label {
+    color: #23712d;
+}
+
+#header form #searchInput {
+	border: 1px solid #23712d;
+    background-color: #89cc92;
+}
+
+/*p-cactions */
+
+#p-cactions li {
+	border-bottom: 1px solid #56a05f;
+	background-color: #58ac64;
+	border-top-color: #58ac64;
+}
+
+#p-cactions li:hover {
+	border-top-color: #68cc76;
+	background-color: #68cc76;
+}
+
+#p-cactions li.selected a {
+	color: #455372;	
+}
+
+/* NAV */
+
+#nav {
+	background: #89cc92;
+}
+
+#nav div a:hover {
+    background: #89cc92;
+}
+
+#nav div a, #nav div span.social {
+    background: #379940;
+    border-bottom: 1px solid #DDD;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #DDD;
+}
+
+/* preftoc */
+
+#preftoc li:hover,#preftoc li:focus, #preftoc li.selected  {
+    background-color: #89cc92;
+}
+
+/* fieldset */
+
+fieldset {
+	border: 1px solid #1fd931;
+}
+
+fieldset fieldset {
+    background-color: #89cc92;
+}
+
+/* mw-line */
+.mw-line-odd {
+	background-color: #379940;
+}
+
+.mw-line-even {
+	background-color: #89cc92;
+}
