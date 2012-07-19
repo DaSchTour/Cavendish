@@ -22,35 +22,20 @@
 /*p-cactions */
 
 #p-cactions li {
-/*	background: url("header_tab.gif") no-repeat scroll 100% -600px transparent; */
 	border-bottom: 1px solid #515358;
 	background-color: #5F697E;
-	border-top-right-radius: 6px;
-	border-top-left-radius: 6px;
+	border-top-color: #5F697E;
 }
 
 #p-cactions li:hover {
+	border-top-color: #747F96;
 	background-color: #747F96;
-}
-/*
-#p-cactions li a {
-	background: url("header_tab.gif") no-repeat scroll 0 -600px transparent;	
-}
-*/
-#p-cactions li.selected {
-	border-top-color: #FFC600;
-	border-top-width: 2px;
-	background-color: #FFFFFF;	
 }
 
 #p-cactions li.selected a {
 	color: #455372;	
 }
-/*
-#p-cactions {
-		background: url("header_br.gif") no-repeat scroll right bottom transparent;
-}
-*/
+
 /* NAV */
 
 #nav {

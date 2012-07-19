@@ -483,50 +483,39 @@ hr.hide {
 	display: inline;
     white-space: nowrap;
     font-size: 7.5pt;
+	border-top-right-radius: 6px;
+	border-top-left-radius: 6px;
+	border-top-width: 2px;
+	border-top-style: solid;
 }
 
 #p-cactions li a {
 	display: block;
 	float: left;
 	margin: 0;
-	padding: 4px 2px 4px 8px;
+	padding: 2px 2px 4px 8px;
 	z-index: 0;	
 	color: #FFF;
 	border: none;
 	text-decoration: none;
 }
 
-#p-cactions li div.share-wrapper {
-	display: block;
-	float: left;
-	margin: 0;
-	padding-left: 10px;
-	z-index: 0;
-	color: #FFF;
-	border: none;
-	text-decoration: none;
+#p-cactions li.selected {
+	border-top-color: #FFC600;	
+	background-color: #FFFFFF;	
 }
 
-#p-cactions li:hover {
-	background-position: 100% -400px;
-}
 #p-cactions li:hover a,
 #p-cactions li a:hover, #p-cactions li:hover div.share-wrapper,
 #p-cactions li div.share-wrapper:hover {
-	z-index: 3;
-	background-position: 0 -400px;
     text-decoration: none;
     border-bottom: 0px;
 }
 #p-cactions li.selected {
-	background-position: 100% -200px;
 	border-bottom: 1px solid #FFF;
     font-weight: bold;
 }
-#p-cactions li.selected a {
-	z-index: 3;
-	background-position: 0 0;
-}
+
 #p-cactions .new a {
 	color: #FFD955;
 }
