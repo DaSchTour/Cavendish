@@ -21,42 +21,6 @@
 	margin-top: 160px;
 }
 
-/* the tabs */
-
-#p-cactions {
-	z-index: 3;
-}
-
-
-#p-cactions li {
-	padding-bottom: 0 !important;
-	border: none;
-/*	background-color: transparent; */
-	padding-right: 4px;
-	cursor: default;
-	float: none !important;
-}
-
-#p-cactions li a {
-	display: inline-block !important;
-	vertical-align: top;
-	padding-bottom: 0;
-	border: solid #aaa;
-	border-width: 1px 1px 0;
-}
-#p-cactions li.selected a {
-	border-color: #fabd23;
-	padding-bottom: 0.17em;
-}
-#p-cactions li a:hover {
-	padding-bottom: 0.17em;
-}
-/*
-#p-navigation a {
-	display: inline-block;
-	width: 100%;
-}
-*/
 #portal-personaltools {
 	padding-bottom: 0.1em;
 }
