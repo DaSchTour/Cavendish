@@ -37,6 +37,7 @@
 
 /* Fonts */
 @import url("fonts/ubuntu/stylesheet.css");
+@import url("fonts/ubuntu-mono/stylesheet.css");
 @import url("fonts/open-sans/stylesheet.css");
 
 /* TOC:
@@ -873,7 +874,7 @@ q, blockquote {
 /* Code */
 code, pre, tt { /* override IE6 default */
     font-size: 1em;
-    font-family: "Courier New", monospace;
+    font-family: UbuntuMonoRegular,"Courier New", monospace;
     overflow: auto;
 }
 
