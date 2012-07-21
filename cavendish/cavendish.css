@@ -82,7 +82,7 @@ hr {
 }
 /* General Structure */
 body {
-    font-family: OpenSansLight, Verdana, sans-serif;
+    font-family: OpenSansRegular, Verdana, sans-serif;
     background: url("subsite_back.png") repeat-x;
     background-color: #fff;
     margin-top: 0;
@@ -102,7 +102,7 @@ h1,h2,h3,h4,h5,h6 {
     padding-top: .5em;
     padding-bottom: .17em;
     border-bottom: 1px solid #aaa;
-/*    font-family: Verdana, sans-serif; */
+    font-family: UbuntuRegular, Verdana, sans-serif; 
 }
 
 h3,h4,h5,h6 {
@@ -630,13 +630,13 @@ div#header {
     height: 25px;
     display: inline;
     background: url("top-mid.png") repeat-x;
-    padding-top: 5px;
+    padding-top: 4px;
     padding-left: 3px;
     padding-right: 3px;
     padding-bottom: 8px;
     margin-left: -4px;
     margin-right: -4px;
-    font-size: 10px;
+    font-size: 11px;
     text-shadow: 0.1em 0.1em 0.1em gray;
 }
 
@@ -863,12 +863,12 @@ abbr,acronym,.explain {
     cursor: help;
 }
 
-
+/*
 q, blockquote {
     font-family: Fontin, Georgia, serif;
 	font-size: 1.15em;
 }
-
+*/
 
 /* Code */
 code, pre, tt { /* override IE6 default */
