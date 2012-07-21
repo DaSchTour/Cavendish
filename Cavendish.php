@@ -54,7 +54,7 @@ class SkinCavendish extends SkinTemplate {
 			$cavendishLogoURL=$wgStylePath . "/cavendish/wiki_header_logo.gif";
 		}
 		if (!isset($cavendishcolor)) {
-			$cavendishcolor = blue;				
+			$cavendishcolor = 'blue';				
 		}
 		$out->addStyle( 'cavendish/'. $cavendishcolor .'/main.css', 'screen' );
 		

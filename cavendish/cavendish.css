@@ -83,6 +83,11 @@
     src: url('fonts/Fontin_Sans_SC_45b.otf');
 }
 
+@font-face {
+    font-family: Delicious;
+    src: url('fonts/Delicious.otf');
+}
+
 /* TOC:
  Body
  Random HTML Styles
