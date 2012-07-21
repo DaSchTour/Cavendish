@@ -204,8 +204,9 @@ div.wikiEditor-ui div.wikiEditor-ui-top {
 	font-size: 8.5pt;
 }
 
-div.wikiEditor-ui div.wikiEditor-ui-tabs {
+div.wikiEditor-ui div.wikiEditor-ui-tabs div{
 	font-size: 9pt;
+	padding-bottom: 1px;
 }
 
 /* Liquid Threads */

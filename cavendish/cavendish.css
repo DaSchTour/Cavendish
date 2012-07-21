@@ -58,7 +58,7 @@
 
  Body */
 #column-content, #side {
-    background: #fff;
+    background: #FFF;
     line-height: 1.7em;
     /* value other than 'normal' needed for WinIE */
     color: #000;
@@ -75,17 +75,17 @@
 /* Random HTML Styles */
 hr {
     height: 1px;
-    background-color: #aaa;
-    color: #aaa;
+    background-color: #AAA;
+    color: #AAA;
     margin: .2em 0 .2em 0;
-    border: 1px solid #fff;
-    border-top: 1px solid #ccc;
+    border: 1px solid #FFF;
+    border-top: 1px solid #CCC;
 }
 /* General Structure */
 body {
     font-family: OpenSansRegular, Verdana, sans-serif;
     background: url("subsite_back.png") repeat-x;
-    background-color: #fff;
+    background-color: #FFF;
     margin-top: 0;
     margin-left: 5%;
     margin-right: 5%;
@@ -864,12 +864,16 @@ abbr,acronym,.explain {
     cursor: help;
 }
 
-/*
+
 q, blockquote {
+<<<<<<< HEAD
     font-family: Fontin, Georgia, serif;
+=======
+    font-family: "Palatino Linotype", Georgia, serif;
+>>>>>>> refs/heads/master
 	font-size: 1.15em;
 }
-*/
+
 
 /* Code */
 code, pre, tt { /* override IE6 default */
