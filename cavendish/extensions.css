@@ -29,11 +29,15 @@ div.mw-geshi {
     padding: 1em;
     margin: 1em 0;
     border: 1px dashed #2fab6f;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 .mw-geshi ol {
 	padding-left: 1em;
+}
+
+div.mw-geshi div pre {
+	font-family: UbuntuMonoRegular, monospace;
 }
 
 /* Cite Extension */
@@ -79,7 +83,7 @@ table.smwtable {
     border: 1px #aaa solid;
     border-collapse: collapse;
     empty-cells: show;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 table.smwtable th {
@@ -122,7 +126,7 @@ table.smwtable tr.row-even td{
 }
 
 .smwfact {
-    border-radius: 4px;
+    border-radius: 6px;
 }
     
 #content div.smwfact table.smwfacttable {
@@ -214,13 +218,13 @@ div.lqt-thread-toolbar {
 }
 
 .lqt-talkpage-header, .lqt_header_content{
-    border-radius: 4px;
+    border-radius: 6px;
     border-width: 1px;
     }
 
 /* Flagged Revisions */
 div.flaggedrevs_basic, div.flaggedrevs_quality, div.flaggedrevs_pristine, div.flaggedrevs_notice {
- 	border-radius: 4px;
+ 	border-radius: 6px;
 }
 	
 /* OpenID */
@@ -230,7 +234,7 @@ div.flaggedrevs_basic, div.flaggedrevs_quality, div.flaggedrevs_pristine, div.fl
 }
 
 .openid_large_link {
-	border-radius: 4px;
+	border-radius: 6px;
     border-width: 1px;
 }
 .openid_small_providers_block {
