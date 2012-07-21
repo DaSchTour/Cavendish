@@ -864,16 +864,12 @@ abbr,acronym,.explain {
     cursor: help;
 }
 
-
+/*
 q, blockquote {
-<<<<<<< HEAD
-    font-family: Fontin, Georgia, serif;
-=======
     font-family: "Palatino Linotype", Georgia, serif;
->>>>>>> refs/heads/master
 	font-size: 1.15em;
 }
-
+*/
 
 /* Code */
 code, pre, tt { /* override IE6 default */
