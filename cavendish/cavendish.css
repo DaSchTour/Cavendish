@@ -36,57 +36,7 @@
 
 
 /* Fonts */
-/* A font by Jos Buivenga (exljbris) -> www.exljbris.com */ 
-@font-face {
-    font-family: Fontin;
-    src: url('fonts/Fontin-Regular.otf');
-}
-@font-face {
-    font-family: Fontin;
-    font-weight: bold;
-    src: url('fonts/Fontin-Bold.otf');
-}
-@font-face {
-    font-family: Fontin;
-    font-style: italic;
-    src: url('fonts/Fontin-Italic.otf');
-}
-@font-face {
-    font-family: Fontin;
-    text-transform: capitalize;
-    src: url('fonts/Fontin-SmallCaps.otf');
-}
-
-@font-face {
-    font-family: Fontin Sans;
-    src: url('fonts/Fontin_Sans_R_45b.otf');
-}
-@font-face {
-    font-family: Fontin Sans;
-    font-weight: bold;
-    src: url('fonts/Fontin_Sans_B_45b.otf');
-}
-@font-face {
-    font-family: Fontin Sans;
-    font-style: italic;
-    src: url('fonts/Fontin_Sans_I_45b.otf');
-}
-@font-face {
-    font-family: Fontin Sans;
-    font-style: italic;
-    font-weight: bold;
-    src: url('fonts/Fontin_Sans_BI_45b.otf');
-}
-@font-face {
-    font-family: Fontin Sans;
-    text-transform: capitalize;
-    src: url('fonts/Fontin_Sans_SC_45b.otf');
-}
-
-@font-face {
-    font-family: Delicious;
-    src: url('fonts/Delicious.otf');
-}
+@import url("fonts/ubuntu/stylesheet.css");
 
 /* TOC:
  Body
@@ -131,7 +81,7 @@ hr {
 }
 /* General Structure */
 body {
-    font-family: "Fontin Sans", Verdana, sans-serif;
+    font-family: UbuntuRegular, Verdana, sans-serif;
     background: url("subsite_back.png") repeat-x;
     background-color: #fff;
     margin-top: 0;
