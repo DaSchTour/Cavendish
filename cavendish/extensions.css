@@ -36,7 +36,7 @@ div.mw-geshi {
 	padding-left: 1em;
 }
 
-div.mw-geshi div pre {
+#bodyContent div.mw-geshi div pre * {
 	font-family: UbuntuMonoRegular, monospace;
 }
 
