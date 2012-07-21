@@ -34,6 +34,55 @@
  *
  */
 
+
+/* Fonts */
+/* A font by Jos Buivenga (exljbris) -> www.exljbris.com */ 
+@font-face {
+    font-family: Fontin;
+    src: url('fonts/Fontin-Regular.otf');
+}
+@font-face {
+    font-family: Fontin;
+    font-weight: bold;
+    src: url('fonts/Fontin-Bold.otf');
+}
+@font-face {
+    font-family: Fontin;
+    font-style: italic;
+    src: url('fonts/Fontin-Italic.otf');
+}
+@font-face {
+    font-family: Fontin;
+    text-transform: capitalize;
+    src: url('fonts/Fontin-SmallCaps.otf');
+}
+
+@font-face {
+    font-family: Fontin Sans;
+    src: url('fonts/Fontin_Sans_R_45b.otf');
+}
+@font-face {
+    font-family: Fontin Sans;
+    font-weight: bold;
+    src: url('fonts/Fontin_Sans_B_45b.otf');
+}
+@font-face {
+    font-family: Fontin Sans;
+    font-style: italic;
+    src: url('fonts/Fontin_Sans_I_45b.otf');
+}
+@font-face {
+    font-family: Fontin Sans;
+    font-style: italic;
+    font-weight: bold;
+    src: url('fonts/Fontin_Sans_BI_45b.otf');
+}
+@font-face {
+    font-family: Fontin Sans;
+    text-transform: capitalize;
+    src: url('fonts/Fontin_Sans_SC_45b.otf');
+}
+
 /* TOC:
  Body
  Random HTML Styles
@@ -77,7 +126,7 @@ hr {
 }
 /* General Structure */
 body {
-    font-family: /*Gill Sans, Calibri,Helvetica,*/  Verdana, /*Arial,*/ sans-serif;
+    font-family: "Fontin Sans", Verdana, sans-serif;
     background: url("subsite_back.png") repeat-x;
     background-color: #fff;
     margin-top: 0;
@@ -147,6 +196,7 @@ h6 {
 caption {
 	font-size: 1.3em;
 	font-weight: bold;
+	margin-bottom: 2pt;
 }
 
 /* Navigation */
@@ -857,21 +907,21 @@ abbr,acronym,.explain {
     cursor: help;
 }
 
-/*
+
 q, blockquote {
-    font-family: "times new roman", serif;
+    font-family: Fontin, Georgia, serif;
 	font-size: 1.15em;
 }
-*/
+
 
 /* Code */
-code,pre,tt { /* override IE6 default */
+code, pre, tt { /* override IE6 default */
     font-size: 1em;
     font-family: "Courier New", monospace;
     overflow: auto;
 }
 
-code,tt {
+code, tt {
     background-color: #f9f9f9;
     white-space: nowrap;
 }
@@ -934,8 +984,8 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
 }
 
 #catlinks {
-    border: 1px solid #aaaaaa;
-    background-color: #f9f9f9;
+    border: 1px solid #AAA;
+    background-color: #F9F9F9;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-right: 5px;
@@ -957,7 +1007,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
 }
 
 /* small for tables and similar */
-.small,.small * {
+.small, .small * {
     font-size: 94%;
 }
 
@@ -969,11 +1019,11 @@ table.small {
  ** content styles
  */
 .successbox, .errorbox, .warningbox {
-    border-width:1px;
+    border-width: 1px;
     border-radius: 6px;
     margin-bottom: 1em;
-    padding-left:5em;
-    padding-right:5em;
+    padding-left: 5em;
+    padding-right: 5em;
     text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -999,13 +1049,10 @@ table.small {
 	box-shadow: 0 0 2px #FFA500;
 }
 
-#toc,.toc,.mw-warning {
-    border: 1px solid #aaa;
-    background-color: #f9f9f9;
-    padding: 5px;
-    font-size: 9pt;
-    border-radius: 6px;
-    box-shadow: 5px 5px 5px #ccc;
+.mw-warning {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
 }
 
 #editpage-copywarn {
@@ -1018,6 +1065,17 @@ table.small {
 #mw-anon-edit-warning, .mw-warning-with-logexcerpt, .mw-editinginterface {
  	border-radius: 6px;
     border-width: 1px;
+}
+
+/* TOC */
+
+#toc,.toc,.mw-warning {
+    border: 1px solid #AAA;
+    background-color: #F9F9F9;
+    padding: 5px;
+    font-size: 9pt;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px #ccc;
 }
 
 #toctitle h2 {
@@ -1048,11 +1106,14 @@ table.small {
     font-size: 8pt;
 }
 
-.mw-warning {
-    margin-left: 50px;
-    margin-right: 50px;
-    text-align: center;
+.toccolours {
+    background-color: #F9F9F9;
+    border: 1px solid #AAAAAA;
+    font-size: 95%;
+    padding: 5px;
 }
+
+/* Colors RC */
 
 .mw-plusminus-pos {
     color: #006400; /* darkgreen */
@@ -1069,6 +1130,8 @@ table.small {
 #content table.mw-enhanced-rc {
     margin-bottom: 0.1em;   
 }
+
+/* Preferences */
 
 #mw-pref-clear {
     clear: both;
