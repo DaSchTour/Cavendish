@@ -263,7 +263,7 @@ table .yelp-reviews blockquote {
 	margin-left: 20px;
 }
 
-/* Social Sidebar*/
+/* Social Sidebar WeCoWi*/
 
 #nav div li#facebook span span {
 	margin-left: -10px;
@@ -272,6 +272,10 @@ table .yelp-reviews blockquote {
 
 #nav div li#facebook span.social {
 	height: 19px;
+}
+
+#nav li#twitter span.social {
+	padding-bottom: 6px;
 }
 
 #nav div li#twitter span.social iframe {
@@ -289,6 +293,7 @@ table .yelp-reviews blockquote {
 
 #nav li#google span.social {
 	padding-left: 20px;
+	padding-bottom: 6px;
 }
 
 #nav li#flattr span.social {
