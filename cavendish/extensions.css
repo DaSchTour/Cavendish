@@ -25,11 +25,12 @@
     }
 
 /* Syntax Hightlight Geshi */
-div.mw-geshi {
+.mw-geshi {
     padding: 1em;
     margin: 1em 0;
     border: 1px dashed #2fab6f;
     border-radius: 6px;
+    overflow-y: hidden;
 }
 
 .mw-geshi ol {
