@@ -869,6 +869,8 @@ code, pre, tt { /* override IE6 default */
     font-size: 1em;
     font-family: "Courier New", monospace;
     overflow: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 code, tt {
