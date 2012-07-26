@@ -52,7 +52,7 @@
 
  Body */
 #column-content, #side {
-    background: #fff;
+    background: #FFF;
     line-height: 1.7em;
     /* value other than 'normal' needed for WinIE */
     color: #000;
@@ -69,17 +69,17 @@
 /* Random HTML Styles */
 hr {
     height: 1px;
-    background-color: #aaa;
-    color: #aaa;
+    background-color: #AAA;
+    color: #AAA;
     margin: .2em 0 .2em 0;
-    border: 1px solid #fff;
-    border-top: 1px solid #ccc;
+    border: 1px solid #FFF;
+    border-top: 1px solid #CCC;
 }
 /* General Structure */
 body {
-    font-family: /*Gill Sans, Calibri,Helvetica,*/  Verdana, /*Arial,*/ sans-serif;
+    font-family: Verdana, sans-serif;
     background: url("subsite_back.png") repeat-x;
-    background-color: #fff;
+    background-color: #FFF;
     margin-top: 0;
     margin-left: 5%;
     margin-right: 5%;
@@ -97,7 +97,6 @@ h1,h2,h3,h4,h5,h6 {
     padding-top: .5em;
     padding-bottom: .17em;
     border-bottom: 1px solid #aaa;
-/*    font-family: Verdana, sans-serif; */
 }
 
 h3,h4,h5,h6 {
@@ -147,6 +146,7 @@ h6 {
 caption {
 	font-size: 1.3em;
 	font-weight: bold;
+	margin-bottom: 2pt;
 }
 
 /* Navigation */
@@ -600,7 +600,7 @@ div#header {
     height: 25px;
     display: inline;
     background: url("top-left.png") no-repeat;
-    padding-top: 5px;
+    padding-top: 6px;
     padding-right: 4px;
     padding-bottom: 8px;
     margin-left: 3px;
@@ -612,7 +612,7 @@ div#header {
     height: 25px;
     display: inline;
     background: url("top-right.png") no-repeat;
-    padding-top: 5px;
+    padding-top: 6px;
     padding-left: 4px;
     padding-bottom: 8px;
     margin-left: -1px;
@@ -624,7 +624,7 @@ div#header {
     height: 25px;
     display: inline;
     background: url("top-mid.png") repeat-x;
-    padding-top: 5px;
+    padding-top: 6px;
     padding-left: 3px;
     padding-right: 3px;
     padding-bottom: 8px;
@@ -857,21 +857,22 @@ abbr,acronym,.explain {
     cursor: help;
 }
 
-/*
+
 q, blockquote {
-    font-family: "times new roman", serif;
+    font-family: "Palatino Linotype", Georgia, serif;
 	font-size: 1.15em;
 }
-*/
+
 
 /* Code */
-code,pre,tt { /* override IE6 default */
+code, pre, tt { /* override IE6 default */
     font-size: 1em;
     font-family: "Courier New", monospace;
     overflow: auto;
+    overflow-y: hidden;
 }
 
-code,tt {
+code, tt {
     background-color: #f9f9f9;
     white-space: nowrap;
 }
@@ -934,8 +935,8 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
 }
 
 #catlinks {
-    border: 1px solid #aaaaaa;
-    background-color: #f9f9f9;
+    border: 1px solid #AAA;
+    background-color: #F9F9F9;
     padding-top: 3px;
     padding-bottom: 3px;
     padding-right: 5px;
@@ -957,7 +958,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
 }
 
 /* small for tables and similar */
-.small,.small * {
+.small, .small * {
     font-size: 94%;
 }
 
@@ -969,11 +970,11 @@ table.small {
  ** content styles
  */
 .successbox, .errorbox, .warningbox {
-    border-width:1px;
+    border-width: 1px;
     border-radius: 6px;
     margin-bottom: 1em;
-    padding-left:5em;
-    padding-right:5em;
+    padding-left: 5em;
+    padding-right: 5em;
     text-align: center;
 	margin-left: auto;
 	margin-right: auto;
@@ -999,13 +1000,10 @@ table.small {
 	box-shadow: 0 0 2px #FFA500;
 }
 
-#toc,.toc,.mw-warning {
-    border: 1px solid #aaa;
-    background-color: #f9f9f9;
-    padding: 5px;
-    font-size: 9pt;
-    border-radius: 6px;
-    box-shadow: 5px 5px 5px #ccc;
+.mw-warning {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
 }
 
 #editpage-copywarn {
@@ -1018,6 +1016,17 @@ table.small {
 #mw-anon-edit-warning, .mw-warning-with-logexcerpt, .mw-editinginterface {
  	border-radius: 6px;
     border-width: 1px;
+}
+
+/* TOC */
+
+#toc,.toc,.mw-warning {
+    border: 1px solid #AAA;
+    background-color: #F9F9F9;
+    padding: 5px;
+    font-size: 9pt;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px #ccc;
 }
 
 #toctitle h2 {
@@ -1048,11 +1057,14 @@ table.small {
     font-size: 8pt;
 }
 
-.mw-warning {
-    margin-left: 50px;
-    margin-right: 50px;
-    text-align: center;
+.toccolours {
+    background-color: #F9F9F9;
+    border: 1px solid #AAAAAA;
+    font-size: 95%;
+    padding: 5px;
 }
+
+/* Colors RC */
 
 .mw-plusminus-pos {
     color: #006400; /* darkgreen */
@@ -1069,6 +1081,8 @@ table.small {
 #content table.mw-enhanced-rc {
     margin-bottom: 0.1em;   
 }
+
+/* Preferences */
 
 #mw-pref-clear {
     clear: both;
@@ -1545,6 +1559,7 @@ special external link styling */
     margin-right: 0;
     margin-top: 0; 
     border-radius: 6px;
+    box-shadow: 5px 5px 5px #CCCCCC
 }
 
 #nav ul {

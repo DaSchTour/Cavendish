@@ -25,11 +25,12 @@
     }
 
 /* Syntax Hightlight Geshi */
-div.mw-geshi {
+.mw-geshi {
     padding: 1em;
     margin: 1em 0;
     border: 1px dashed #2fab6f;
-    border-radius: 4px;
+    border-radius: 6px;
+    overflow-y: hidden;
 }
 
 .mw-geshi ol {
@@ -79,7 +80,7 @@ table.smwtable {
     border: 1px #aaa solid;
     border-collapse: collapse;
     empty-cells: show;
-    border-radius: 4px;
+    border-radius: 6px;
 }
 
 table.smwtable th {
@@ -122,7 +123,7 @@ table.smwtable tr.row-even td{
 }
 
 .smwfact {
-    border-radius: 4px;
+    border-radius: 6px;
 }
     
 #content div.smwfact table.smwfacttable {
@@ -200,8 +201,9 @@ div.wikiEditor-ui div.wikiEditor-ui-top {
 	font-size: 8.5pt;
 }
 
-div.wikiEditor-ui div.wikiEditor-ui-tabs {
+div.wikiEditor-ui div.wikiEditor-ui-tabs div{
 	font-size: 9pt;
+	padding-bottom: 1px;
 }
 
 /* Liquid Threads */
@@ -214,13 +216,13 @@ div.lqt-thread-toolbar {
 }
 
 .lqt-talkpage-header, .lqt_header_content{
-    border-radius: 4px;
+    border-radius: 6px;
     border-width: 1px;
     }
 
 /* Flagged Revisions */
 div.flaggedrevs_basic, div.flaggedrevs_quality, div.flaggedrevs_pristine, div.flaggedrevs_notice {
- 	border-radius: 4px;
+ 	border-radius: 6px;
 }
 	
 /* OpenID */
@@ -230,7 +232,7 @@ div.flaggedrevs_basic, div.flaggedrevs_quality, div.flaggedrevs_pristine, div.fl
 }
 
 .openid_large_link {
-	border-radius: 4px;
+	border-radius: 6px;
     border-width: 1px;
 }
 .openid_small_providers_block {
@@ -258,7 +260,7 @@ table .yelp-reviews blockquote {
 	margin-left: 20px;
 }
 
-/* Social Sidebar*/
+/* Social Sidebar WeCoWi*/
 
 #nav div li#facebook span span {
 	margin-left: -10px;
@@ -267,6 +269,10 @@ table .yelp-reviews blockquote {
 
 #nav div li#facebook span.social {
 	height: 19px;
+}
+
+#nav li#twitter span.social {
+	padding-bottom: 6px;
 }
 
 #nav div li#twitter span.social iframe {
@@ -284,6 +290,7 @@ table .yelp-reviews blockquote {
 
 #nav li#google span.social {
 	padding-left: 20px;
+	padding-bottom: 6px;
 }
 
 #nav li#flattr span.social {
