@@ -68,6 +68,7 @@ class SkinCavendish extends SkinTemplate {
 		if(isset($cavendishLogoMargin)) {
 			$cavendishLogoMarginToAdd .= 'margin-top:'.$cavendishLogoMargin.'px;';
 		}
+		// TODO Searchbox Handling
 		if(!isset($cavendishSidebarSearchbox)) {
 			$cavendishSidebarSearchbox=false;
 		}
@@ -114,6 +115,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		}
 		// Suppress warnings to prevent notices about missing indexes in $this->data
 		wfSuppressWarnings();
+		// HTML starts here
 		$this->html( 'headelement' );
 ?>
 <div id="internal"></div>
@@ -169,7 +171,9 @@ class CavendishTemplate extends MonoBookTemplate {
 								
 				?>
 			</ul></div>
-			<?php $this->searchBox(); ?>
+			<?php 
+			// TODO Searchbox Handling
+			$this->searchBox(); ?>
 	</div>
 	<div id="mBody">
 		<div id="side">
@@ -180,6 +184,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		if ( !isset( $sidebar['TOOLBOX'] ) ) $sidebar['TOOLBOX'] = true;
 		if ( !isset( $sidebar['LANGUAGES'] ) ) $sidebar['LANGUAGES'] = true;
 		foreach ($sidebar as $boxName => $cont) {
+			// TODO Searchbox Handling
 			if ( $boxName == 'SEARCH' ) {
 //				$this->searchBox();	
 			} elseif ( $boxName == 'TOOLBOX' ) {

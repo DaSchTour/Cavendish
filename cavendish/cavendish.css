@@ -381,7 +381,6 @@ address {
 #globalWrapper {
     margin: 0 auto;
     font-size: 9.5pt;
-/*	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif; */
 }
 
 #mBody {
@@ -638,60 +637,17 @@ div#header {
     font-weight: bold;
 }
 
-/*
- #p-personal {
- width:100%;
- white-space:nowrap;
- padding: 0;
- margin: 0;
- position:absolute;
- left:0px;
- top:0px;
- z-index: 0;
- border: none;
- background: none;
- overflow: visible;
- line-height: 1.2em;
- }
- */
-
 /* this is the ul contained in the portlet */
 #p-personal ul {
     border: none;
     line-height: 22px;
     color: #2f6fab;
-    /* padding: 0em 2em 0 3em; */
     margin: 0;
     text-align: right;
-    /* text-transform: lowercase; */
     list-style: none;
     z-index: 0;
     background: none;
 }
-/*
- #p-personal li {
- z-index:0;
- border:none;
- padding:0;
- display: inline;
- color: #2f6fab;
- margin-left: 1em;
- line-height: 1.2em;
- background: none;
- }
- #p-personal li a {
- text-decoration: none;
- color: #005896;
- padding-bottom: 0.2em;
- background: none;
- }
- #p-personal li a:hover {
- background-color: White;
- padding-bottom: 0.2em;
- text-decoration: none;
- }
- 
- */
 
 /*
  ** the main content area
@@ -821,16 +777,6 @@ input {
 	margin: 2px;
 	vertical-align:middle;
 }
-
-/*
-fieldset input, fieldset select {
-	border-radius: 3px;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	box-shadow: 2px inset;
-	background: white;
-}
-*/
 
 input[type="submit"] {
     cursor: pointer;
@@ -1532,19 +1478,6 @@ special external link styling */
     margin: 0;
     padding: 0;
 }
-/*
-.portlet ul {
-    line-height: 1.5em;
-    list-style-type: square;
-    list-style-image: url("bullet.gif");
-    font-size: 95%;
-}
-
-.portlet li {
-    padding: 0;
-    margin: 0;
-}
-*/
 
 /* Sidebar */
 
@@ -1559,7 +1492,6 @@ special external link styling */
     margin-right: 0;
     margin-top: 0; 
     border-radius: 6px;
-    box-shadow: 5px 5px 5px #CCCCCC
 }
 
 #nav ul {
