@@ -1,5 +1,14 @@
+/* Green color */
+
 #header {
-	background: #56a05f url("header_back.png") bottom left repeat-x;
+	background: #379940; /* Old browsers */
+	background: -moz-linear-gradient(top,  #379940 0%, #36983f 56%, #32903a 68%, #216d2b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#379940), color-stop(56%,#36983f), color-stop(68%,#32903a), color-stop(100%,#216d2b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #379940 0%,#36983f 56%,#32903a 68%,#216d2b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #379940 0%,#36983f 56%,#32903a 68%,#216d2b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #379940 0%,#36983f 56%,#32903a 68%,#216d2b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #379940 0%,#36983f 56%,#32903a 68%,#216d2b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#379940', endColorstr='#216d2b',GradientType=0 ); /* IE6-9 */
 }
 
 #header form label, #header label {
