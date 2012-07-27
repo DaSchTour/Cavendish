@@ -34,7 +34,7 @@ class SkinCavendish extends SkinTemplate {
 		$this->useHeadElement = true;
 		}
 	function setupSkinUserCss( OutputPage $out ) {
-		global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion;
+		global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion, $wgLogo;
 		global $cavendishcolor, $cavendishLogoURL, $cavendishLogoWidth, $cavendishLogoHeight, $cavendishLogoMargin, $cavendishSiteWith, $cavendishExtensionCSS, $cavendishSidebarSearchbox;
 		parent::setupSkinUserCss( $out );
 		// Append to the default screen common & print styles...
@@ -51,7 +51,7 @@ class SkinCavendish extends SkinTemplate {
 		
 		/* README for details */
 		if(!isset($cavendishLogoURL)) {
-			$cavendishLogoURL=$wgStylePath . "/cavendish/wiki_header_logo.gif";
+			$cavendishLogoURL=$wgLogo;
 		}
 		if (!isset($cavendishcolor)) {
 			$cavendishcolor = 'blue';				
