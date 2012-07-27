@@ -1,0 +1,91 @@
+/* Brown color */
+
+#header {
+	background: #e3cead; /* Old browsers */
+	background: -moz-linear-gradient(top,  #e3cead 0%, #dac39e 35%, #ccb186 75%, #c5aa7d 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e3cead), color-stop(35%,#dac39e), color-stop(75%,#ccb186), color-stop(100%,#c5aa7d)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #e3cead 0%,#dac39e 35%,#ccb186 75%,#c5aa7d 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #e3cead 0%,#dac39e 35%,#ccb186 75%,#c5aa7d 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #e3cead 0%,#dac39e 35%,#ccb186 75%,#c5aa7d 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #e3cead 0%,#dac39e 35%,#ccb186 75%,#c5aa7d 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3cead', endColorstr='#c5aa7d',GradientType=0 ); /* IE6-9 */
+}
+
+#header form label, #header label {
+    color: #774F03;
+}
+
+#header form #searchInput {
+	border: 1px solid #774F03;
+    background-color: #FBF4E8;
+}
+
+/*p-cactions */
+
+#p-cactions li {
+	border-bottom: 1px solid #B48A48;
+	background-color: #885E1B;
+	border-top-color: #885E1B;
+}
+
+#p-cactions li:hover {
+	border-top-color: #B48A48;
+	background-color: #B48A48;
+}
+
+#p-cactions li.selected a {
+	color: #780000;
+}
+
+/* NAV */
+
+#nav {
+	background: #E8DDCA;
+}
+
+#nav div a:hover {
+    background: #E8DDCA;
+}
+
+#nav div a, #nav div span.social {
+	background-color:#FBF4E8;
+	border-bottom: 1px solid #DDD;
+	border-right: 1px solid #DDD;
+	border-top: 1px solid #FFF;	
+}
+
+/* preftoc */
+
+#preftoc li:hover,#preftoc li:focus, #preftoc li.selected  {
+    background-color: #E8DDCA;
+}
+
+/* fieldset */
+
+fieldset {
+	border: 1px solid #774F03;
+}
+
+fieldset fieldset {
+    background-color: #E8DDCA;
+    }
+
+/* mw-line */
+.mw-line-odd {
+	background-color: #FBF4E8;
+}
+
+.mw-line-even {
+	background-color: #E8DDCA;
+}
+
+/* different from blue.css */
+
+.portlet li a:link {
+	color: #780000;
+	text-decoration: none;
+}
+.portlet li a:visited {
+	color: #774F03;
+	text-decoration: none;
+}

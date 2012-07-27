@@ -56,7 +56,7 @@ class SkinCavendish extends SkinTemplate {
 		if (!isset($cavendishcolor)) {
 			$cavendishcolor = 'blue';				
 		}
-		$out->addStyle( 'cavendish/'. $cavendishcolor .'/main.css', 'screen' );
+		$out->addStyle( 'cavendish/colors/'. $cavendishcolor .'.css', 'screen' );
 		
 		if(!isset($cavendishLogoWidth)) {
 			$cavendishLogoWidth="322";
@@ -107,7 +107,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		if (!isset($cavendishQRCode)) {
 			$cavendishQRCode = true;
 		}
-		$styleversion = '2.1.0';
+		$styleversion = '2.1.1';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
