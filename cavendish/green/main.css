@@ -1,0 +1,80 @@
+/* Green color */
+
+#header {
+	background: #379940; /* Old browsers */
+	background: -moz-linear-gradient(top,  #379940 0%, #36983f 56%, #32903a 68%, #216d2b 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#379940), color-stop(56%,#36983f), color-stop(68%,#32903a), color-stop(100%,#216d2b)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #379940 0%,#36983f 56%,#32903a 68%,#216d2b 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #379940 0%,#36983f 56%,#32903a 68%,#216d2b 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #379940 0%,#36983f 56%,#32903a 68%,#216d2b 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #379940 0%,#36983f 56%,#32903a 68%,#216d2b 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#379940', endColorstr='#216d2b',GradientType=0 ); /* IE6-9 */
+}
+
+#header form label, #header label {
+    color: #89cc92;
+}
+
+#header form #searchInput {
+	border: 1px solid #23712d;
+    background-color: #89cc92;
+}
+
+/*p-cactions */
+
+#p-cactions li {
+	border-bottom: 1px solid #56a05f;
+	background-color: #58ac64;
+	border-top-color: #58ac64;
+}
+
+#p-cactions li:hover {
+	border-top-color: #68cc76;
+	background-color: #68cc76;
+}
+
+#p-cactions li.selected a {
+	color: #455372;	
+}
+
+/* NAV */
+
+#nav {
+	background: #379940;
+}
+
+#nav div a:hover {
+    background: #379940;
+}
+
+#nav div a, #nav div span.social {
+    background: #89cc92;
+    border-bottom: 1px solid #DDD;
+	border-top: 1px solid #FFF;
+	border-right: 1px solid #DDD;
+}
+
+/* preftoc */
+
+#preftoc li:hover,#preftoc li:focus, #preftoc li.selected  {
+    background-color: #89cc92;
+}
+
+/* fieldset */
+
+fieldset {
+	border: 1px solid #1fd931;
+}
+
+fieldset fieldset {
+    background-color: #89cc92;
+}
+
+/* mw-line */
+.mw-line-odd {
+	background-color: #379940;
+}
+
+.mw-line-even {
+	background-color: #89cc92;
+}
