@@ -14,8 +14,6 @@
 if( !defined( 'MEDIAWIKI' ) )
 	die( -1 );
 
-require_once('Cavendish.deps.php');
-
 /**
  * Inherit main code from SkinTemplate, set the CSS and template filter.
  * @todo document
