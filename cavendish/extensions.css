@@ -134,7 +134,7 @@ table.smwtable tr.row-even td{
 	font-size: 10pt;
 }
 
-table.smwb-factbox, table.smwb-ifactbox {
+#content table.smwb-factbox, #content table.smwb-ifactbox {
 	border-radius: 0px;
 }
 
