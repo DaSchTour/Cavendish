@@ -134,6 +134,10 @@ table.smwtable tr.row-even td{
 	font-size: 10pt;
 }
 
+table.smwb-factbox, table.smwb-ifactbox {
+	border-radius: 0px;
+}
+
 /* Semantic Drilldown */
 div div#drilldown-categories-wrapper {
 	padding-left: 0;
