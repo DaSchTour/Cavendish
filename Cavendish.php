@@ -89,7 +89,7 @@ class SkinCavendish extends SkinTemplate {
 			$out->addInlineStyle($headStyle);
 		}
 		else {
-			$out->addStyle( 'cavendish/fonts/Journal-fontfacekist/stylesheet.css', 'screen' );
+			$out->addStyle( 'cavendish/fonts/Journal-fontfacekit/stylesheet.css', 'screen' );
 			$out->addStyle( 'cavendish/header.css', 'screen' );
 		}
 	}
