@@ -33,7 +33,7 @@ class SkinCavendish extends SkinTemplate {
 		}
 	function setupSkinUserCss( OutputPage $out ) {
 		global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion, $wgLogo;
-		global $cavendishcolor, $cavendishLogoURL, $cavendishLogoWidth, $cavendishLogoHeight, $cavendishLogoMargin, $cavendishSiteWith, $cavendishExtensionCSS, $cavendishSidebarSearchbox;
+		global $cavendishLogoText, $cavendishcolor, $cavendishLogoURL, $cavendishLogoWidth, $cavendishLogoHeight, $cavendishLogoMargin, $cavendishSiteWith, $cavendishExtensionCSS, $cavendishSidebarSearchbox;
 		parent::setupSkinUserCss( $out );
 		// Append to the default screen common & print styles...
 		$out->addStyle( 'cavendish/print.css', 'print' );
@@ -84,8 +84,14 @@ class SkinCavendish extends SkinTemplate {
 		if ($cavendishExtensionCSS) {
 			$out->addStyle( 'cavendish/extensions.css', 'screen' );	
 		}
-		$headStyle = '#header h6 a { background: transparent url("'.$cavendishLogoURL.'") no-repeat; width:'.$cavendishLogoWidth.'px;height:'.$cavendishLogoHeight.'px;'.$cavendishLogoMarginToAdd.'}'.$cavendishglobalWrapper.$cavendishSidebarSearchboxToAdd;
-		$out->addInlineStyle($headStyle);
+		if (!isset($cavendishLogoText)) {
+			$headStyle = '#header h6 a { background: transparent url("'.$cavendishLogoURL.'") no-repeat; width:'.$cavendishLogoWidth.'px;height:'.$cavendishLogoHeight.'px;'.$cavendishLogoMarginToAdd.'}'.$cavendishglobalWrapper.$cavendishSidebarSearchboxToAdd;
+			$out->addInlineStyle($headStyle);
+		}
+		else {
+			$out->addStyle( 'cavendish/fonts/Journal-fontfacekist/stylesheet.css', 'screen' );
+			$out->addStyle( 'cavendish/header.css', 'screen' );
+		}
 	}
 }
 
@@ -101,7 +107,7 @@ class CavendishTemplate extends MonoBookTemplate {
 	 */
 	function execute() {
 		global $wgRequest, $wgLang;
-		global $cavendishQRCode;
+		global $cavendishQRCode, $cavendishLogoText;
 		if (!isset($cavendishQRCode)) {
 			$cavendishQRCode = true;
 		}
@@ -143,7 +149,14 @@ class CavendishTemplate extends MonoBookTemplate {
 		<h6>
 		<a
 		href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>"
-		title="<?php $this->msg('mainpage') ?>"><?php $this->text('pagetitle') ?></a></h6>
+		title="<?php $this->msg('mainpage') ?>"><?php 
+		if (!isset($cavendishLogoText)) {
+			echo $this->text('pagetitle');
+		}
+		else {
+			echo $cavendishLogoText;
+		}
+		?></a></h6>
 		<div id="p-cactions" class="portlet"><ul>
 <?php			foreach($this->data['content_actions'] as $key => $tab) {
 					echo '
