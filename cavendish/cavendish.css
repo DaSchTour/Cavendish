@@ -1568,20 +1568,19 @@ special external link styling */
     border-right: 1px solid #ddd;
 }
 
-#nav div ul #feedlinks #feed-rss {
+#nav div ul #feedlinks #feed-rss, #nav div ul #feedlinks #feed-atom {
     display: inline;
-    padding: 8px 20px;
     background: #EDF2F2;
     border: none;
     padding: 0px;
 }
 
-#nav div ul #feedlinks  #feed-atom {
-    display: inline;
-    text-decoration: none;
-    background: #EDF2F2;
-    border: none;
-    padding: 0px;
+#nav div ul #feedlinks a.feedlink:last-child:before {
+	content: " | ";
+}
+
+#nav div ul #feedlinks #feed-atom:only-child:before {
+	content: "";
 }
 
 #nav .pBody {
