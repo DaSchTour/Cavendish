@@ -111,7 +111,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		if (!isset($cavendishQRCode)) {
 			$cavendishQRCode = true;
 		}
-		$styleversion = '2.1.2 (wecowi)';
+		$styleversion = '2.1.3 (wecowi)';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
