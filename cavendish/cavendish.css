@@ -880,7 +880,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     padding: 0;
 }
 
-#catlinks {
+#catlinks, .catlinks {
     border: 1px solid #AAA;
     background-color: #F9F9F9;
     padding-top: 3px;
