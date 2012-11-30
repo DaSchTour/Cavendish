@@ -62,6 +62,9 @@ class SkinCavendish extends SkinTemplate {
 		if(!isset($cavendishLogoHeight)) {
 			$cavendishLogoHeight="53";
 		}
+		if(!isset($cavendishBackgroundSize)) {
+			$cavendishBackgroundSize="100%";
+		}
 		$cavendishLogoMarginToAdd="";
 		if(isset($cavendishLogoMargin)) {
 			$cavendishLogoMarginToAdd .= 'margin-top:'.$cavendishLogoMargin.'px;';
@@ -85,7 +88,7 @@ class SkinCavendish extends SkinTemplate {
 			$out->addStyle( 'cavendish/extensions.css', 'screen' );	
 		}
 		if (!isset($cavendishLogoText)) {
-			$headStyle = '#header h6 a { background: transparent url("'.$cavendishLogoURL.'") no-repeat; width:'.$cavendishLogoWidth.'px;height:'.$cavendishLogoHeight.'px;'.$cavendishLogoMarginToAdd.'}'.$cavendishglobalWrapper.$cavendishSidebarSearchboxToAdd;
+			$headStyle = '#header h6 a { background-size:'  . $cavendishBackgroundSize .  ';background: transparent url("'.$cavendishLogoURL.'") no-repeat; width:'.$cavendishLogoWidth.'px;height:'.$cavendishLogoHeight.'px;'.$cavendishLogoMarginToAdd.'}'.$cavendishglobalWrapper.$cavendishSidebarSearchboxToAdd;
 			$out->addInlineStyle($headStyle);
 		}
 		else {
