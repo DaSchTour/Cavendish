@@ -540,6 +540,7 @@ div#header {
     display: block;
     text-indent: -700em;
     text-decoration: none;
+    background-size: 100%;
 }
 
 #header h6 {
