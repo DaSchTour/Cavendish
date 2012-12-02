@@ -1649,6 +1649,10 @@ special external link styling */
     white-space: nowrap; /* for Opera */
 }
 
+#header #p-search h3 {
+	display: inline;
+}
+
 #searchBody {
     display: inline;
 }
