@@ -1521,6 +1521,7 @@ special external link styling */
     font-weight: bold;
     color: #666;
     text-shadow: 0.1em 0.1em 0.1em gray;
+    font-size: 8.5pt;
 }
 
 #nav div span#configParent,#nav div span #configuration {
