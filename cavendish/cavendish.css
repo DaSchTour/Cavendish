@@ -1515,7 +1515,7 @@ special external link styling */
     text-shadow: 0.1em 0.1em 0.1em gray;
 }
 
-#nav div h5 {
+#nav div h5, #nav div h3 {
     display: block;
     padding: 4px 10px;
     font-weight: bold;
