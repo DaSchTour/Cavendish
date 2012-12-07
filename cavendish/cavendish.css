@@ -540,6 +540,7 @@ div#header {
     display: block;
     text-indent: -700em;
     text-decoration: none;
+    background-size: 100%;
 }
 
 #header h6 {
@@ -1441,7 +1442,7 @@ special external link styling */
     white-space: nowrap;
 }
 
-.portlet h5 {
+.portlet h5, .portlet h3 {
     background: transparent;
     padding: 0em 1em 0em 0.5em;
     /*    text-transform: lowercase; */
@@ -1514,7 +1515,7 @@ special external link styling */
     text-shadow: 0.1em 0.1em 0.1em gray;
 }
 
-#nav div h5 {
+#nav div h5, #nav div h3 {
     display: block;
     padding: 4px 10px;
     font-weight: bold;
