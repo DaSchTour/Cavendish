@@ -1442,7 +1442,7 @@ special external link styling */
     white-space: nowrap;
 }
 
-.portlet h5 {
+.portlet h5, .portlet h3 {
     background: transparent;
     padding: 0em 1em 0em 0.5em;
     /*    text-transform: lowercase; */
