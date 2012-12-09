@@ -1475,10 +1475,12 @@ special external link styling */
     padding: 0 0.8em 0.3em 0.5em;
 }
 
+/*
 .portlet h1,.portlet h2,.portlet h3,.portlet h4 {
     margin: 0;
     padding: 0;
 }
+*/
 
 /* Sidebar */
 
