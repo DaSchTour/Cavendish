@@ -600,7 +600,7 @@ div#header {
     height: 25px;
     display: inline;
     background: url("top-left.png") no-repeat;
-    padding-top: 6px;
+    padding-top: 5px;
     padding-right: 4px;
     padding-bottom: 8px;
     margin-left: 3px;
@@ -612,7 +612,7 @@ div#header {
     height: 25px;
     display: inline;
     background: url("top-right.png") no-repeat;
-    padding-top: 6px;
+    padding-top: 5px;
     padding-left: 4px;
     padding-bottom: 8px;
     margin-left: -1px;
@@ -624,7 +624,7 @@ div#header {
     height: 25px;
     display: inline;
     background: url("top-mid.png") repeat-x;
-    padding-top: 6px;
+    padding-top: 5px;
     padding-left: 3px;
     padding-right: 3px;
     padding-bottom: 8px;
