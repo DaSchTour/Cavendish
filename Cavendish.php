@@ -52,7 +52,7 @@ class SkinCavendish extends SkinTemplate {
 			$cavendishLogoURL=$wgLogo;
 		}
 		if (!isset($cavendishcolor)) {
-			$cavendishcolor = 'blue';				
+			$cavendishcolor = 'blue';
 		}
 		$out->addStyle( 'cavendish/colors/'. $cavendishcolor .'.css', 'screen' );
 		
@@ -92,6 +92,7 @@ class SkinCavendish extends SkinTemplate {
 		else {
 			$out->addStyle( 'cavendish/fonts/Journal-fontfacekit/stylesheet.css', 'screen' );
 			$out->addStyle( 'cavendish/header.css', 'screen' );
+		$cavendishQRurladd="?pk_campaign=qr-code";
 		}
 	}
 }
@@ -137,7 +138,7 @@ class CavendishTemplate extends MonoBookTemplate {
 				<span class="top-nav-left">&nbsp;</span>
 				<a class="top-nav-mid <?php echo htmlspecialchars($item['class']) ?>" 
 				   href="<?php echo htmlspecialchars($item['href']) ?>">
-				   <?php echo htmlspecialchars($item['text']) ?></a>	
+				   <?php echo htmlspecialchars($item['text']) ?></a>
 				<span class="top-nav-right">&nbsp;</span></li>
 				<?php
 				} ?>
@@ -275,7 +276,7 @@ class CavendishTemplate extends MonoBookTemplate {
 					// QR-Code added on option
 					if ($cavendishQRCode) { ?>
 					<div id="qrcode">
-						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()); ?>&#38;size=60x60" alt="QR Code generator" title="" /></a>
+						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()).$cavendishQRurladd; ?>&#38;size=60x60" alt="QR Code generator" title="" /></a>
 					</div>
 					<?php } ?> 
 				</td>
