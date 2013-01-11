@@ -33,7 +33,7 @@ class SkinCavendish extends SkinTemplate {
 		}
 	function setupSkinUserCss( OutputPage $out ) {
 		global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion, $wgLogo;
-		global $cavendishLogoText, $cavendishcolor, $cavendishLogoURL, $cavendishLogoWidth, $cavendishLogoHeight, $cavendishLogoMargin, $cavendishSiteWith, $cavendishExtensionCSS, $cavendishSidebarSearchbox;
+		global $cavendishQRurladd, $cavendishLogoText, $cavendishcolor, $cavendishLogoURL, $cavendishLogoWidth, $cavendishLogoHeight, $cavendishLogoMargin, $cavendishSiteWith, $cavendishExtensionCSS, $cavendishSidebarSearchbox;
 		parent::setupSkinUserCss( $out );
 		// Append to the default screen common & print styles...
 		$out->addStyle( 'cavendish/print.css', 'print' );
@@ -92,7 +92,6 @@ class SkinCavendish extends SkinTemplate {
 		else {
 			$out->addStyle( 'cavendish/fonts/Journal-fontfacekit/stylesheet.css', 'screen' );
 			$out->addStyle( 'cavendish/header.css', 'screen' );
-		$cavendishQRurladd="?pk_campaign=qr-code";
 		}
 	}
 }
