@@ -2276,6 +2276,12 @@ ul#filetoc {
     color: gray;
 }
 
+/* QR-Code */
+/*
 #qrcode {
+	display:none;
+}
+*/
+#f-poweredbyico {
 	display:none;
 }
