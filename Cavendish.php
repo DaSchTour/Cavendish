@@ -52,7 +52,7 @@ class SkinCavendish extends SkinTemplate {
 			$cavendishLogoURL=$wgLogo;
 		}
 		if (!isset($cavendishcolor)) {
-			$cavendishcolor = 'blue';				
+			$cavendishcolor = 'blue';
 		}
 		$out->addStyle( 'cavendish/colors/'. $cavendishcolor .'.css', 'screen' );
 		
@@ -108,11 +108,12 @@ class CavendishTemplate extends MonoBookTemplate {
 	 */
 	function execute() {
 		global $wgRequest, $wgLang;
-		global $cavendishQRCode, $cavendishLogoText;
+		global $cavendishQRCode, $cavendishLogoText, $cavendishQRurladd;
 		if (!isset($cavendishQRCode)) {
 			$cavendishQRCode = true;
 		}
-		$styleversion = '2.1.4 (wecowi)';
+		$QRURL = htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()).$cavendishQRurladd;
+		$styleversion = '2.1.5 (wecowi)';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
@@ -137,7 +138,7 @@ class CavendishTemplate extends MonoBookTemplate {
 				<span class="top-nav-left">&nbsp;</span>
 				<a class="top-nav-mid <?php echo htmlspecialchars($item['class']) ?>" 
 				   href="<?php echo htmlspecialchars($item['href']) ?>">
-				   <?php echo htmlspecialchars($item['text']) ?></a>	
+				   <?php echo htmlspecialchars($item['text']) ?></a>
 				<span class="top-nav-right">&nbsp;</span></li>
 				<?php
 				} ?>
@@ -275,7 +276,7 @@ class CavendishTemplate extends MonoBookTemplate {
 					// QR-Code added on option
 					if ($cavendishQRCode) { ?>
 					<div id="qrcode">
-						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()); ?>&#38;size=60x60" alt="QR Code generator" title="" /></a>
+						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height=80 width=80 alt="QR Code generator" title="" /></a>
 					</div>
 					<?php } ?> 
 				</td>
