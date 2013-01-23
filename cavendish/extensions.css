@@ -51,6 +51,10 @@ sup.reference {
     white-space: nowrap;
 }
 
+.reference * {
+	vertical-align: top;
+}
+
 ol.references>li:target {
     background-color: #def;
 }
