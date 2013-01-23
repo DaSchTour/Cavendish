@@ -288,7 +288,7 @@ ol.faq li a:hover {
 }
 /* Tables */
 table {
-    line-height: 1.4em;
+    line-height: 1.6em;
 }
 
 #content table {
@@ -686,7 +686,7 @@ img {
 
 p {
     margin: .4em 0 .5em 0;
-    line-height: 1.5em;
+    line-height: 1.6em;
 }
 
 p img {
@@ -694,7 +694,7 @@ p img {
 }
 
 ul {
-    line-height: 1.5em;
+    line-height: 1.6em;
     list-style-type: square;
     margin: 0.4em 0 0.4em 1.5em;
     padding: 0;
@@ -703,7 +703,7 @@ ul {
 }
 
 ol {
-    line-height: 1.5em;
+    line-height: 1.6em;
     margin: .3em 0 0 3.2em;
     padding: 0;
     list-style-image: none;
@@ -726,7 +726,7 @@ dl {
 }
 
 dd {
-    line-height: 1.5em;
+    line-height: 1.6em;
     margin-left: 2em;
     margin-bottom: .1em;
 }
@@ -744,7 +744,7 @@ legend {
 fieldset {
     margin: 1em 0 1em 0;
     padding: 0 1em 1em;
-    line-height: 1.5em;
+    line-height: 1.6em;
     border-radius: 6px;
 }
 
@@ -1742,7 +1742,7 @@ special external link styling */
 #footer ul {
     margin: 0 0 1em 0;
     padding: 0;
-    line-height: 1.5em;
+    line-height: 1.6em;
     list-style: none;
 }
 
