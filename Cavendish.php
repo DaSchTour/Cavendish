@@ -24,7 +24,7 @@ if( !defined( 'MEDIAWIKI' ) )
 class SkinCavendish extends SkinTemplate {
 	/** Using cavendish. */
 
-	function initPage( &$out ) {
+	function initPage( OutputPage $out ) {
 		SkinTemplate::initPage( $out );
 		$this->skinname = 'cavendish'; 
 		$this->stylename = 'cavendish';
@@ -62,22 +62,9 @@ class SkinCavendish extends SkinTemplate {
 		if(!isset($cavendishLogoHeight)) {
 			$cavendishLogoHeight="53";
 		}
-
-		$cavendishLogoMarginToAdd="";
-		if(isset($cavendishLogoMargin)) {
-			$cavendishLogoMarginToAdd .= 'margin-top:'.$cavendishLogoMargin.'px;';
-		}
 		// TODO Searchbox Handling
 		if(!isset($cavendishSidebarSearchbox)) {
 			$cavendishSidebarSearchbox=false;
-		}
-		$cavendishSidebarSearchboxToAdd = "";
-		if(!$cavendishSidebarSearchbox) {
-			$cavendishSidebarSearchboxToAdd .= '#nav #p-search {display:none;}';
-		} 
-		$cavendishglobalWrapper="";
-		if (isset($cavendishSiteWith)) {
-			$cavendishglobalWrapper = '#globalWrapper {width:'. $cavendishSiteWith .'px;}';
 		}
 		if (!isset($cavendishExtensionCSS)) {
 			$cavendishExtensionCSS = true;
@@ -85,14 +72,7 @@ class SkinCavendish extends SkinTemplate {
 		if ($cavendishExtensionCSS) {
 			$out->addStyle( 'cavendish/extensions.css', 'screen' );	
 		}
-		if (!isset($cavendishLogoText)) {
-			$headStyle = '#header h6 a { background-color: transparent; background-image: url("'.$cavendishLogoURL.'"); background-repeat: no-repeat; width:'.$cavendishLogoWidth.'px;height:'.$cavendishLogoHeight.'px;'.$cavendishLogoMarginToAdd.'}'.$cavendishglobalWrapper.$cavendishSidebarSearchboxToAdd;
-			$out->addInlineStyle($headStyle);
-		}
-		else {
-			$out->addStyle( 'cavendish/fonts/Journal-fontfacekit/stylesheet.css', 'screen' );
-			$out->addStyle( 'cavendish/header.css', 'screen' );
-		}
+		$out->addStyle( 'cavendish/style.php?logowidth='.$cavendishSidebarSearchbox.'&logo='.$cavendishLogoURL.'&logoheight='.$cavendishLogoHeight.'&logomargin='.$cavendishLogoMarginToAdd.'&sidebarsearch='.$cavendishSidebarSearchbox.'&pagewidth='.$cavendishSiteWith, 'screen' );	
 	}
 }
 
@@ -108,12 +88,12 @@ class CavendishTemplate extends MonoBookTemplate {
 	 */
 	function execute() {
 		global $wgRequest, $wgLang;
-		global $cavendishQRCode, $cavendishLogoText, $cavendishQRurladd;
+		global $cavendishQRCode, $cavendishQRurladd;
 		if (!isset($cavendishQRCode)) {
 			$cavendishQRCode = true;
 		}
 		$QRURL = htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()).$cavendishQRurladd;
-		$styleversion = '2.1.5 (wecowi)';
+		$styleversion = '2.1.6 (wecowi)';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
