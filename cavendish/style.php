@@ -5,14 +5,14 @@ include('config.php');
 	background-color: transparent; 
 	background-image: url("<?php echo $cavendishLogoURL ?>"); 
 	background-repeat: no-repeat; 
-	width:<?php echo $cavendishLogoWidth ?> px;
-	height:<?php echo $cavendishLogoHeight ?> px;
-	margin-top:<?php echo $cavendishLogoMargin ?> px;
+	width: <?php echo $cavendishLogoWidth ?>px;
+	height: <?php echo $cavendishLogoHeight ?>px;
+	margin-top: <?php echo $cavendishLogoMargin ?>px;
 	}
 <?php
 if ($cavendishSiteWith) { ?>
 #globalWrapper {
-	width:<?php echo $cavendishSiteWith ?> px;
+	width: <?php echo $cavendishSiteWith ?>px;
 	}
 <?php
 }
