@@ -1,27 +1,22 @@
 <?php header("Content-type: text/css");
-$logoURL = $_GET['logo'];	
-$logowidth = $_GET['logowidth'];
-$logoheight = $_GET['logoheight'];
-$logomargin=$GET['logomargin'];
-$pagewidth=$GET['pagewidth'];
-$sidebarsearch=$GET['$sidebarsearch'];
+include(config.php);
 ?>
 #header h6 a { 
 	background-color: transparent; 
-	background-image: url("'.$logoURL.'"); 
+	background-image: url("'.$cavendishLogoURL.'"); 
 	background-repeat: no-repeat; 
-	width:<?php echo $logowidth ?> px;
-	height:<?php echo $logoheight ?> px;
-	margin-top:<?php echo $logomargin ?> px;
+	width:<?php echo $cavendishLogoWidth ?> px;
+	height:<?php echo $cavendishLogoHeight ?> px;
+	margin-top:<?php echo $cavendishLogoMargin ?> px;
 	}
 <?php
-if (isset($pagewith)) { ?>
+if ($cavendishSiteWith) { ?>
 #globalWrapper {
-	width:<?php echo $pagewidth ?> px;
+	width:<?php echo $cavendishSiteWith ?> px;
 	}
 <?php
 }
-if ($sidebarsearch)	{
+if ($cavendishSidebarSearchbox)	{
 	?>#nav #p-search {display:none;}<?php
 }
 ?>

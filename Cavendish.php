@@ -33,7 +33,6 @@ class SkinCavendish extends SkinTemplate {
 		}
 	function setupSkinUserCss( OutputPage $out ) {
 		global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion, $wgLogo;
-		global $cavendishLogoText, $cavendishcolor, $cavendishLogoURL, $cavendishLogoWidth, $cavendishLogoHeight, $cavendishLogoMargin, $cavendishSiteWith, $cavendishExtensionCSS, $cavendishSidebarSearchbox;
 		parent::setupSkinUserCss( $out );
 		// Append to the default screen common & print styles...
 		$out->addStyle( 'cavendish/print.css', 'print' );
@@ -48,31 +47,17 @@ class SkinCavendish extends SkinTemplate {
 		$out->addStyle( 'cavendish/rtl.css', 'screen', '', 'rtl' );
 		
 		/* README for details */
-		if(!isset($cavendishLogoURL)) {
+		include('cavendish/config.php');
+		if(!$cavendishLogoURL) {
 			$cavendishLogoURL=$wgLogo;
 		}
-		if (!isset($cavendishcolor)) {
-			$cavendishcolor = 'blue';
-		}
-		$out->addStyle( 'cavendish/colors/'. $cavendishcolor .'.css', 'screen' );
 		
-		if(!isset($cavendishLogoWidth)) {
-			$cavendishLogoWidth="322";
-		}
-		if(!isset($cavendishLogoHeight)) {
-			$cavendishLogoHeight="53";
-		}
-		// TODO Searchbox Handling
-		if(!isset($cavendishSidebarSearchbox)) {
-			$cavendishSidebarSearchbox=false;
-		}
-		if (!isset($cavendishExtensionCSS)) {
-			$cavendishExtensionCSS = true;
-		}
+		$out->addStyle( 'cavendish/colors/'. $cavendishcolor .'.css', 'screen' );
+
 		if ($cavendishExtensionCSS) {
 			$out->addStyle( 'cavendish/extensions.css', 'screen' );	
 		}
-		$out->addStyle( 'cavendish/style.php?logowidth='.$cavendishSidebarSearchbox.'&logo='.$cavendishLogoURL.'&logoheight='.$cavendishLogoHeight.'&logomargin='.$cavendishLogoMarginToAdd.'&sidebarsearch='.$cavendishSidebarSearchbox.'&pagewidth='.$cavendishSiteWith, 'screen' );	
+		$out->addStyle( 'cavendish/style.php', 'screen' );	
 	}
 }
 
@@ -88,7 +73,7 @@ class CavendishTemplate extends MonoBookTemplate {
 	 */
 	function execute() {
 		global $wgRequest, $wgLang;
-		global $cavendishQRCode, $cavendishQRurladd;
+		include('cavendish/config.php');
 		if (!isset($cavendishQRCode)) {
 			$cavendishQRCode = true;
 		}
