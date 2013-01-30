@@ -1,5 +1,5 @@
 <?php header("Content-type: text/css");
-include(config.php);
+include('config.php');
 ?>
 #header h6 a { 
 	background-color: transparent; 
