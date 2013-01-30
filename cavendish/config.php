@@ -7,6 +7,8 @@
     $cavendishSiteWith = false; 
     $cavendishExtensionCSS = true; 
     $cavendishSidebarSearchbox =false;
-	$cavendishQRCode = true; 
+	$cavendishQRCode = true;
+	/* if showed on page or only on print (all, print)*/
+	$cavendishQRCodeMode = 'all';
 	$cavendishQRurladd = "?pk_campaign=qr-code";
 ?>

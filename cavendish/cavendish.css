@@ -2275,13 +2275,3 @@ ul#filetoc {
 .minor,.minoredit {
     color: gray;
 }
-
-/* QR-Code */
-/*
-#qrcode {
-	display:none;
-}
-*/
-#f-poweredbyico {
-	display:none;
-}

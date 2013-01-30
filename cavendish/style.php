@@ -16,8 +16,22 @@ if ($cavendishSiteWith) { ?>
 	}
 <?php
 }
-if ($cavendishSidebarSearchbox)	{
-	?>#nav #p-search {display:none;}<?php
+if ($cavendishSidebarSearchbox)	{ ?>
+	#nav #p-search {
+		display:none;
+	}<?php
+}
+if ($cavendishQRCodeMode=='all'){ ?>
+#f-poweredbyico {
+	display:none;
+}
+<?php
+}
+if ($cavendishQRCodeMode=='print'){ ?>
+#qrcode {
+	display:none;
+}
+<?php
 }
 ?>
 			
