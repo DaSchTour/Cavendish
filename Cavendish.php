@@ -48,9 +48,6 @@ class SkinCavendish extends SkinTemplate {
 		
 		/* README for details */
 		include('cavendish/config.php');
-		if(!$cavendishLogoURL) {
-			$cavendishLogoURL=$wgLogo;
-		}
 		
 		$out->addStyle( 'cavendish/colors/'. $cavendishcolor .'.css', 'screen' );
 

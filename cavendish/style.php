@@ -3,7 +3,7 @@ include('config.php');
 ?>
 #header h6 a { 
 	background-color: transparent; 
-	background-image: url("'.$cavendishLogoURL.'"); 
+	background-image: url("<?php echo $cavendishLogoURL ?>"); 
 	background-repeat: no-repeat; 
 	width:<?php echo $cavendishLogoWidth ?> px;
 	height:<?php echo $cavendishLogoHeight ?> px;
