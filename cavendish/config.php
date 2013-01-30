@@ -1,5 +1,5 @@
 <?php
-    $cavendishcolor = 'blue'; 
+    $cavendishColor = 'blue'; 
     $cavendishLogoURL = false; 
     $cavendishLogoWidth = '322'; 
     $cavendishLogoHeight = '53';

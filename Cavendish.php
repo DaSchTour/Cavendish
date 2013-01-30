@@ -49,7 +49,7 @@ class SkinCavendish extends SkinTemplate {
 		/* README for details */
 		include('cavendish/config.php');
 		
-		$out->addStyle( 'cavendish/colors/'. $cavendishcolor .'.css', 'screen' );
+		$out->addStyle( 'cavendish/colors/'. $cavendishColor .'.css', 'screen' );
 
 		if ($cavendishExtensionCSS) {
 			$out->addStyle( 'cavendish/extensions.css', 'screen' );	
@@ -71,9 +71,6 @@ class CavendishTemplate extends MonoBookTemplate {
 	function execute() {
 		global $wgRequest, $wgLang;
 		include('cavendish/config.php');
-		if (!isset($cavendishQRCode)) {
-			$cavendishQRCode = true;
-		}
 		$QRURL = htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()).$cavendishQRurladd;
 		$styleversion = '2.1.6 (wecowi)';
 		$this->skin = $skin = $this->data['skin'];
@@ -113,14 +110,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		<h6>
 		<a
 		href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>"
-		title="<?php $this->msg('mainpage') ?>"><?php 
-		if (!isset($cavendishLogoText)) {
-			echo $this->text('pagetitle');
-		}
-		else {
-			echo $cavendishLogoText;
-		}
-		?></a></h6>
+		title="<?php $this->msg('mainpage') ?>"><?php $this->text('pagetitle') ?></a></h6>
 		<div id="p-cactions" class="portlet"><ul>
 <?php			foreach($this->data['content_actions'] as $key => $tab) {
 					echo '
