@@ -72,7 +72,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		global $wgRequest, $wgLang;
 		include('cavendish/config.php');
 		$QRURL = htmlentities(Title::newFromText( $wgRequest->getVal( 'title' ))->getFullURL()).$cavendishQRurladd;
-		$styleversion = '2.2.0';
+		$styleversion = '2.2.1';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
