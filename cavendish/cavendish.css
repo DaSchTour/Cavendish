@@ -787,6 +787,10 @@ input[type="submit"] {
     cursor: pointer;
 }
 
+iframe {
+	border-width: 0;
+}
+
 /* nested elements */
 td > p, td > div {
 	margin: 0;
@@ -807,7 +811,6 @@ abbr,acronym,.explain {
     background: none;
     cursor: help;
 }
-
 
 q, blockquote {
     font-family: "Palatino Linotype", Georgia, "DejaVu Serif", serif;
