@@ -364,6 +364,10 @@ table.wikitable caption {
     font-weight: bold;
 }
 
+.mw-datatable {
+	margin-bottom: 1em;
+}
+
 .NavFrame {
 	border-radius: 6px;
     }
