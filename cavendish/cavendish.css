@@ -97,6 +97,7 @@ h1,h2,h3,h4,h5,h6 {
     padding-top: .5em;
     padding-bottom: .17em;
     border-bottom: 1px solid #aaa;
+    overflow: hidden;
 }
 
 h3,h4,h5,h6 {
