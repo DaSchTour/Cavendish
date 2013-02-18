@@ -557,6 +557,7 @@ div#header {
     height: 8px;
     z-index: 100; /* above the UL */
 	padding-left:5px;
+	overflow: visible;
 }
 
 /* P-Personal */
