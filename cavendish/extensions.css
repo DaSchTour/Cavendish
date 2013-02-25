@@ -265,6 +265,8 @@ table.flaggedrevs_editnotice {
 table .tips-4sq blockquote {
 	margin-right: 20px;
 	margin-left: 20px;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
 }
 
 /* yelp */
