@@ -254,9 +254,16 @@ ul.compact {
 /* Emphasis */
 /* Computers - General */
 kbd {
-    margin: 0.1em;
-    padding: 0.1em;
-    border: 1px #ccc;
+    background-color: #FAFAFA;
+    border-color: #CCCCCC #CCCCCC white;
+    border-radius: 4px 4px 4px 4px;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #FFFFFF inset;
+    color: #444444;
+    font-weight: normal;
+    padding: 0 6px;
+    white-space: nowrap;
 }
 
 kbd.command,code.command {
@@ -743,6 +750,10 @@ sup,sub {
     font-size: 0.8em;
 }
 
+del {
+  text-decoration: line-through;
+}
+
 legend {
     font-size: 10pt;
     font-weight: bold;
@@ -818,16 +829,17 @@ abbr,acronym,.explain {
 
 q, blockquote {
     font-family: "Palatino Linotype", Georgia, "DejaVu Serif", serif;
-	font-size: 1.15em;
+	font-size: 1em;
+	color:#888888;
 }
 
 
 /* Code */
-code, pre, tt { /* override IE6 default */
+code, pre, tt, kbd, samp { /* override IE6 default */
     font-size: 1em;
-    font-family: "Courier New", "Nimbus Mono L", monospace;
     overflow: auto;
     overflow-y: hidden;
+    font-family: Menlo,Monaco,"Courier New", "Nimbus Mono L",monospace,sans-serif;
 }
 
 code, tt {
