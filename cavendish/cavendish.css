@@ -2228,20 +2228,19 @@ span.highlightred {
 
 /** Special:Version */
 table#sv-ext,table#sv-hooks,table#sv-software,table#mw-version-entrypoints-table,.mw-special-Version #mw-content-text table {
-    margin: 1em;
     padding: 0em;
 }
 
 #sv-ext td,#sv-hooks td,#sv-software td,#sv-ext th,#sv-hooks th,#sv-software th, .mw-special-Version #content td, .mw-special-Version #content th
     {
     border: 1px solid #a0a0a0;
-    padding: 0 0.15em 0 0.15em;
+    padding: 0.1em 0.2em 0.1em 0.2em;
 }
 
 #sv-ext th,#sv-hooks th,#sv-software th, .mw-special-Version #content th {
     background-color: #f0f0f0;
     color: black;
-    padding: 0 0.15em 0 0.15em;
+    padding: 0.1em 0.2em 0.1em 0.2em;
 }
 
 tr.sv-space {
