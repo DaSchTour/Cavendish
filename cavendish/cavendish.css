@@ -1528,6 +1528,7 @@ special external link styling */
     margin-right: 0;
     margin-top: 0; 
     border-radius: 6px;
+    box-shadow: 3px 3px 3px grey;
 }
 
 #nav ul {
