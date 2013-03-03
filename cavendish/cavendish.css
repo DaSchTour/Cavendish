@@ -686,6 +686,14 @@ h3#siteSub {
 	margin-right: 0;
 }
 
+#contentSub2 .breadcrumb {
+	list-style-type: none;
+}
+
+#contentSub2 .breadcrumb li {
+	display: inline;
+}
+
 #jump-to-nav {
     display: none;
 }
