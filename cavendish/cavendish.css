@@ -2339,3 +2339,11 @@ h2.portal-heading, .portalseite h2, #hauptseite h2 {
 	border-bottom-left-radius: 6px;
 	border-bottom-right-radius: 6px;
 }
+
+.hauptseite-links, .portalseite .portal-left {
+    margin-right: 0.5em;	
+}
+
+.hauptseite-rechts, .portalseite .portal-right {
+    margin-left: 0.5em;
+}
