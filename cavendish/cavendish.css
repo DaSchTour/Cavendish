@@ -2324,11 +2324,23 @@ h2.portal-heading, .portalseite h2, #hauptseite h2 {
 	background-color: #F0F0F0;
 	padding: 0.2em 0; 
 	margin: 0; 
-	font-size: 110%; 
+	font-size: 1.1em; 
 	font-weight: bold;
 	text-indent: 0.5em;
 	border-top-left-radius: 6px;
 	border-top-right-radius: 6px;
+}
+
+h3.portal-heading, .portalseite h3, #hauptseite h3  {
+    background-color: #F0F0F0;
+    border-bottom: 1px dotted #AAAAAA;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0.1em;
+    padding-left: 0.3em;
+    padding-top: 0.1em;
 }
 
 .portalseite div.inhalt, div.portal-content, #hauptseite .inhalt {
