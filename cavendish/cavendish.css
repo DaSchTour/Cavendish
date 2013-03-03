@@ -1753,6 +1753,10 @@ special external link styling */
 	font-size: 8.5pt;
 }
 
+.suggestions {
+	margin-right: 142px;
+}
+
 /*
  ** the remaining portlets
  */
