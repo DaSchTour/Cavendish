@@ -201,6 +201,10 @@ input.createboxInput {
     color: red;
 }
 
+#bodyContent .srf-datatables select {
+	padding: 4px;
+}
+
 /* WikiEditor */
 div.wikiEditor-ui div.section {
     padding-left: 0;
