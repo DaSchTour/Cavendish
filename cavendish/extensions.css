@@ -228,8 +228,13 @@ div.lqt-thread-toolbar {
     display: inline;    
 }
 
-.lqt-talkpage-header, .lqt_header_content{
+.lqt-talkpage-header {
     border-radius: 6px;
+    border-width: 1px;
+    }
+
+.lqt_header_content {
+    border-bottom-right-radius: 6px;
     border-width: 1px;
     }
 
