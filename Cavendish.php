@@ -138,9 +138,20 @@ class CavendishTemplate extends MonoBookTemplate {
 								
 				?>
 			</ul></div>
-			<?php 
-			// TODO Searchbox Handling
-			$this->searchBox(); ?>
+			<div id="p-search" class="portlet" role="search">
+            <div id="searchBody" class="pBody">
+			<form action="<?php $this->text( 'wgScript' ); ?>" id="searchform">
+                <fieldset>
+                    <input type='hidden' name="title" value="<?php $this->text( 'searchtitle' ) ?>" />
+                        <?php echo $this->makeSearchInput( array( 'id' => 'searchinput') ); ?>
+                        <?php echo $this->makeSearchButton( 'go', array(
+                            'class' => 'searchButton btn btn-primary',
+                            'id'    => 'searchsubmit',
+                        ) ); ?>
+                        
+                        <?php echo $this->makeSearchButton( 'fulltext', array(
+                            'class' => 'btn',) );  ?>
+                </fieldset></form></div></div>
 	</div>
 	<div id="mBody">
 		<div id="side">
