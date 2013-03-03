@@ -2309,7 +2309,7 @@ ul#filetoc {
 
 /* Portal page style */
 
-h2.portal-heading {
+h2.portal-heading, .portalseite h2, #hauptseite h2 {
 	border-width: 1px;
 	border-color: #AAAAAA;
 	border-style: solid solid dotted;
@@ -2323,7 +2323,7 @@ h2.portal-heading {
 	border-top-right-radius: 6px;
 }
 
-.portalseite div.inhalt, div.portal-content {
+.portalseite div.inhalt, div.portal-content, #hauptseite .inhalt {
 	border: 1px solid #AAAAAA; 
 	border-top: 0px solid #FFFFFF; 
 	background-color: #FFFFFF; 
