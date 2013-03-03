@@ -923,6 +923,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     margin-top: 1em;
     clear: both;
     border-radius: 6px;
+    box-shadow: 3px 3px 3px grey;
 }
 
 /* emulate center */
@@ -2336,8 +2337,8 @@ h3.portal-heading, .portalseite h3, #hauptseite h3  {
     border-bottom: 1px dotted #AAAAAA;
     font-size: 1em;
     font-weight: bold;
-    margin-bottom: 0.2em;
-    margin-top: 0.2em;
+    margin-bottom: 0.5em;
+    margin-top: 0.5em;
     padding-bottom: 0.1em;
     padding-left: 0.3em;
     padding-top: 0.1em;
