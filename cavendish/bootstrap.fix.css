@@ -1,0 +1,8 @@
+/*
+ * Fixing what bootstrap crashes
+ * 
+ */
+
+#p-cactions li, #p-navigation li, #p-navigation h3 {
+	line-height: 1em;
+}

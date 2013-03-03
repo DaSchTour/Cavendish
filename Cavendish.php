@@ -35,6 +35,8 @@ class SkinCavendish extends SkinTemplate {
 		global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion, $wgLogo;
 		parent::setupSkinUserCss( $out );
 		// Append to the default screen common & print styles...
+		$out->addStyle( 'cavendish/bootstrap.css', 'screen' );
+        $out->addStyle( 'cavendish/bootstrap.fix.css', 'screen' );
 		$out->addStyle( 'cavendish/print.css', 'print' );
 		$out->addStyle( 'cavendish/cavendish.css', 'screen' );
 		if( $wgHandheldStyle ) {
