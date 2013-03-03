@@ -2309,6 +2309,13 @@ ul#filetoc {
 
 /* Portal page style */
 
+.portalseite div.portal-container, .hauptseite-oben, .hauptseite-links, .hauptseite-rechts, .hauptseite-unten {
+	box-shadow: 3px 3px 3px grey;
+    -moz-box-shadow: 3px 3px 3px grey;
+    -webkit-box-shadow: 3px 3px 3px grey;
+    margin-bottom: 1em;
+}
+
 h2.portal-heading, .portalseite h2, #hauptseite h2 {
 	border-width: 1px;
 	border-color: #AAAAAA;
