@@ -2314,6 +2314,7 @@ ul#filetoc {
     -moz-box-shadow: 3px 3px 3px grey;
     -webkit-box-shadow: 3px 3px 3px grey;
     margin-bottom: 1em;
+    border-radius: 6px;
 }
 
 h2.portal-heading, .portalseite h2, #hauptseite h2 {
