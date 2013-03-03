@@ -2306,3 +2306,29 @@ ul#filetoc {
 .minor,.minoredit {
     color: gray;
 }
+
+/* Portal page style */
+
+h2.portal-heading {
+	border-width: 1px;
+	border-color: #AAAAAA;
+	border-style: solid solid dotted;
+	background-color: #F0F0F0;
+	padding: 0.2em 0; 
+	margin: 0; 
+	font-size: 110%; 
+	font-weight: bold;
+	text-indent: 0.5em;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.portalseite div.inhalt, div.portal-content {
+	border: 1px solid #AAAAAA; 
+	border-top: 0px solid #FFFFFF; 
+	background-color: #FFFFFF; 
+	margin-bottom: 1em; 
+	padding: 0.5em 0.8em 0.5em 0.8em;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
