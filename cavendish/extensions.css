@@ -184,7 +184,7 @@ input.createboxInput {
 	border: 1px solid #FF8C00 !important;
 }
 
-.checkboxLabel {
+.checkboxLabel, .ui-widget {
 	white-space: nowrap;
 }
 
