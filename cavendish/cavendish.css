@@ -923,7 +923,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     margin-top: 1em;
     clear: both;
     border-radius: 6px;
-    box-shadow: 3px 3px 3px grey;
+/*    box-shadow: 3px 3px 3px grey; */
 }
 
 /* emulate center */
@@ -1006,7 +1006,7 @@ table.small {
     padding: 5px;
     font-size: 9pt;
     border-radius: 6px;
-    box-shadow: 5px 5px 5px #ccc;
+/*    box-shadow: 5px 5px 5px #ccc; */
 }
 
 #toctitle h2 {

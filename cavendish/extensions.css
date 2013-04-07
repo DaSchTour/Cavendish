@@ -129,7 +129,7 @@ table.smwtable tr.row-even td{
 
 .smwfact {
     border-radius: 6px;
-    box-shadow: 3px 3px 3px grey;
+    box-shadow: 2px 2px 2px grey;
 }
     
 #content div.smwfact table.smwfacttable {
@@ -182,6 +182,10 @@ input.createboxInput {
 
 #sfForm div.warningbox {
 	border: 1px solid #FF8C00 !important;
+}
+
+.checkboxLabel {
+	white-space: nowrap;
 }
 
 
