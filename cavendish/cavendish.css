@@ -380,7 +380,13 @@ table.wikitable caption {
 
 .NavFrame {
 	border-radius: 6px;
+	box-shadow:2px 2px 2px grey;
     }
+    
+table.infobox {
+	border-radius: 6px;
+	box-shadow:2px 2px 2px grey;
+}
 /* Meta */
 address {
     color: #666;
