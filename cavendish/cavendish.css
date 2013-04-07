@@ -923,7 +923,7 @@ pre.code .remark:before,pre.code .remark:after,pre.code .note:before {
     margin-top: 1em;
     clear: both;
     border-radius: 6px;
-/*    box-shadow: 3px 3px 3px grey; */
+    box-shadow: 2px 2px 2px grey;
 }
 
 /* emulate center */
@@ -1006,7 +1006,7 @@ table.small {
     padding: 5px;
     font-size: 9pt;
     border-radius: 6px;
-/*    box-shadow: 5px 5px 5px #ccc; */
+    box-shadow: 2px 2px 2px grey;
 }
 
 #toctitle h2 {
@@ -1155,7 +1155,7 @@ div.thumbinner {
 
 li.gallerybox div.thumb {
     border-radius: 6px;
-    box-shadow: 5px 5px 5px #ccc;
+    box-shadow: 2px 2px 2px grey;
 }
 
 div.thumb div a img {
@@ -1528,7 +1528,7 @@ special external link styling */
     margin-right: 0;
     margin-top: 0; 
     border-radius: 6px;
-    box-shadow: 3px 3px 3px grey;
+    box-shadow: 2px 2px 2px grey;
 }
 
 #nav ul {
@@ -1853,7 +1853,7 @@ special external link styling */
     margin-bottom: 0.9em;
     padding: 3px;
     border-radius: 6px;
-	box-shadow: 2px 2px 2px;
+	box-shadow: 2px 2px 2px grey;
 }
 
 
@@ -2316,9 +2316,7 @@ ul#filetoc {
 /* Portal page style */
 
 .portalseite div.portal-container, .hauptseite-oben, .hauptseite-links, .hauptseite-rechts, .hauptseite-unten {
-	box-shadow: 3px 3px 3px grey;
-    -moz-box-shadow: 3px 3px 3px grey;
-    -webkit-box-shadow: 3px 3px 3px grey;
+	box-shadow: 2px 2px 2px grey;
     margin-bottom: 1em;
     border-radius: 6px;
 }
