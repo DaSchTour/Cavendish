@@ -1073,6 +1073,10 @@ table.small {
 	font-weight: normal;
 }
 
+td.mw-enhanced-rc .newpage, td.mw-enhanced-rc .minoredit, td.mw-enhanced-rc .botedit {
+	font-weight: normal;
+}
+
 /* Preferences */
 
 #mw-pref-clear {
