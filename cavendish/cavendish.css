@@ -1081,6 +1081,16 @@ td.mw-enhanced-rc .newpage, td.mw-enhanced-rc .minoredit, td.mw-enhanced-rc .bot
 	font-weight: normal;
 }
 
+.skin-cavendish .mw-collapsible-toggle-expanded {
+	background: url("minus.png") no-repeat scroll left center transparent;
+	background-size: 12px 12px;
+}
+
+.skin-cavendish .mw-collapsible-toggle-collapsed {
+	background: url("plus.png") no-repeat scroll left center transparent;
+	background-size: 12px 12px;
+}
+
 /* Preferences */
 
 #mw-pref-clear {
