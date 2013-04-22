@@ -1073,6 +1073,10 @@ table.small {
 	font-weight: normal;
 }
 
+.skin-cavendish table.mw-enhanced-rc th, .skin-cavendish table.mw-enhanced-rc td {
+	vertical-align: middle;
+}
+
 td.mw-enhanced-rc .newpage, td.mw-enhanced-rc .minoredit, td.mw-enhanced-rc .botedit {
 	font-weight: normal;
 }
