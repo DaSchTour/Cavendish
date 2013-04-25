@@ -1386,6 +1386,7 @@ span.diffchange {
 #bodyContent a.external,#bodyContent a[href ^="gopher://"] {
     background: url("external.png") center right no-repeat;
     padding-right: 13px;
+    background-size: 10px 10px;
 }
 
 .rtl #bodyContent a.external,.rtl #bodyContent a[href ^="gopher://"] {
@@ -1400,6 +1401,7 @@ span.diffchange {
 #bodyContent a[href ^="mailto:"],.link-mailto {
     background: url("mail_icon.gif") center right no-repeat;
     padding: 0 18px;
+    
 }
 
 #bodyContent a[href ^="news://"] {
