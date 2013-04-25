@@ -1385,44 +1385,49 @@ span.diffchange {
 */
 #bodyContent a.external,#bodyContent a[href ^="gopher://"] {
     background: url("external.png") center right no-repeat;
-    padding-right: 13px;
-    background-size: 10px 10px;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 .rtl #bodyContent a.external,.rtl #bodyContent a[href ^="gopher://"] {
-    background-image: url("external-rtl.png");
+    background-image: url("external.png");
 }
 
 #bodyContent a[href ^="https://"],.link-https {
-    background: url("lock_icon.gif") center right no-repeat;
-    padding: 0 16px;
+    background: url("locked.png") center right no-repeat;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 #bodyContent a[href ^="mailto:"],.link-mailto {
-    background: url("mail_icon.gif") center right no-repeat;
-    padding: 0 18px;
-    
+    background: url("envelope.png") center right no-repeat;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 #bodyContent a[href ^="news://"] {
-    background: url("news_icon.png") center right no-repeat;
-    padding: 0 18px;
+    background: url("newspaper.png") center right no-repeat;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 #bodyContent a[href ^="ftp://"],.link-ftp {
-    background: url("file_icon.gif") center right no-repeat;
-    padding: 0 18px;
+    background: url("folder.png") center right no-repeat;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 #bodyContent a[href ^="irc://"],#bodyContent a.extiw[href ^="irc://"],.link-irc
     {
-    background: url("discussionitem_icon.gif") center right no-repeat;
-    padding: 0 18px;
+    background: url("speech-bubble-left-4.png") center right no-repeat;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 #bodyContent a[href ^="skype:"],.link-skype {
-    background: url("discussionitem_icon.gif") center right no-repeat;
-    padding: 0 18px;
+    background: url("speech-bubble-left-4.png") center right no-repeat;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 #bodyContent a.external[href $=".ogg"],#bodyContent a.external[href $=".ogg"],#bodyContent a.external[href
@@ -1432,7 +1437,8 @@ span.diffchange {
     $=".wav"],#bodyContent a.external[href $=".wav"],#bodyContent a.external[href
     $=".wma"],#bodyContent a.external[href $=".wma"],#bodyContent a.external[href $=".m4a"],.link-audio {
     background: url("audio.png") center right no-repeat;
-    padding: 0 13px;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 #bodyContent a.external[href $=".ogm"],#bodyContent a.external[href $=".ogm"],#bodyContent a.external[href
@@ -1440,13 +1446,15 @@ span.diffchange {
     $=".mpeg"],#bodyContent a.external[href $=".mpeg"],#bodyContent a.external[href
     $=".mpg"],#bodyContent a.external[href $=".mpg"],#bodyContent a.external[href $=".m4v"],.link-video {
     background: url("video.png") center right no-repeat;
-    padding: 0 13px;
+    padding-right: 18px;
+    background-size: 14px 14px;
 }
 
 #bodyContent a.external[href $=".pdf"], #bodyContent a.external[href $=".doc"], #bodyContent a.external[href
     $=".docx"],#bodyContent a.external[href $=".odt"], .link-document {
     background: url("document.png") center right no-repeat;
-    padding: 0 12px;
+    ppadding-right: 18px;
+    background-size: 14px 14px;
 }
 
 /* for rtl wikis */
