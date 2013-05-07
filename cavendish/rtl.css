@@ -210,3 +210,7 @@ input#wpSave, input#wpDiff {
 	float: right;
 	margin: 0 0 1em 3em;
 }
+
+.editsection, .mw-editsection {
+	float: left;
+}

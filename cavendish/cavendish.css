@@ -105,10 +105,14 @@ h3,h4,h5,h6 {
     font-weight: bold;
 }
 
-h1 .editsection,h2 .editsection,h3 .editsection,h4 .editsection,h5 .editsection,h6 .editsection
+h1 .editsection,h2 .editsection,h3 .editsection,h4 .editsection,h5 .editsection,h6 .editsection,h1 .mw-editsection,h2 .mw-editsection,h3 .mw-editsection,h4 .mw-editsection,h5 .mw-editsection,h6 .mw-editsection
     {
     font-size: 7pt;
     font-weight: normal;
+}
+
+.editsection, .mw-editsection {
+	float: right;
 }
 
 h1 {
@@ -1964,7 +1968,7 @@ td.mw-label {
     margin-bottom: 0;
 }
 
-* html div.editsection {
+* html div.editsection, * html div.mw-editsection {
     font-size: smaller;
 }
 
