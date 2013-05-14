@@ -243,6 +243,11 @@ div.lqt-thread-toolbar {
     border-width: 1px;
     }
 
+.lqt_watchlist_messages_notice {
+	border-radius: 6px;
+	background-color: #F2DEDE;
+}
+
 /* Flagged Revisions */
 div.flaggedrevs_basic, div.flaggedrevs_quality, div.flaggedrevs_pristine, div.flaggedrevs_notice {
  	border-radius: 6px;
