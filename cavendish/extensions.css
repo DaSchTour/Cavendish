@@ -243,9 +243,11 @@ div.lqt-thread-toolbar {
     border-width: 1px;
     }
 
-.lqt_watchlist_messages_notice {
+body.skin-cavendish a.lqt_watchlist_messages_notice {
 	border-radius: 6px;
 	background-color: #F2DEDE;
+	border-color: red;
+	padding: 0.5em 1.5em;
 }
 
 /* Flagged Revisions */
