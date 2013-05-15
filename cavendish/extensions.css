@@ -246,7 +246,8 @@ div.lqt-thread-toolbar {
 body.skin-cavendish a.lqt_watchlist_messages_notice {
 	border-radius: 6px;
 	background-color: #F2DEDE;
-	border-color: red;
+    border-color: #EED3D7;
+    color: #B94A48;
 	padding: 0.5em 1.5em;
 }
 
