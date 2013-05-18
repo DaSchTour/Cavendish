@@ -113,6 +113,7 @@ h1 .editsection,h2 .editsection,h3 .editsection,h4 .editsection,h5 .editsection,
 
 .editsection, .mw-editsection {
 	float: right;
+	line-height: inherit;
 }
 
 h1 {
