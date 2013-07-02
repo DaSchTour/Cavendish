@@ -1011,13 +1011,17 @@ table.small {
 
 /* TOC */
 
-#toc,.toc,.mw-warning {
+#toc, .toc, .mw-warning {
     border: 1px solid #AAA;
     background-color: #F9F9F9;
     padding: 5px;
     font-size: 9pt;
     border-radius: 6px;
     box-shadow:1px 1px 1px grey;
+}
+
+#toc, .toc {
+	display: inline-block;
 }
 
 #toctitle h2 {
@@ -1028,11 +1032,11 @@ table.small {
     font-weight: bold;
 }
 
-#toc #toctitle,.toc #toctitle,#toc .toctitle,.toc .toctitle {
+#toc #toctitle, .toc #toctitle, #toc .toctitle, .toc .toctitle {
     text-align: center;
 }
 
-#toc ul,.toc ul {
+#toc ul, .toc ul {
     list-style-type: none;
     list-style-image: none;
     margin-left: 0;
@@ -1040,7 +1044,7 @@ table.small {
     text-align: left;
 }
 
-#toc ul ul,.toc ul ul {
+#toc ul ul, .toc ul ul {
     margin: 0 0 0 2em;
 }
 
