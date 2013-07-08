@@ -387,6 +387,9 @@ table.wikitable caption {
 	border-radius: 6px;
 	box-shadow:1px 1px 1px grey;
     }
+.NavFrame .wikitable {
+	table-layout: auto;
+}
     
 table.infobox {
 	border-radius: 6px;
