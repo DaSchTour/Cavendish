@@ -383,12 +383,17 @@ table.wikitable caption {
 	margin-bottom: 1em;
 }
 
-.NavFrame {
+.NavFrame, .BoxenVerschmelzen {
 	border-radius: 6px;
 	box-shadow:1px 1px 1px grey;
     }
 .NavFrame .wikitable {
 	table-layout: auto;
+}
+
+.BoxenVerschmelzen .NavFrame, .wikitable .NavFrame {
+	border-radius: none;
+	box-shadow: none;
 }
     
 table.infobox {
