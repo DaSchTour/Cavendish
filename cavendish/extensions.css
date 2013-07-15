@@ -304,6 +304,10 @@ table .yelp-reviews blockquote {
 	padding-top: 6px;
 }
 
+#nav div li#buffer span.social {
+	padding-left: 19px;
+}
+
 #nav div li#facebook span span {
 	margin-left: -10px;
 	margin-top: -5px;
