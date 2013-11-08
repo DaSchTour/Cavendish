@@ -72,7 +72,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		global $wgRequest, $wgLang;
 		include('cavendish/config.php');
 		$QRURL = htmlentities( $this->getSkin()->getTitle()->getFullURL()).$cavendishQRurladd;
-		$styleversion = '2.2.1';
+		$styleversion = '2.3.3';
 		$this->skin = $skin = $this->data['skin'];
 		$action = $wgRequest->getText( 'action' );
 		if ( $action == "") {
@@ -235,8 +235,8 @@ class CavendishTemplate extends MonoBookTemplate {
 			</tr>
 			<tr>
 				<td><div id="skin-info">
-					Mozilla Cavendish Theme based on Cavendish style by Gabriel Wicke modified by <a href="http://www.dasch-tour.de" target="_blank">DaSch</a> for the <a href="http://www.wecowi.de/">Web Community Wiki</a><br/>
-					<a href="https://github.com/DaSchTour/Cavendish">github Projectpage</a> &ndash; <a href="https://github.com/DaSchTour/Cavendish/issues">Report Bug</a> &ndash; Skin-Version: <?php echo $styleversion ?>
+					Mozilla Cavendish Theme based on Cavendish style by Gabriel Wicke modified by <a href="http://www.dasch-tour.de" title="DaSch-Tour Blog" target="_blank">DaSch</a> for the <a href="http://www.wecowi.de/" title="Web Community Wiki">Web Community Wiki</a><br/>
+					<a href="https://github.com/DaSchTour/Cavendish" title="github projectpage">github Projectpage</a> &ndash; <a href="https://github.com/DaSchTour/Cavendish/issues" title="Bug reporting at github">Report Bug</a> &ndash; Skin-Version: <?php echo $styleversion ?>
 				</div></td>
 			</tr>
 		</table>
