@@ -349,7 +349,7 @@ table.wikitable {
 	line-height: 1.6em;
 	border-radius: 6px;
 	/* force width of tables (important for webkit) */
-	table-layout: fixed;
+	table-layout: auto;
 }
 
 table.wikitable th {
