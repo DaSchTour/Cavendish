@@ -21,7 +21,7 @@
   background: linear-gradient(to bottom, #455372 0%, #455372 52%, #3f4c6b 67%, #2a3753 100%);
   /* W3C */
 
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#455372', endColorstr='#2a3753', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@header-back', endColorstr='#2a3753', GradientType=0);
   /* IE6-9 */
 
 }
