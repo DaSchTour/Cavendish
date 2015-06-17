@@ -11,8 +11,20 @@
  */
 
 
-if( !defined( 'MEDIAWIKI' ) )
-	die( -1 );
+if ( !defined( 'MEDIAWIKI' ) ) {
+	die( 'This is an extension to the MediaWiki package and cannot be run standalone.' );
+}
+ 
+$wgExtensionCredits['skin'][] = array(
+	'path' => __FILE__,
+	'name' => 'Cavendish', // name as shown under [[Special:Version]]
+	'namemsg' => 'cavendish', // used since MW 1.24, see the section on "Localisation messages" below
+	'version' => '2.3.4',
+	'url' => 'https://www.mediawiki.org/wiki/Skin:Cavendish',
+	'author' => '[https://mediawiki.org/wiki/User:DaSch DaSch]',
+	'descriptionmsg' => 'cavendish-desc', // see the section on "Localisation messages" below
+	'license' => 'GPL-2.0+',
+);
 
 /**
  * Inherit main code from SkinTemplate, set the CSS and template filter.
