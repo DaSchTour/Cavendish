@@ -30,7 +30,7 @@ $wgValidSkinNames['cavendish'] = 'Cavendish';
 $wgAutoloadClasses['SkinCavendish'] = dirname(__FILE__).'/Cavendish.skin.php';
 $wgExtensionMessagesFiles['Cavendish'] = dirname(__FILE__).'/Cavendish.i18n.php';
 
-$wgResourceModules['skins.bootstrap'] = array(
+$wgResourceModules['skins.cavendish'] = array(
 	'styles' => array(
 		'Cavendish/cavendish/print.css' => array( 'media' => 'print' ),
 		'Cavendish/cavendish/cavendish.css' => array( 'media' => 'screen' ),
