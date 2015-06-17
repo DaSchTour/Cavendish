@@ -1,5 +1,5 @@
 <?php 
-class SkinCavendish extends SkinTemplate {
+class SkinCavendish extends MonoBookTemplate {
 	/** Using cavendish. */
     
     var $skinname = 'cavendish', $stylename = 'cavendish',
