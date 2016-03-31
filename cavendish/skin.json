@@ -1,0 +1,36 @@
+{
+	"name": "cavendish",
+	"author": [
+		"[https://mediawiki.org/wiki/User:DaSch DaSch]'",
+		"..."
+	],
+	"url": "https://www.mediawiki.org/wiki/Skin:Modern",
+	"descriptionmsg": "cavendish-desc",
+	"namemsg": "skinname-cavendish",
+	"license-name": "GPL-2.0+",
+	"type": "skin",
+	"ValidSkinNames": {
+		"cavendish": "Cavendish"
+	},
+	"ResourceModules": {
+		"skins.cavendish": {
+			"position": "top",
+			"styles": {
+				"cavendish.css": {
+					"media": "screen"
+				},
+				"print.css": {
+					"media": "print"
+				}
+			}
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "cavendish"
+	},
+	"AutoloadClasses": {
+		"SkinCavendish": "../Cavendish.skin.php"
+	},
+	"manifest_version": 1
+}
