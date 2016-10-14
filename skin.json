@@ -1,0 +1,45 @@
+{
+	"name": "Cavendish",
+	"author": [
+		"Daniel Schuba",
+		"..."
+	],
+	"url": "https://www.mediawiki.org/wiki/Skin:Cavendish",
+	"descriptionmsg": "cavendish-desc",
+	"namemsg": "skinname-cavendish",
+	"license-name": "GPL-2.0+",
+	"type": "skin",
+	"requires": {
+		"MediaWiki": ">= 1.25.0"
+	},
+	"ValidSkinNames": {
+		"cavendish": "Cavendish"
+	},
+	"MessagesDirs": {
+		"Cavendish": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"skins.cavendish": {
+			"position": "top",
+			"styles": {
+				"resources/cavendish.css": {
+					"media": "screen"
+				},
+				"resources/print.css": {
+					"media": "print"
+				}
+			}
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "Cavendish"
+	},
+	"AutoloadClasses": {
+		"SkinCavendish": "SkinCavendish.php",
+		"CavendishTemplate": "SkinCavendish.php"
+	},
+	"manifest_version": 1
+}

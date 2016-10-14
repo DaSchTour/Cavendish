@@ -34,4 +34,3 @@ if ($cavendishQRCodeMode=='print'){ ?>
 <?php
 }
 ?>
-			
