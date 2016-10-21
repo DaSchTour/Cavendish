@@ -1,0 +1,9 @@
+#header h6 a
+{
+	font-family:JournalRegular;
+	text-indent: 0;
+	font-size: 37pt;
+	color: #2DAAE1;
+	padding-left: 15px;
+	text-shadow:0.1em 0.1em 0.2em gray;
+}

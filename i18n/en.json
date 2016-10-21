@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": ["DaSch"]
+	},
+	"cavendish.css": "/* CSS placed here will affect users of the Modern skin */",
+	"cavendish.js": "/* Any JavaScript here will be loaded for users using the Cavendish skin */",
+	"skinname-cavendish": "Cavendish",
+	"cavendish-desc": "Mozilla cavendish theme. Modified by DaSch for MW 1.19 and WeCoWi. Loosely based on the cavendish style by Gabriel Wicke."
+}
