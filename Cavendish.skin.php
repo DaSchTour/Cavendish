@@ -42,20 +42,15 @@ class CavendishTemplate extends MonoBookTemplate {
 	 * Takes an associative array of data set from a SkinTemplate-based
 	 * class, and a wrapper for MediaWiki's localization database, and
 	 * outputs a formatted page.
-	 *
-	 * @access private
 	 */
 	function execute() {
 		global $wgRequest;
 
 		include('cavendish/config.php');
-		$QRURL = htmlentities( $this->getSkin()->getTitle()->getFullURL()).$cavendishQRurladd;
-		$styleversion = '2.3.4';
 		$this->skin = $skin = $this->data['skin'];
-		$action = $wgRequest->getText( 'action' );
-		if ( $action == "") {
-			$action = "view";
-		}
+		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $cavendishQRurladd;
+		$styleversion = '2.3.4';
+		$action = $wgRequest->getText( 'action', 'view' );
 
 		// HTML starts here
 		$this->html( 'headelement' );
@@ -104,8 +99,7 @@ class CavendishTemplate extends MonoBookTemplate {
 					# used for editing in Safari.
 					if( in_array( $action, array( 'edit', 'submit' ) ) && in_array( $key, array( 'edit', 'watch', 'unwatch' ) ) ) {
 						echo $skin->tooltip( "ca-$key" );
-					}
-					else {
+					} else {
 						echo $skin->tooltip( "ca-$key" );
 					}
 					echo '>'.htmlspecialchars($tab['text']).'</a></li>';
@@ -122,10 +116,16 @@ class CavendishTemplate extends MonoBookTemplate {
 			<div id="nav">
 <?php //sidebar
 		$sidebar = $this->data['sidebar'];
-		if ( !isset( $sidebar['SEARCH'] ) ) $sidebar['SEARCH'] = true;
-		if ( !isset( $sidebar['TOOLBOX'] ) ) $sidebar['TOOLBOX'] = true;
-		if ( !isset( $sidebar['LANGUAGES'] ) ) $sidebar['LANGUAGES'] = true;
-		foreach ($sidebar as $boxName => $cont) {
+		if ( !isset( $sidebar['SEARCH'] ) ) {
+			$sidebar['SEARCH'] = true;
+		}
+		if ( !isset( $sidebar['TOOLBOX'] ) ) {
+			$sidebar['TOOLBOX'] = true;
+		}
+		if ( !isset( $sidebar['LANGUAGES'] ) ) {
+			$sidebar['LANGUAGES'] = true;
+		}
+		foreach ( $sidebar as $boxName => $cont ) {
 			// TODO Searchbox Handling
 			if ( $boxName == 'SEARCH' ) {
 //				$this->searchBox();
@@ -166,7 +166,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		<table>
 			<tr>
 				<td rowspan="2" class="f-iconsection">
-		<?php //copytight icon
+		<?php //copyright icon
 		if($this->data['copyrightico']) { ?><div id="f-copyrightico"><?php $this->html('copyrightico') ?></div><?php } ?>
 				</td>
 				<td align="center">
@@ -176,29 +176,29 @@ class CavendishTemplate extends MonoBookTemplate {
 			'privacy', 'about', 'disclaimer', 'tagline',
 		);
 		$validFooterLinks = array();
-		foreach( $footerlinks as $aLink ) {
-			if( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
+		foreach ( $footerlinks as $aLink ) {
+			if ( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
 				$validFooterLinks[] = $aLink;
 			}
 		}
 		if ( count( $validFooterLinks ) > 0 ) {
 ?>			<ul id="f-list">
 <?php
-			foreach( $validFooterLinks as $aLink ) {
-				if( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
-?>					<li id="f-<?php echo$aLink?>"><?php $this->html($aLink) ?></li>
+			foreach ( $validFooterLinks as $aLink ) {
+				if ( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
+?>					<li id="f-<?php echo $aLink ?>"><?php $this->html( $aLink ) ?></li>
 <?php 			}
 			}
 		}
 ?></ul></td>
 				<td rowspan="2" class="f-iconsection">
 					<?php
-					$validFooterIcons = $this->getFooterIcons( "nocopyright" );
+					$validFooterIcons = $this->getFooterIcons( 'nocopyright' );
 					foreach ( $validFooterIcons as $blockName => $footerIcons ) { ?>
-							<div id="f-<?php echo htmlspecialchars($blockName); ?>ico"><?php
+							<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico"><?php
 						foreach ( $footerIcons as $icon ) {
 							echo $this->skin->makeFooterIcon( $icon );
-							}
+						}
 					}
 					?></div>
 					<?php
