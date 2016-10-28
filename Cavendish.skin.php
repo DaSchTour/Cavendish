@@ -44,13 +44,11 @@ class CavendishTemplate extends MonoBookTemplate {
 	 * outputs a formatted page.
 	 */
 	function execute() {
-		global $wgRequest;
-
 		include('cavendish/config.php');
 		$this->skin = $skin = $this->data['skin'];
 		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $cavendishQRurladd;
 		$styleversion = '2.3.4';
-		$action = $wgRequest->getText( 'action', 'view' );
+		$action = $skin->getRequest()->getText( 'action', 'view' );
 
 		// HTML starts here
 		$this->html( 'headelement' );
