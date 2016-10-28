@@ -1,16 +1,17 @@
-<?php 
+<?php
+
 class SkinCavendish extends SkinTemplate {
-	/** Using cavendish. */
-    
-    var $skinname = 'cavendish', $stylename = 'cavendish',
+    public $skinname = 'cavendish', $stylename = 'cavendish',
 		$template = 'CavendishTemplate', $useHeadElement = true;
 
 	/**
 	 * @param $out OutputPage object
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
-	    global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion, $wgLogo;
+	    global $wgHandheldStyle;
+
 		parent::setupSkinUserCss( $out );
+
 		$out->addModuleStyles( "skins.cavendish" );
 		if( $wgHandheldStyle ) {
 			// Currently in testing... try 'chick/main.css'
@@ -18,24 +19,24 @@ class SkinCavendish extends SkinTemplate {
 		}
 		$out->addStyle( 'cavendish/IE60Fixes.css', 'screen', 'IE 6' );
 		$out->addStyle( 'cavendish/IE70Fixes.css', 'screen', 'IE 7' );
-		
+
 		$out->addStyle( 'cavendish/rtl.css', 'screen', '', 'rtl' );
-		
+
 		/* README for details */
 		include('cavendish/config.php');
-		
+
 		$out->addStyle( 'cavendish/colors/'. $cavendishColor .'.css', 'screen' );
 
 		if ($cavendishExtensionCSS) {
-			$out->addStyle( 'cavendish/extensions.css', 'screen' );	
+			$out->addStyle( 'cavendish/extensions.css', 'screen' );
 		}
 		$out->addStyle( 'cavendish/style.php', 'screen' );
 	}
-    
+
 }
 
 class CavendishTemplate extends MonoBookTemplate {
-	var $skin;
+	public $skin;
 	/**
 	 * Template filter callback for cavendish skin.
 	 * Takes an associative array of data set from a SkinTemplate-based
@@ -45,7 +46,8 @@ class CavendishTemplate extends MonoBookTemplate {
 	 * @access private
 	 */
 	function execute() {
-		global $wgRequest, $wgLang;
+		global $wgRequest;
+
 		include('cavendish/config.php');
 		$QRURL = htmlentities( $this->getSkin()->getTitle()->getFullURL()).$cavendishQRurladd;
 		$styleversion = '2.3.4';
@@ -67,17 +69,17 @@ class CavendishTemplate extends MonoBookTemplate {
 		<div class="pBody">
 			<ul <?php $this->html('userlangattributes') ?>>
 			<?php foreach($this->data['personal_urls'] as $key => $item) {?>
-			
+
 			<li id="<?php echo Sanitizer::escapeId( "pt-$key" ) ?>" class="<?php
 					if ($item['active']) { ?>active <?php } ?>top-nav-element">
 				<span class="top-nav-left">&nbsp;</span>
-				<a class="top-nav-mid <?php echo htmlspecialchars($item['class']) ?>" 
+				<a class="top-nav-mid <?php echo htmlspecialchars($item['class']) ?>"
 				   href="<?php echo htmlspecialchars($item['href']) ?>">
 				   <?php echo htmlspecialchars($item['text']) ?></a>
 				<span class="top-nav-right">&nbsp;</span></li>
 				<?php
 				} ?>
-			
+
 			</ul>
 		</div>
 	</div>
@@ -109,10 +111,10 @@ class CavendishTemplate extends MonoBookTemplate {
 					}
 					echo '>'.htmlspecialchars($tab['text']).'</a></li>';
 				}
-								
+
 				?>
 			</ul></div>
-			<?php 
+			<?php
 			// TODO Searchbox Handling
 			$this->searchBox(); ?>
 	</div>
@@ -127,7 +129,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		foreach ($sidebar as $boxName => $cont) {
 			// TODO Searchbox Handling
 			if ( $boxName == 'SEARCH' ) {
-//				$this->searchBox();	
+//				$this->searchBox();
 			} elseif ( $boxName == 'TOOLBOX' ) {
 				$this->toolbox();
 			} elseif ( $boxName == 'LANGUAGES' ) {
@@ -157,7 +159,7 @@ class CavendishTemplate extends MonoBookTemplate {
 					<!-- end content -->
 					<?php if($this->data['dataAfterContent']) { $this->html ('dataAfterContent'); } ?>
 				</div>
-			</div><!-- end of MAINCONTENT div -->	
+			</div><!-- end of MAINCONTENT div -->
 		</div>
 	</div><!-- end of MBODY div -->
 	<div class="visualClear"></div>
@@ -200,13 +202,13 @@ class CavendishTemplate extends MonoBookTemplate {
 							}
 					}
 					?></div>
-					<?php 
+					<?php
 					// QR-Code added on option
 					if ($cavendishQRCode) { ?>
 					<div id="qrcode">
 						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height=80 width=80 alt="QR Code generator" title="" /></a>
 					</div>
-					<?php } ?> 
+					<?php } ?>
 				</td>
 			</tr>
 			<tr>
