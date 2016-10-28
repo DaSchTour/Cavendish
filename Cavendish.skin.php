@@ -13,7 +13,7 @@ class SkinCavendish extends SkinTemplate {
 		parent::setupSkinUserCss( $out );
 
 		$out->addModuleStyles( "skins.cavendish" );
-		if( $wgHandheldStyle ) {
+		if ( $wgHandheldStyle ) {
 			// Currently in testing... try 'chick/main.css'
 			$out->addStyle( $wgHandheldStyle, 'handheld' );
 		}
@@ -23,11 +23,11 @@ class SkinCavendish extends SkinTemplate {
 		$out->addStyle( 'cavendish/rtl.css', 'screen', '', 'rtl' );
 
 		/* README for details */
-		include('cavendish/config.php');
+		include( 'cavendish/config.php' );
 
-		$out->addStyle( 'cavendish/colors/'. $cavendishColor .'.css', 'screen' );
+		$out->addStyle( 'cavendish/colors/' . $cavendishColor . '.css', 'screen' );
 
-		if ($cavendishExtensionCSS) {
+		if ( $cavendishExtensionCSS ) {
 			$out->addStyle( 'cavendish/extensions.css', 'screen' );
 		}
 		$out->addStyle( 'cavendish/style.php', 'screen' );
@@ -44,7 +44,7 @@ class CavendishTemplate extends MonoBookTemplate {
 	 * outputs a formatted page.
 	 */
 	function execute() {
-		include('cavendish/config.php');
+		include( 'cavendish/config.php' );
 		$this->skin = $skin = $this->data['skin'];
 		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $cavendishQRurladd;
 		$styleversion = '2.3.4';
@@ -57,17 +57,17 @@ class CavendishTemplate extends MonoBookTemplate {
 <!-- Skin-Version: <?php echo $styleversion ?> //Please leave this for bugtracking purpose//-->
 <div id="globalWrapper" class="<?php echo $action ?>">
 	<div id="p-personal" class="portlet">
-		<h5><?php $this->msg('personaltools') ?></h5>
+		<h5><?php $this->msg( 'personaltools' ) ?></h5>
 		<div class="pBody">
-			<ul <?php $this->html('userlangattributes') ?>>
-			<?php foreach($this->data['personal_urls'] as $key => $item) {?>
+			<ul <?php $this->html( 'userlangattributes' ) ?>>
+			<?php foreach ( $this->data['personal_urls'] as $key => $item ) { ?>
 
 			<li id="<?php echo Sanitizer::escapeId( "pt-$key" ) ?>" class="<?php
-					if ($item['active']) { ?>active <?php } ?>top-nav-element">
+					if ( $item['active'] ) { ?>active <?php } ?>top-nav-element">
 				<span class="top-nav-left">&nbsp;</span>
-				<a class="top-nav-mid <?php echo htmlspecialchars($item['class']) ?>"
-				   href="<?php echo htmlspecialchars($item['href']) ?>">
-				   <?php echo htmlspecialchars($item['text']) ?></a>
+				<a class="top-nav-mid <?php echo htmlspecialchars( $item['class'] ) ?>"
+				   href="<?php echo htmlspecialchars( $item['href'] ) ?>">
+				   <?php echo htmlspecialchars( $item['text'] ) ?></a>
 				<span class="top-nav-right">&nbsp;</span></li>
 				<?php
 				} ?>
@@ -79,28 +79,28 @@ class CavendishTemplate extends MonoBookTemplate {
 		<a name="top" id="contentTop"></a>
 		<h6>
 		<a
-		href="<?php echo htmlspecialchars($this->data['nav_urls']['mainpage']['href'])?>"
-		title="<?php $this->msg('mainpage') ?>"><?php $this->text('pagetitle') ?></a></h6>
+		href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] )?>"
+		title="<?php $this->msg( 'mainpage' ) ?>"><?php $this->text( 'pagetitle' ) ?></a></h6>
 		<div id="p-cactions" class="portlet"><ul>
-<?php			foreach($this->data['content_actions'] as $key => $tab) {
+<?php			foreach ( $this->data['content_actions'] as $key => $tab ) {
 					echo '
 				<li id="' . Sanitizer::escapeId( "ca-$key" ) . '"';
-					if( $tab['class'] ) {
-						echo ' class="'.htmlspecialchars($tab['class']).'"';
+					if ( $tab['class'] ) {
+						echo ' class="' . htmlspecialchars( $tab['class'] ) . '"';
 					}
-					echo '><a href="'.htmlspecialchars($tab['href']).'"';
+					echo '><a href="' . htmlspecialchars( $tab['href'] ) . '"';
 					# We don't want to give the watch tab an accesskey if the
 					# page is being edited, because that conflicts with the
 					# accesskey on the watch checkbox.  We also don't want to
 					# give the edit tab an accesskey, because that's fairly su-
 					# perfluous and conflicts with an accesskey (Ctrl-E) often
 					# used for editing in Safari.
-					if( in_array( $action, array( 'edit', 'submit' ) ) && in_array( $key, array( 'edit', 'watch', 'unwatch' ) ) ) {
+					if ( in_array( $action, array( 'edit', 'submit' ) ) && in_array( $key, array( 'edit', 'watch', 'unwatch' ) ) ) {
 						echo $skin->tooltip( "ca-$key" );
 					} else {
 						echo $skin->tooltip( "ca-$key" );
 					}
-					echo '>'.htmlspecialchars($tab['text']).'</a></li>';
+					echo '>' . htmlspecialchars( $tab['text'] ) . '</a></li>';
 				}
 
 				?>
@@ -112,7 +112,7 @@ class CavendishTemplate extends MonoBookTemplate {
 	<div id="mBody">
 		<div id="side">
 			<div id="nav">
-<?php //sidebar
+<?php // sidebar
 		$sidebar = $this->data['sidebar'];
 		if ( !isset( $sidebar['SEARCH'] ) ) {
 			$sidebar['SEARCH'] = true;
@@ -142,19 +142,19 @@ class CavendishTemplate extends MonoBookTemplate {
 		<div id="column-content">
 			<div id="content">
 				<a id="top"></a>
-				<?php if($this->data['sitenotice']) { ?><div id="siteNotice"><?php $this->html('sitenotice') ?></div><?php } ?>
-				<h1 id="firstHeading" class="firstHeading"><?php $this->html('title') ?></h1>
+				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
+				<h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
 				<div id="bodyContent">
-					<h3 id="siteSub"><?php $this->msg('tagline') ?></h3>
-					<div id="contentSub"><?php $this->html('subtitle') ?></div>
-					<?php if($this->data['undelete']) { ?><div id="contentSub2"><?php $this->html('undelete') ?></div><?php } ?>
-					<?php if($this->data['newtalk'] ) { ?><div class="usermessage"><?php $this->html('newtalk')  ?></div><?php } ?>
-					<?php if($this->data['showjumplinks']) { ?><div id="jump-to-nav"><?php $this->msg('jumpto') ?> <a href="#column-one"><?php $this->msg('jumptonavigation') ?></a>, <a href="#searchInput"><?php $this->msg('jumptosearch') ?></a></div><?php } ?>
+					<h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3>
+					<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
+					<?php if ( $this->data['undelete'] ) { ?><div id="contentSub2"><?php $this->html( 'undelete' ) ?></div><?php } ?>
+					<?php if ( $this->data['newtalk'] ) { ?><div class="usermessage"><?php $this->html( 'newtalk' )  ?></div><?php } ?>
+					<?php if ( $this->data['showjumplinks'] ) { ?><div id="jump-to-nav"><?php $this->msg( 'jumpto' ) ?> <a href="#column-one"><?php $this->msg( 'jumptonavigation' ) ?></a>, <a href="#searchInput"><?php $this->msg( 'jumptosearch' ) ?></a></div><?php } ?>
 					<!-- start content -->
-					<?php $this->html('bodytext') ?>
-					<?php if($this->data['catlinks']) { $this->html('catlinks'); } ?>
+					<?php $this->html( 'bodytext' ) ?>
+					<?php if ( $this->data['catlinks'] ) { $this->html( 'catlinks' ); } ?>
 					<!-- end content -->
-					<?php if($this->data['dataAfterContent']) { $this->html ('dataAfterContent'); } ?>
+					<?php if ( $this->data['dataAfterContent'] ) { $this->html ( 'dataAfterContent' ); } ?>
 				</div>
 			</div><!-- end of MAINCONTENT div -->
 		</div>
@@ -164,8 +164,8 @@ class CavendishTemplate extends MonoBookTemplate {
 		<table>
 			<tr>
 				<td rowspan="2" class="f-iconsection">
-		<?php //copyright icon
-		if($this->data['copyrightico']) { ?><div id="f-copyrightico"><?php $this->html('copyrightico') ?></div><?php } ?>
+		<?php // copyright icon
+		if ( $this->data['copyrightico'] ) { ?><div id="f-copyrightico"><?php $this->html( 'copyrightico' ) ?></div><?php } ?>
 				</td>
 				<td align="center">
 <?php	// Generate additional footer links
@@ -201,7 +201,7 @@ class CavendishTemplate extends MonoBookTemplate {
 					?></div>
 					<?php
 					// QR-Code added on option
-					if ($cavendishQRCode) { ?>
+					if ( $cavendishQRCode ) { ?>
 					<div id="qrcode">
 						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height=80 width=80 alt="QR Code generator" title="" /></a>
 					</div>
