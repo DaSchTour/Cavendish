@@ -1,14 +1,14 @@
 <?php
 
 class SkinCavendish extends SkinTemplate {
-    public $skinname = 'cavendish', $stylename = 'cavendish',
+	public $skinname = 'cavendish', $stylename = 'cavendish',
 		$template = 'CavendishTemplate', $useHeadElement = true;
 
 	/**
 	 * @param $out OutputPage object
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
-	    global $wgHandheldStyle;
+		global $wgHandheldStyle;
 
 		parent::setupSkinUserCss( $out );
 
@@ -56,8 +56,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		if ( $action == "") {
 			$action = "view";
 		}
-		// Suppress warnings to prevent notices about missing indexes in $this->data
-		wfSuppressWarnings();
+
 		// HTML starts here
 		$this->html( 'headelement' );
 ?>
@@ -226,6 +225,5 @@ class CavendishTemplate extends MonoBookTemplate {
 		$this->printTrail();
 		echo Html::closeElement( 'body' );
 		echo Html::closeElement( 'html' );
-		wfRestoreWarnings();
 	}
 } // end of class
