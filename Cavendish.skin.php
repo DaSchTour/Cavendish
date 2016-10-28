@@ -211,10 +211,9 @@ class CavendishTemplate extends MonoBookTemplate {
 				</td>
 			</tr>
 			<tr>
-				<td><div id="skin-info">
-					Mozilla Cavendish Theme based on Cavendish style by Gabriel Wicke modified by <a href="http://www.dasch-tour.de" title="DaSch-Tour Blog" target="_blank">DaSch</a> for the <a href="http://www.wecowi.de/" title="Web Community Wiki">Web Community Wiki</a><br/>
-					<a href="https://github.com/DaSchTour/Cavendish" title="github projectpage">github Projectpage</a> &ndash; <a href="https://github.com/DaSchTour/Cavendish/issues" title="Bug reporting at github">Report Bug</a> &ndash; Skin-Version: <?php echo $styleversion ?>
-				</div></td>
+				<td>
+					<div id="skin-info"><?php echo $skin->getMsg( 'cavendish-skin-info' )->parse() ?></div>
+				</td>
 			</tr>
 		</table>
 	</div><!-- end of the FOOTER div -->
