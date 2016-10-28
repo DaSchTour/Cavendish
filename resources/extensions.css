@@ -8,29 +8,29 @@
 * Poem Extension
 */
 .poem {
-    margin-left: 1.5em;
-    white-space: nowrap;
-    overflow: auto;
+	margin-left: 1.5em;
+	white-space: nowrap;
+	overflow: auto;
 }
 
 .poem p {
-    padding-left: 0.5em;
-    border-left: 1px solid #FFD700;
-   }
+	padding-left: 0.5em;
+	border-left: 1px solid #FFD700;
+}
 
 /* HeaderTabs */
 
 #headertabs {
-    border: 1px solid #AAAAAA;
-    }
+	border: 1px solid #AAAAAA;
+}
 
 /* Syntax Hightlight Geshi */
 .mw-geshi {
-    padding: 1em;
-    margin: 1em 0;
-    border: 1px dashed #2fab6f;
-    border-radius: 6px;
-    overflow-y: hidden;
+	padding: 1em;
+	margin: 1em 0;
+	border: 1px dashed #2fab6f;
+	border-radius: 6px;
+	overflow-y: hidden;
 }
 
 .mw-geshi ol {
@@ -39,72 +39,72 @@
 
 /* Cite Extension */
 ol.references {
-    font-size: 0.9em;
+	font-size: 0.9em;
 }
 
 sup.reference {
-    font-size: 0.8em;
-    line-height: 0.8em;
-    vertical-align: top;
-    position: relative;
-    top: -0.2em;
-    white-space: nowrap;
+	font-size: 0.8em;
+	line-height: 0.8em;
+	vertical-align: top;
+	position: relative;
+	top: -0.2em;
+	white-space: nowrap;
 }
 
 .reference * {
 	vertical-align: top;
 }
 
-ol.references>li:target {
-    background-color: #def;
+ol.references > li:target {
+	background-color: #def;
 }
 
 sup.reference:target {
-    background-color: #def;
+	background-color: #def;
 }
 
 /* Google Maps */
 .pmap {
-    margin-top: -5px;
-    margin-bottom: 5px;
+	margin-top: -5px;
+	margin-bottom: 5px;
 }
 
 .google-map {
-    margin-bottom: 1.5em;
-    width: auto;
+	margin-bottom: 1.5em;
+	width: auto;
 }
 
 /* Semantic MediaWiki */
 table.smwtable tr.smwfooter td.sortbottom {
-    padding-top: 3px;
-    padding-bottom: 3px;
+	padding-top: 3px;
+	padding-bottom: 3px;
 }
 
 table.smwtable {
-    margin: 1em 1em 1em 0;
-    border: 1px #aaa solid;
-    border-collapse: collapse;
-    empty-cells: show;
-    border-radius: 6px;
+	margin: 1em 1em 1em 0;
+	border: 1px #aaa solid;
+	border-collapse: collapse;
+	empty-cells: show;
+	border-radius: 6px;
 }
 
 table.smwtable th {
-    background-color: #e0e9e9;
-    border: 1px #aaa solid;
-    padding: 0.2em;
-    white-space: nowrap;
-    padding: 0.2em;
+	background-color: #e0e9e9;
+	border: 1px #aaa solid;
+	padding: 0.2em;
+	white-space: nowrap;
+	padding: 0.2em;
 }
 
 table.smwtable td {
-    border: 1px #aaa solid;
-    padding: 0.2em;
+	border: 1px #aaa solid;
+	padding: 0.2em;
 }
 
 table.smwtable caption {
-    margin-left: inherit;
-    margin-right: inherit;
-    font-weight: bold;
+	margin-left: inherit;
+	margin-right: inherit;
+	font-weight: bold;
 }
 
 table.smwtable tr.row-odd {
@@ -124,18 +124,18 @@ table.smwtable tr.row-even td{
 }
 
 .smwttactiveinline {
-    white-space: nowrap;
+	white-space: nowrap;
 }
 
 .smwfact {
-    border-radius: 6px;
-    box-shadow: 2px 2px 2px grey;
+	border-radius: 6px;
+	box-shadow: 2px 2px 2px grey;
 }
-    
+	
 #content div.smwfact table.smwfacttable {
 	border-radius: 0px;
 }
-    
+	
 .smwtt {
 	font-size: 10pt;
 }
@@ -151,16 +151,16 @@ div div#drilldown-categories-wrapper {
 }
 /* Semantic Forms */
 input.createboxInput {
-    margin-top: 1px;
-    margin-bottom: 1px;
+	margin-top: 1px;
+	margin-bottom: 1px;
 }
 /*
 .mandatoryFieldSpan {
 	border: 1px solid #8B0000;
 	border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-    background: #FFA07A;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #FFA07A;
 }
 
 .inputSpan {
@@ -188,22 +188,21 @@ input.createboxInput {
 	white-space: nowrap;
 }
 
-
 /* Semantic Result Formats */
 #bodyContent table.navigation_table tr td.month_name {
-    font-size: 18pt;
+	font-size: 18pt;
 }
 
 #bodyContent table.month_calendar tr.weekdays {
-    background: #E0E9E9;
+	background: #E0E9E9;
 }
 
 #bodyContent table.month_calendar td.today div.day {
-    background: #E0E9E9;
+	background: #E0E9E9;
 }
 
 #bodyContent table.month_calendar td.weekend_day div.day {
-    color: red;
+	color: red;
 }
 
 #bodyContent .srf-datatables select {
@@ -212,7 +211,7 @@ input.createboxInput {
 
 /* WikiEditor */
 div.wikiEditor-ui div.section {
-    padding-left: 0;
+	padding-left: 0;
 }
 
 div.wikiEditor-ui div.wikiEditor-ui-top {
@@ -226,28 +225,28 @@ div.wikiEditor-ui div.wikiEditor-ui-tabs div{
 
 /* Liquid Threads */
 div.lqt-thread-toolbar {
-    right: 3em;
+	right: 3em;
 }
 
 .lqt-thread-toolbar-command-list {
-    display: inline;    
+	display: inline;	
 }
 
 .lqt-talkpage-header {
-    border-radius: 6px;
-    border-width: 1px;
-    }
+	border-radius: 6px;
+	border-width: 1px;
+}
 
 .lqt_header_content {
-    border-bottom-right-radius: 6px;
-    border-width: 1px;
-    }
+	border-bottom-right-radius: 6px;
+	border-width: 1px;
+}
 
 body.skin-cavendish a.lqt_watchlist_messages_notice {
 	border-radius: 6px;
 	background-color: #F2DEDE;
-    border-color: #EED3D7;
-    color: #B94A48;
+	border-color: #EED3D7;
+	color: #B94A48;
 	padding: 0.5em 1.5em;
 }
 
@@ -262,13 +261,13 @@ table.flaggedrevs_editnotice {
 	
 /* OpenID */
 #p-personal .pBody li#pt-openidlogin {
-    background: none;
-    padding-left: 0;
+	background: none;
+	padding-left: 0;
 }
 
 .openid_large_link {
 	border-radius: 6px;
-    border-width: 1px;
+	border-width: 1px;
 }
 .openid_small_providers_block {
 	padding-right: 5em;
@@ -279,8 +278,8 @@ table.flaggedrevs_editnotice {
 
 /* Input Box */
 .inputbox-element {
-    white-space: nowrap;
-    display: inline-block;
+	white-space: nowrap;
+	display: inline-block;
 }
 
 /* 4sq */
@@ -297,8 +296,7 @@ table .yelp-reviews blockquote {
 	margin-left: 20px;
 }
 
-/* Social Sidebar WeCoWi*/
-
+/* Social Sidebar WeCoWi */
 #nav div li span.social {
 	padding-bottom: 6px;
 	padding-top: 6px;

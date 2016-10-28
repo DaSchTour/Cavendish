@@ -1,18 +1,18 @@
 /**
-* Stylesheet for Babel extension.
-*
-* This should be added to your MediaWiki:Common.css page when installing this
-* extension and should not be modified.  You may modify the CSS code on the
-* MediaWiki:Common.css page to adjust colours etc.
-*
-* @addtogroup Extensions
-*/
+ * Stylesheet for Babel extension.
+ *
+ * This should be added to your MediaWiki:Common.css page when installing this
+ * extension and should not be modified. You may modify the CSS code on the
+ * MediaWiki:Common.css page to adjust colours etc.
+ *
+ * @addtogroup Extensions
+ */
 
 /* Babel wrapper layout. */
 table.mw-babel-wrapper {
-	width:        238px;
-	float:        right;
-	clear:        right;
+	width: 238px;
+	float: right;
+	clear: right;
 	border-style: solid;
 	margin-right: 0;
 	border-width: 1px;
@@ -21,8 +21,8 @@ table.mw-babel-wrapper {
 
 /* Babel box layout. */
 div.mw-babel-box {
-	float:  left;
-	clear:  left;
+	float: left;
+	clear: left;
 	margin: 1px;
 }
 
@@ -31,16 +31,16 @@ div.mw-babel-box table {
 }
 
 div.mw-babel-box table th {
-	width:       238px;
-	width:       45px;
-	height:      45px;
-	font-size:   14pt;
+	width: 238px;
+	width: 45px;
+	height: 45px;
+	font-size: 14pt;
 	font-family: monospace;
 }
 
 div.mw-babel-box table td {
-	font-size:   8pt;
-	padding:     4pt;
+	font-size: 8pt;
+	padding: 4pt;
 	line-height: 1.25em;
 }
 

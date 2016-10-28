@@ -8,12 +8,12 @@ include('config.php');
 	width: <?php echo $cavendishLogoWidth ?>px;
 	height: <?php echo $cavendishLogoHeight ?>px;
 	margin-top: <?php echo $cavendishLogoMargin ?>px;
-	}
+}
 <?php
 if ($cavendishSiteWith) { ?>
 #globalWrapper {
 	width: <?php echo $cavendishSiteWith ?>px;
-	}
+}
 <?php
 }
 if ($cavendishSidebarSearchbox)	{ ?>

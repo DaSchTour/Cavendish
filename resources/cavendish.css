@@ -77,6 +77,7 @@ hr {
 /* General Structure */
 body {
 	font-family: Verdana, "DejaVu Sans", sans-serif;
+	/* @embed */
 	background: url("images/subsite_back.png") repeat-x;
 	background-color: #FFF;
 	margin-top: 0;
@@ -104,7 +105,8 @@ h3, h4, h5, h6 {
 	font-weight: bold;
 }
 
-h1 .editsection, h2 .editsection, h3 .editsection, h4 .editsection, h5 .editsection, h6 .editsection, h1 .mw-editsection, h2 .mw-editsection, h3 .mw-editsection, h4 .mw-editsection, h5 .mw-editsection, h6 .mw-editsection {
+h1 .editsection, h2 .editsection, h3 .editsection, h4 .editsection, h5 .editsection, h6 .editsection,
+h1 .mw-editsection, h2 .mw-editsection, h3 .mw-editsection, h4 .mw-editsection, h5 .mw-editsection, h6 .mw-editsection {
 	font-size: 7pt;
 	font-weight: normal;
 }
@@ -1199,7 +1201,7 @@ li.gallerybox div.thumb {
 }
 
 div.thumb div a img {
-	/*    border: 1px solid #cccccc; */
+	/* border: 1px solid #cccccc; */
 }
 
 div.thumbinner div.thumbcaption {
@@ -1514,7 +1516,7 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 	margin: 0 0 0.5em 0em;
 	float: none;
 	padding: 0;
-	/*    width: 11.6em; */
+	/* width: 11.6em; */
 	overflow: hidden;
 }
 
@@ -1527,7 +1529,7 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 .portlet h5, .portlet h3 {
 	background: transparent;
 	padding: 0em 1em 0em 0.5em;
-	/*    text-transform: lowercase; */
+	/* text-transform: lowercase; */
 	display: inline;
 	font-size: 8.5pt;
 	height: 1em;
@@ -1765,7 +1767,8 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 	background: #fff;
 }
 
-#p-search {/*    position: relative; */
+#p-search {
+	/* position: relative; */
 	z-index: 3;
 	border-bottom: none;
 }
@@ -2023,7 +2026,8 @@ span.searchmatch {
 	box-shadow: 0 0 2px #0000DD;
 }
 
-span.updatedmarker {/*    color: black; */
+span.updatedmarker {
+	/* color: black; */
 	color: #00ff00;
 }
 
@@ -2140,7 +2144,8 @@ div.tip {
 	background: #dfd;
 }
 
-div.note {/*    border: solid goldenrod 2px; */
+div.note {
+	/* border: solid goldenrod 2px; */
 	padding: 0px 10px 0px 10px;
 	margin: 10px 0px 10px 0px;
 	background: #ffd;
@@ -2151,8 +2156,8 @@ div.note:before {
 	content: "";
 }
 
-.figure {/* for future use */
-
+.figure {
+	/* for future use */
 }
 
 .originaldocinfo {

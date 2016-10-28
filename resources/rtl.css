@@ -24,7 +24,7 @@ To test:
 */
 body {
 	direction: rtl;
-/*    unicode-bidi: bidi-override;*/
+/*	unicode-bidi: bidi-override;*/
 	unicode-bidi: embed;
 }
 #column-content {
