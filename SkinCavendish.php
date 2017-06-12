@@ -19,15 +19,18 @@ class SkinCavendish extends SkinTemplate {
 	function setupSkinUserCss( OutputPage $out ) {
 		parent::setupSkinUserCss( $out );
 
-		$out->addModuleStyles( 'skins.cavendish' );
-
-		$out->addStyle( 'Cavendish/resources/colors/' . $this->cavendishConfig->get( 'CavendishColor' ) . '.css', 'screen' );
+		// Base CSS modules
+		$modules = array(
+			'skins.cavendish',
+			'skins.cavendish.' . $this->cavendishConfig->get( 'CavendishColor' )
+		);
 
 		if ( $this->cavendishConfig->get( 'CavendishExtensionCSS' ) ) {
-			$out->addStyle( 'Cavendish/resources/extensions.css', 'screen' );
+			$modules[] = 'skins.cavendish.extensions';
 		}
+		$out->addModuleStyles( $modules );
 
-		/* README for details */
+		/* See README for details */
 		include 'resources/config.php';
 
 		$out->addStyle( 'Cavendish/resources/style.php', 'screen' );
@@ -36,6 +39,7 @@ class SkinCavendish extends SkinTemplate {
 
 class CavendishTemplate extends MonoBookTemplate {
 	public $skin;
+
 	/**
 	 * Template filter callback for Cavendish skin.
 	 * Takes an associative array of data set from a SkinTemplate-based
@@ -45,14 +49,12 @@ class CavendishTemplate extends MonoBookTemplate {
 	function execute() {
 		$this->skin = $skin = $this->data['skin'];
 		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $this->config->get( 'CavendishQRUrlAdd' );
-		$styleversion = '2.3.5';
 		$action = $skin->getRequest()->getText( 'action', 'view' );
 
 		// HTML starts here
 		$this->html( 'headelement' );
 ?>
 <div id="internal"></div>
-<!-- Skin version: <?php echo $styleversion ?> //Please leave this for bugtracking purpose//-->
 <div id="globalWrapper" class="<?php echo htmlspecialchars( $action, ENT_QUOTES ) ?>">
 	<div id="p-personal" class="portlet">
 		<h5><?php $this->msg( 'personaltools' ) ?></h5>
@@ -94,8 +96,8 @@ class CavendishTemplate extends MonoBookTemplate {
 			<ul>
 			<?php
 			foreach ( $this->data['content_actions'] as $key => $tab ) {
-					echo $this->makeListItem( $key, $tab );
-				}
+				echo $this->makeListItem( $key, $tab );
+			}
 			?>
 			</ul>
 		</div>
@@ -145,7 +147,7 @@ class CavendishTemplate extends MonoBookTemplate {
 			<tr>
 				<td rowspan="2" class="f-iconsection">
 		<?php // copyright icon
-		if ( $this->data['copyrightico'] ) { ?><div id="f-copyrightico"><?php $this->skin->makeFooterIcon( $this->data['copyrightico'] ) ?></div><?php } ?>
+		if ( $this->data['copyrightico'] ) { ?><div id="f-copyrightico"><?php echo $this->skin->makeFooterIcon( $this->data['copyrightico'] ) ?></div><?php } ?>
 				</td>
 				<td align="center">
 <?php	// Generate additional footer links
@@ -153,12 +155,14 @@ class CavendishTemplate extends MonoBookTemplate {
 			'lastmod', 'viewcount', 'credits', 'copyright',
 			'privacy', 'about', 'disclaimer', 'tagline',
 		);
+
 		$validFooterLinks = array();
 		foreach ( $footerLinks as $aLink ) {
 			if ( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
 				$validFooterLinks[] = $aLink;
 			}
 		}
+
 		if ( count( $validFooterLinks ) > 0 ) {
 ?>			<ul id="f-list">
 <?php
@@ -193,7 +197,7 @@ class CavendishTemplate extends MonoBookTemplate {
 			<tr>
 				<td>
 					<div id="skin-info">
-						<?php echo $skin->msg( 'cavendish-skin-info', $styleversion )->parse() ?>
+						<?php echo $skin->msg( 'cavendish-skin-info', '2.4.0' )->parse() ?>
 					</div>
 				</td>
 			</tr>

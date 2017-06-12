@@ -4,6 +4,8 @@
 		"Daniel Schuba",
 		"..."
 	],
+	"version": "2.4.0",
+	"@note": "Remember to update the version number in SkinCavendish.php, too, since it's passed to the \"cavendish-skin-info\" i18n message!",
 	"url": "https://www.mediawiki.org/wiki/Skin:Cavendish",
 	"descriptionmsg": "cavendish-desc",
 	"namemsg": "skinname-cavendish",
@@ -40,6 +42,38 @@
 					"media": "print"
 				}
 			}
+		},
+		"skins.cavendish.extensions": {
+			"position": "top",
+			"styles": {
+				"resources/extensions.css": {
+					"media": "screen"
+				}
+			}
+		},
+		"skins.cavendish.blue": {
+			"position": "top",
+			"styles": {
+				"resources/colors/blue.css": {
+					"media": "screen"
+				}
+			}
+		},
+		"skins.cavendish.brown": {
+			"position": "top",
+			"styles": {
+				"resources/colors/brown.css": {
+					"media": "screen"
+				}
+			}
+		},
+		"skins.cavendish.green": {
+			"position": "top",
+			"styles": {
+				"resources/colors/green.css": {
+					"media": "screen"
+				}
+			}
 		}
 	},
 	"ResourceFileModulePaths": {
@@ -58,6 +92,7 @@
 			"+ext.liquidThreads": "resources/ext.liquidThreads.css",
 			"+jquery.wikiEditor": "resources/jquery.wikiEditor.css",
 			"+mediawiki.action.history.styles": "resources/mediawiki.action.history.styles.css",
+			"+mediawiki.action.view.filepage": "resources/mediawiki.action.view.filepage.css",
 			"+mediawiki.diff.styles": "resources/mediawiki.diff.styles.css",
 			"+mediawiki.special.preferences.styles": "resources/mediawiki.special.preferences.styles.css",
 			"+mediawiki.special.version": "resources/mediawiki.special.version.css"

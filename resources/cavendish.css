@@ -1752,7 +1752,7 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 	text-align: center;
 	vertical-align: top;
 	padding-right: 1em;
-	white-space: nowrap
+	white-space: nowrap;
 }
 
 #f-list li {
@@ -1791,7 +1791,8 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 	width: 100%;
 	padding-bottom: 25px;
 }
-/* more IE fixes */ /* float/negative margin brokenness */
+/* more IE fixes */
+/* float/negative margin brokenness */
 * html #footer {
 	margin-top: 0;
 }
@@ -1973,10 +1974,6 @@ div.note:before {
 	content: "";
 }
 
-.figure {
-	/* for future use */
-}
-
 .originaldocinfo {
 	font-size: 0.8em;
 	background: #ffd;
@@ -2126,25 +2123,6 @@ span.highlightred {
 /* Special:AllPages */
 .allpageslist {
 	margin: auto;
-}
-
-/* filetoc */
-ul#filetoc {
-	text-align: center;
-	border: 1px solid #aaaaaa;
-	background-color: #f9f9f9;
-	padding: 5px;
-	font-size: 95%;
-	margin-bottom: 0.5em;
-	margin-left: 0;
-	margin-right: 0;
-	border-radius: 6px;
-}
-
-#filetoc li {
-	display: inline;
-	list-style-type: none;
-	padding-right: 2em;
 }
 
 .newpage {
