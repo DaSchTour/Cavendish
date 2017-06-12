@@ -1276,7 +1276,7 @@ span.texhtml {
 }
 
 /*
- ** classes for special content elements like town boxes
+ ** classes for special content elements
  ** intended to be referenced directly from the wiki src
 
  ** User styles
@@ -1304,72 +1304,6 @@ table.rimage {
 	line-height: 1.4em;
 	margin: 0;
 	padding: 0;
-}
-
-/* Page history styling */
-/* the auto-generated edit comments */
-.autocomment {
-	color: gray;
-}
-
-#pagehistory span.user {
-	margin-left: 1.4em;
-	margin-right: 0.4em;
-}
-
-#pagehistory span.minor {
-	font-weight: bold;
-}
-
-#pagehistory li {
-	border: 1px solid white;
-	padding: 2px;
-	border-radius: 6px;
-}
-
-#pagehistory li:focus, #pagehistory li:hover {
-	box-shadow: 0 0 2px inset;
-}
-
-#pagehistory li.selected {
-	background-color: #f9f9f9;
-	border: 1px dashed #aaaaaa;
-	border-radius: 6px;
-}
-
-/*
- ** Diff rendering
- */
-table.diff {
-	background: white;
-}
-
-td.diff-otitle {
-	background: #ffffff;
-}
-
-td.diff-ntitle {
-	background: #ffffff;
-}
-
-td.diff-addedline {
-	background: #ccffcc;
-	font-size: smaller;
-}
-
-td.diff-deletedline {
-	background: #ffffaa;
-	font-size: smaller;
-}
-
-td.diff-context {
-	background: #eeeeee;
-	font-size: smaller;
-}
-
-span.diffchange {
-	color: red;
-	font-weight: bold;
 }
 
 /*
@@ -1648,7 +1582,7 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
  */
 #p-logo {
 	z-index: 3;
-	position: absolute; /*needed to use z-index */
+	position: absolute; /* needed to use z-index */
 	top: 0;
 	left: 0;
 	height: 155px;
@@ -1871,10 +1805,6 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 	font-size: smaller;
 }
 
-#pagehistory li.selected {
-	position: relative;
-}
-
 .redirecttext {
 	font-size: 150%;
 	margin: 5px;
@@ -1916,11 +1846,6 @@ span.searchmatch {
 	padding: 5px;
 	border-radius: 5px;
 	box-shadow: 0 0 2px #0000DD;
-}
-
-span.updatedmarker {
-	/* color: black; */
-	color: #00ff00;
 }
 
 span.newpageletter {
@@ -2186,12 +2111,11 @@ span.highlightred {
 	clear: both;
 }
 
-/* Special:Recentchanges*/
-
+/* Special:RecentChanges */
 .mw-special-Recentchanges ul.special {
 	margin: 0;
 	border-radius: 6px;
-	border: 1px white solid;
+	border: 1px #fff solid;
 }
 
 .mw-special-Recentchanges ul.special li {
@@ -2199,7 +2123,7 @@ span.highlightred {
 	list-style-image: none;
 }
 
-/* Spezial:Allpages */
+/* Special:AllPages */
 .allpageslist {
 	margin: auto;
 }
@@ -2232,7 +2156,6 @@ ul#filetoc {
 }
 
 /* Portal page style */
-
 .portalseite div.portal-container, .hauptseite-oben, .hauptseite-links, .hauptseite-rechts, .hauptseite-unten {
 	box-shadow: 1px 1px 1px grey;
 	margin-bottom: 1em;

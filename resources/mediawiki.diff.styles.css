@@ -1,0 +1,31 @@
+table.diff {
+	background: #fff;
+}
+
+td.diff-otitle {
+	background: #fff;
+}
+
+td.diff-ntitle {
+	background: #fff;
+}
+
+td.diff-addedline {
+	background: #ccffcc;
+	font-size: smaller;
+}
+
+td.diff-deletedline {
+	background: #ffffaa;
+	font-size: smaller;
+}
+
+td.diff-context {
+	background: #eee;
+	font-size: smaller;
+}
+
+span.diffchange {
+	color: red;
+	font-weight: bold;
+}

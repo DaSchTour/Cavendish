@@ -57,6 +57,8 @@
 			"+ext.inputBox.styles": "resources/ext.inputBox.styles.css",
 			"+ext.liquidThreads": "resources/ext.liquidThreads.css",
 			"+jquery.wikiEditor": "resources/jquery.wikiEditor.css",
+			"+mediawiki.action.history.styles": "resources/mediawiki.action.history.styles.css",
+			"+mediawiki.diff.styles": "resources/mediawiki.diff.styles.css",
 			"+mediawiki.special.preferences.styles": "resources/mediawiki.special.preferences.styles.css",
 			"+mediawiki.special.version": "resources/mediawiki.special.version.css"
 		}
