@@ -12,7 +12,7 @@ class SkinCavendish extends SkinTemplate {
 
 		parent::setupSkinUserCss( $out );
 
-		$out->addModuleStyles( "skins.cavendish" );
+		$out->addModuleStyles( 'skins.cavendish' );
 		if ( $wgHandheldStyle ) {
 			// Currently in testing... try 'chick/main.css'
 			$out->addStyle( $wgHandheldStyle, 'handheld' );
@@ -54,7 +54,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		$this->html( 'headelement' );
 ?>
 <div id="internal"></div>
-<!-- Skin-Version: <?php echo $styleversion ?> //Please leave this for bugtracking purpose//-->
+<!-- Skin version: <?php echo $styleversion /* Please leave this for bug tracking purpose */ ?> -->
 <div id="globalWrapper" class="<?php echo $action ?>">
 	<div id="p-personal" class="portlet">
 		<h5><?php $this->msg( 'personaltools' ) ?></h5>
@@ -210,7 +210,7 @@ class CavendishTemplate extends MonoBookTemplate {
 			</tr>
 			<tr>
 				<td>
-					<div id="skin-info"><?php echo $skin->getMsg( 'cavendish-skin-info' )->parse() ?></div>
+					<div id="skin-info"><?php echo $skin->getMsg( 'cavendish-skin-info', $styleversion )->parse() ?></div>
 				</td>
 			</tr>
 		</table>

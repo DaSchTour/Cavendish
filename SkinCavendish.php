@@ -1,83 +1,77 @@
-<?php 
+<?php
 class SkinCavendish extends SkinTemplate {
-	/** Using cavendish. */
-    
-    var $skinname = 'cavendish', $stylename = 'cavendish',
+	public $skinname = 'cavendish', $stylename = 'cavendish',
 		$template = 'CavendishTemplate', $useHeadElement = true;
 
 	/**
 	 * @param $out OutputPage object
 	 */
 	function setupSkinUserCss( OutputPage $out ) {
-	    global $wgHandheldStyle, $wgStyleVersion, $wgJsMimeType, $wgStylePath, $wgVersion, $wgLogo;
+		global $wgHandheldStyle;
+
 		parent::setupSkinUserCss( $out );
-		$out->addModuleStyles( "skins.cavendish" );
+
+		$out->addModuleStyles( 'skins.cavendish' );
 		if( $wgHandheldStyle ) {
 			// Currently in testing... try 'chick/main.css'
 			$out->addStyle( $wgHandheldStyle, 'handheld' );
 		}
 		$out->addStyle( 'Cavendish/resources/IE60Fixes.css', 'screen', 'IE 6' );
 		$out->addStyle( 'Cavendish/resources/IE70Fixes.css', 'screen', 'IE 7' );
-		
+
 		$out->addStyle( 'Cavendish/resources/rtl.css', 'screen', '', 'rtl' );
-		
+
 		/* README for details */
-		include('resources/config.php');
-		
+		include 'resources/config.php';
+
 		$out->addStyle( 'Cavendish/resources/colors/'. $cavendishColor .'.css', 'screen' );
 
-		if ($cavendishExtensionCSS) {
+		if ( $cavendishExtensionCSS ) {
 			$out->addStyle( 'Cavendish/resources/extensions.css', 'screen' );
 		}
 		$out->addStyle( 'Cavendish/resources/style.php', 'screen' );
 	}
-    
+
 }
 
 class CavendishTemplate extends MonoBookTemplate {
-	var $skin;
+	public $skin;
 	/**
-	 * Template filter callback for cavendish skin.
+	 * Template filter callback for Cavendish skin.
 	 * Takes an associative array of data set from a SkinTemplate-based
 	 * class, and a wrapper for MediaWiki's localization database, and
 	 * outputs a formatted page.
-	 *
-	 * @access private
 	 */
 	function execute() {
-		global $wgRequest, $wgLang;
-		include('resources/config.php');
-		$QRURL = htmlentities( $this->getSkin()->getTitle()->getFullURL()).$cavendishQRurladd;
-		$styleversion = '2.3.5';
+		include 'resources/config.php';
+
 		$this->skin = $skin = $this->data['skin'];
-		$action = $wgRequest->getText( 'action' );
-		if ( $action == "") {
-			$action = "view";
-		}
-		// Suppress warnings to prevent notices about missing indexes in $this->data
-		wfSuppressWarnings();
+		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $cavendishQRurladd;
+		$styleversion = '2.3.5';
+		$action = $skin->getRequest()->getText( 'action', 'view' );
+
 		// HTML starts here
 		$this->html( 'headelement' );
 ?>
 <div id="internal"></div>
-<!-- Skin-Version: <?php echo $styleversion ?> //Please leave this for bugtracking purpose//-->
+<!-- Skin version: <?php echo $styleversion ?> //Please leave this for bugtracking purpose//-->
 <div id="globalWrapper" class="<?php echo $action ?>">
 	<div id="p-personal" class="portlet">
-		<h5><?php $this->msg('personaltools') ?></h5>
+		<h5><?php $this->msg( 'personaltools' ) ?></h5>
 		<div class="pBody">
-			<ul <?php $this->html('userlangattributes') ?>>
+			<ul<?php $this->html( 'userlangattributes' ) ?>>
 			<?php foreach($this->data['personal_urls'] as $key => $item) {?>
-			
+
 			<li id="<?php echo Sanitizer::escapeId( "pt-$key" ) ?>" class="<?php
 					if ($item['active']) { ?>active <?php } ?>top-nav-element">
 				<span class="top-nav-left">&nbsp;</span>
-				<a class="top-nav-mid <?php echo htmlspecialchars($item['class']) ?>" 
+				<a class="top-nav-mid <?php echo htmlspecialchars(@$item['class']) ?>"
 				   href="<?php echo htmlspecialchars($item['href']) ?>">
 				   <?php echo htmlspecialchars($item['text']) ?></a>
 				<span class="top-nav-right">&nbsp;</span></li>
 				<?php
 				} ?>
-			
+
 			</ul>
 		</div>
 	</div>
@@ -111,7 +105,7 @@ class CavendishTemplate extends MonoBookTemplate {
 				}
 				?>
 			</ul></div>
-			<?php 
+			<?php
 			// TODO Searchbox Handling
 			$this->searchBox(); ?>
 	</div>
@@ -120,13 +114,19 @@ class CavendishTemplate extends MonoBookTemplate {
 			<div id="nav">
 <?php //sidebar
 		$sidebar = $this->data['sidebar'];
-		if ( !isset( $sidebar['SEARCH'] ) ) $sidebar['SEARCH'] = true;
-		if ( !isset( $sidebar['TOOLBOX'] ) ) $sidebar['TOOLBOX'] = true;
-		if ( !isset( $sidebar['LANGUAGES'] ) ) $sidebar['LANGUAGES'] = true;
-		foreach ($sidebar as $boxName => $cont) {
+		if ( !isset( $sidebar['SEARCH'] ) ) {
+			$sidebar['SEARCH'] = true;
+		}
+		if ( !isset( $sidebar['TOOLBOX'] ) ) {
+			$sidebar['TOOLBOX'] = true;
+		}
+		if ( !isset( $sidebar['LANGUAGES'] ) ) {
+			$sidebar['LANGUAGES'] = true;
+		}
+		foreach ( $sidebar as $boxName => $cont ) {
 			// TODO Searchbox Handling
 			if ( $boxName == 'SEARCH' ) {
-//				$this->searchBox();	
+//				$this->searchBox();
 			} elseif ( $boxName == 'TOOLBOX' ) {
 				$this->toolbox();
 			} elseif ( $boxName == 'LANGUAGES' ) {
@@ -156,7 +156,7 @@ class CavendishTemplate extends MonoBookTemplate {
 					<!-- end content -->
 					<?php if($this->data['dataAfterContent']) { $this->html ('dataAfterContent'); } ?>
 				</div>
-			</div><!-- end of MAINCONTENT div -->	
+			</div><!-- end of MAINCONTENT div -->
 		</div>
 	</div><!-- end of MBODY div -->
 	<div class="visualClear"></div>
@@ -164,7 +164,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		<table>
 			<tr>
 				<td rowspan="2" class="f-iconsection">
-		<?php //copytight icon
+		<?php //copyright icon
 		if($this->data['copyrightico']) { ?><div id="f-copyrightico"><?php $this->html('copyrightico') ?></div><?php } ?>
 				</td>
 				<td align="center">
@@ -191,28 +191,29 @@ class CavendishTemplate extends MonoBookTemplate {
 ?></ul></td>
 				<td rowspan="2" class="f-iconsection">
 					<?php
-					$validFooterIcons = $this->getFooterIcons( "nocopyright" );
+					$validFooterIcons = $this->getFooterIcons( 'nocopyright' );
 					foreach ( $validFooterIcons as $blockName => $footerIcons ) { ?>
-							<div id="f-<?php echo htmlspecialchars($blockName); ?>ico"><?php
+							<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico"><?php
 						foreach ( $footerIcons as $icon ) {
 							echo $this->skin->makeFooterIcon( $icon );
-							}
+						}
 					}
 					?></div>
-					<?php 
+					<?php
 					// QR-Code added on option
 					if ($cavendishQRCode) { ?>
 					<div id="qrcode">
 						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height=80 width=80 alt="QR Code generator" title="" /></a>
 					</div>
-					<?php } ?> 
+					<?php } ?>
 				</td>
 			</tr>
 			<tr>
-				<td><div id="skin-info">
-					Mozilla Cavendish Theme based on Cavendish style by Gabriel Wicke modified by <a href="http://www.dasch-tour.de" title="DaSch-Tour Blog" target="_blank">DaSch</a> for the <a href="http://www.wecowi.de/" title="Web Community Wiki">Web Community Wiki</a><br/>
-					<a href="https://github.com/DaSchTour/Cavendish" title="github projectpage">github Projectpage</a> &ndash; <a href="https://github.com/DaSchTour/Cavendish/issues" title="Bug reporting at github">Report Bug</a> &ndash; Skin-Version: <?php echo $styleversion ?>
-				</div></td>
+				<td>
+					<div id="skin-info">
+						<?php echo $skin->msg( 'cavendish-skin-info', $styleversion )->parse() ?>
+					</div>
+				</td>
 			</tr>
 		</table>
 	</div><!-- end of the FOOTER div -->
@@ -223,6 +224,5 @@ class CavendishTemplate extends MonoBookTemplate {
 		$this->printTrail();
 		echo Html::closeElement( 'body' );
 		echo Html::closeElement( 'html' );
-		wfRestoreWarnings();
 	}
 } // end of class
