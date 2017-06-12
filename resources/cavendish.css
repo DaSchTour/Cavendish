@@ -823,10 +823,6 @@ input.historysubmit {
 	margin-left: 1.6em;
 }
 
-input#wpSummary {
-	width: 80%;
-}
-
 input {
 	margin: 2px;
 	vertical-align: middle;
@@ -1010,20 +1006,12 @@ table.small {
 	text-align: center;
 }
 
-#editpage-copywarn {
-	margin-top: 2em;
-	margin-bottom: 2em;
-	border-radius: 6px;
-	padding: 0.5em;
-}
-
 #mw-anon-edit-warning, .mw-warning-with-logexcerpt, .mw-editinginterface {
 	border-radius: 6px;
 	border-width: 1px;
 }
 
-/* TOC */
-
+/* Table of Contents */
 #toc, .toc, .mw-warning {
 	border: 1px solid #AAA;
 	background-color: #F9F9F9;
@@ -1072,23 +1060,6 @@ table.small {
 	padding: 5px;
 }
 
-#content table.mw-enhanced-rc {
-	margin-bottom: 0.1em;
-}
-
-.skin-cavendish td.mw-enhanced-rc {
-	font-family: Verdana, "DejaVu Sans", sans-serif;
-	font-weight: normal;
-}
-
-.skin-cavendish table.mw-enhanced-rc th, .skin-cavendish table.mw-enhanced-rc td {
-	vertical-align: middle;
-}
-
-td.mw-enhanced-rc .newpage, td.mw-enhanced-rc .minoredit, td.mw-enhanced-rc .botedit {
-	font-weight: normal;
-}
-
 .skin-cavendish .mw-icon-arrow-expanded, .skin-cavendish .mw-collapsible-arrow.mw-collapsible-toggle-expanded {
 	/* @embed */
 	background: url("images/minus.png") no-repeat scroll left center transparent;
@@ -1099,22 +1070,6 @@ td.mw-enhanced-rc .newpage, td.mw-enhanced-rc .minoredit, td.mw-enhanced-rc .bot
 	/* @embed */
 	background: url("images/plus.png") no-repeat scroll left center transparent;
 	background-size: 12px 12px;
-}
-
-/* Preferences */
-
-#mw-pref-clear {
-	clear: both;
-}
-
-.mw-prefs-buttons a {
-	padding-top: 4px;
-	vertical-align: middle;
-}
-
-table#mw_metadata {
-	margin-left: 0;
-	margin-top: 1em;
 }
 
 table#mw-prefixindex-list-table {
@@ -1132,12 +1087,6 @@ span.comment {
 
 .mw-specialpagecached {
 	font-style: italic;
-}
-
-table.filehistory {
-	overflow: scroll;
-	width: 100%;
-	font-size: 0.9em;
 }
 
 /* images */
@@ -1293,87 +1242,93 @@ table.rimage {
 }
 
 /*
- ** keep the whitespace in front of the ^=, hides rule from konqueror
- ** this is css3, the validator doesn't like it when validating as css2
+ ** External link icons
  */
-#bodyContent a.external, #bodyContent a[href ^="gopher://"] {
+#bodyContent a.external, #bodyContent a[href^="gopher://"] {
 	/* @embed */
 	background: url("images/external.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-.rtl #bodyContent a.external, .rtl #bodyContent a[href ^="gopher://"] {
-	/* @embed */
-	background-image: url("images/external.png");
-}
-
-#bodyContent a[href ^="https://"], .link-https {
+#bodyContent a[href^="https://"],
+.link-https {
 	/* @embed */
 	background: url("images/locked.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-#bodyContent a[href ^="mailto:"], .link-mailto {
+#bodyContent a[href^="mailto:"],
+.link-mailto {
 	/* @embed */
 	background: url("images/envelope.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-#bodyContent a[href ^="news://"] {
+#bodyContent a[href^="news://"] {
 	/* @embed */
 	background: url("images/newspaper.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-#bodyContent a[href ^="ftp://"], .link-ftp {
+#bodyContent a[href^="ftp://"],
+.link-ftp {
 	/* @embed */
 	background: url("images/folder.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-#bodyContent a[href ^="irc://"], #bodyContent a.extiw[href ^="irc://"], .link-irc {
+#bodyContent a[href^="irc://"], #bodyContent a.extiw[href^="irc://"],
+.link-irc {
 	/* @embed */
 	background: url("images/speech-bubble-left-4.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-#bodyContent a[href ^="skype:"], .link-skype {
+#bodyContent a[href^="skype:"],
+.link-skype {
 	/* @embed */
 	background: url("images/speech-bubble-left-4.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-#bodyContent a.external[href $=".ogg"], #bodyContent a.external[href $=".ogg"], #bodyContent a.external[href
-$=".mid"], #bodyContent a.external[href $=".mid"], #bodyContent a.external[href
-$=".midi"], #bodyContent a.external[href $=".midi"], #bodyContent a.external[href
-$=".mp3"], #bodyContent a.external[href $=".mp3"], #bodyContent a.external[href
-$=".wav"], #bodyContent a.external[href $=".wav"], #bodyContent a.external[href
-$=".wma"], #bodyContent a.external[href $=".wma"], #bodyContent a.external[href $=".m4a"], .link-audio {
+#bodyContent a.external[href$=".ogg"], #bodyContent a.external[href$=".OGG"],
+#bodyContent a.external[href$=".mid"], #bodyContent a.external[href$=".MID"],
+#bodyContent a.external[href$=".midi"], #bodyContent a.external[href$=".MIDI"],
+#bodyContent a.external[href$=".mp3"], #bodyContent a.external[href$=".MP3"],
+#bodyContent a.external[href$=".wav"], #bodyContent a.external[href$=".WAV"],
+#bodyContent a.external[href$=".wma"], #bodyContent a.external[href$=".WMA"],
+#bodyContent a.external[href$=".m4a"],
+.link-audio {
 	/* @embed */
 	background: url("images/audio.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-#bodyContent a.external[href $=".ogm"], #bodyContent a.external[href $=".ogm"], #bodyContent a.external[href
-$=".avi"], #bodyContent a.external[href $=".avi"], #bodyContent a.external[href
-$=".mpeg"], #bodyContent a.external[href $=".mpeg"], #bodyContent a.external[href
-$=".mpg"], #bodyContent a.external[href $=".mpg"], #bodyContent a.external[href $=".m4v"], .link-video {
+#bodyContent a.external[href$=".ogm"], #bodyContent a.external[href$=".OGM"],
+#bodyContent a.external[href$=".avi"], #bodyContent a.external[href$=".AVI"],
+#bodyContent a.external[href$=".mpeg"], #bodyContent a.external[href$=".MPEG"],
+#bodyContent a.external[href$=".mpg"], #bodyContent a.external[href$=".MPG"],
+#bodyContent a.external[href$=".m4v"], #bodyContent a.external[href$=".M4V"],
+.link-video {
 	/* @embed */
 	background: url("images/video.png") center right no-repeat;
 	padding-right: 16px;
 	background-size: 12px 12px;
 }
 
-#bodyContent a.external[href $=".pdf"], #bodyContent a.external[href $=".doc"], #bodyContent a.external[href
-$=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
+#bodyContent a.external[href$=".pdf"], #bodyContent a.external[href$=".PDF"],
+#bodyContent a.external[href$=".doc"], #bodyContent a.external[href$=".DOC"],
+#bodyContent a.external[href$=".docx"], #bodyContent a.external[href$=".DOCX"],
+#bodyContent a.external[href$=".odt"], #bodyContent a.external[href$=".ODT"],
+.link-document {
 	/* @embed */
 	background: url("images/document.png") center right no-repeat;
 	padding-right: 16px;
@@ -1381,7 +1336,8 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 }
 
 /* disable interwiki styling */
-#bodyContent a.extiw, #bodyContent a.extiw:active {
+#bodyContent a.extiw,
+#bodyContent a.extiw:active {
 	color: #36b;
 	background: none;
 	padding: 0;
@@ -1438,7 +1394,7 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 	white-space: nowrap;
 }
 
-.pbody {
+.pBody {
 	font-size: 95%;
 	background: white;
 	border-collapse: collapse;
@@ -1652,7 +1608,7 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 	border-bottom: none;
 }
 
-#p-search .pbody {
+#p-search .pBody {
 	text-align: center;
 	padding: 0.5em 0.4em 0.4em 0.4em;
 }
@@ -1792,11 +1748,6 @@ $=".docx"], #bodyContent a.external[href $=".odt"], .link-document {
 	font-size: smaller;
 }
 
-.redirecttext {
-	font-size: 150%;
-	margin: 5px;
-}
-
 .printfooter {
 	display: none;
 }
@@ -1844,40 +1795,6 @@ span.newpageletter {
 span.minoreditletter {
 	color: black;
 	background-color: #c5ffe6;
-}
-
-table.gallery {
-	border: 1px solid #cccccc;
-	margin: 2px;
-	padding: 2px;
-	background-color: #ffffff;
-}
-
-table.gallery tr {
-	vertical-align: top;
-}
-
-table.gallery td {
-	vertical-align: top;
-	background-color: #f9f9f9;
-	border: solid 2px white;
-}
-
-div.gallerybox {
-	margin: 2px;
-	width: 150px;
-}
-
-div.gallerybox div.thumb {
-	text-align: center;
-	border: 1px solid #cccccc;
-	margin: 2px;
-}
-
-div.gallerytext {
-	font-size: 94%;
-	padding: 2px 4px;
-	text-align: left;
 }
 
 /* ADDED BY DEB@DRIA.ORG FOR DEVMO WIKI */

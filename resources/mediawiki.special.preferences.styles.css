@@ -66,3 +66,12 @@ td.htmlform-tip {
 td.mw-label {
 	padding-right: 4pt;
 }
+
+#mw-pref-clear {
+	clear: both;
+}
+
+.mw-prefs-buttons a {
+	padding-top: 4px;
+	vertical-align: middle;
+}
