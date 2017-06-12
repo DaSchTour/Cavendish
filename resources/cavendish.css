@@ -1072,20 +1072,6 @@ table.small {
 	padding: 5px;
 }
 
-/* Colors RC */
-
-.mw-plusminus-pos {
-	color: #006400; /* darkgreen */
-}
-
-.mw-plusminus-null {
-	color: #aaaaaa; /* gray */
-}
-
-.mw-plusminus-neg {
-	color: #8b0000; /* darkred */
-}
-
 #content table.mw-enhanced-rc {
 	margin-bottom: 0.1em;
 }
