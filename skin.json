@@ -44,6 +44,8 @@
 	"ResourceModuleSkinStyles": {
 		"cavendish": {
 			"+ext.babel": "resources/babel.css",
+			"+ext.cite.style": "resources/ext.cite.style.css",
+			"+jquery.wikiEditor": "resources/jquery.wikiEditor.css",
 			"+mediawiki.special.preferences.styles": "resources/mediawiki.special.preferences.styles.css",
 			"+mediawiki.special.version": "resources/mediawiki.special.version.css"
 		}

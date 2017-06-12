@@ -1,12 +1,10 @@
 /*
-* Font Style for Extensions
-
- Babel Extension*/
-@import url("babel.css");
+ * Styles for extensions
+ */
 
 /*
-* Poem Extension
-*/
+ * Poem Extension
+ */
 .poem {
 	margin-left: 1.5em;
 	white-space: nowrap;
@@ -19,12 +17,11 @@
 }
 
 /* HeaderTabs */
-
 #headertabs {
 	border: 1px solid #AAAAAA;
 }
 
-/* Syntax Hightlight Geshi */
+/* Syntax Hightlight GeSHi */
 .mw-geshi {
 	padding: 1em;
 	margin: 1em 0;
@@ -35,32 +32,6 @@
 
 .mw-geshi ol {
 	padding-left: 1em;
-}
-
-/* Cite Extension */
-ol.references {
-	font-size: 0.9em;
-}
-
-sup.reference {
-	font-size: 0.8em;
-	line-height: 0.8em;
-	vertical-align: top;
-	position: relative;
-	top: -0.2em;
-	white-space: nowrap;
-}
-
-.reference * {
-	vertical-align: top;
-}
-
-ol.references > li:target {
-	background-color: #def;
-}
-
-sup.reference:target {
-	background-color: #def;
 }
 
 /* Google Maps */
@@ -207,20 +178,6 @@ input.createboxInput {
 
 #bodyContent .srf-datatables select {
 	padding: 4px;
-}
-
-/* WikiEditor */
-div.wikiEditor-ui div.section {
-	padding-left: 0;
-}
-
-div.wikiEditor-ui div.wikiEditor-ui-top {
-	font-size: 8.5pt;
-}
-
-div.wikiEditor-ui div.wikiEditor-ui-tabs div{
-	font-size: 9pt;
-	padding-bottom: 1px;
 }
 
 /* Liquid Threads */
