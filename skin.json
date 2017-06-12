@@ -41,5 +41,12 @@
 		"SkinCavendish": "SkinCavendish.php",
 		"CavendishTemplate": "SkinCavendish.php"
 	},
+	"ResourceModuleSkinStyles": {
+		"cavendish": {
+			"+ext.babel": "resources/babel.css",
+			"+mediawiki.special.preferences.styles": "resources/mediawiki.special.preferences.styles.css",
+			"+mediawiki.special.version": "resources/mediawiki.special.version.css"
+		}
+	},
 	"manifest_version": 1
 }

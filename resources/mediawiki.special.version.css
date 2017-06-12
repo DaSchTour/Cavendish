@@ -1,0 +1,37 @@
+table#sv-ext,
+table#sv-hooks,
+table#sv-software,
+table#mw-version-entrypoints-table,
+.mw-special-Version #mw-content-text table {
+	padding: 0;
+}
+
+#sv-ext td,
+#sv-hooks td,
+#sv-software td,
+#sv-ext th,
+#sv-hooks th,
+#sv-software th,
+.mw-special-Version #bodyContent td,
+.mw-special-Version #bodyContent th {
+	border: 1px solid #a0a0a0;
+	padding: 0.1em 0.2em 0.1em 0.2em;
+}
+
+#sv-ext th,
+#sv-hooks th,
+#sv-software th,
+.mw-special-Version #bodyContent th {
+	background-color: #f0f0f0;
+	color: #000;
+	padding: 0.1em 0.2em 0.1em 0.2em;
+}
+
+tr.sv-space {
+	height: 0.8em;
+	border: none;
+}
+
+tr.sv-space td {
+	display: none;
+}
