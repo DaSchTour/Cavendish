@@ -61,7 +61,24 @@ class CavendishTemplate extends MonoBookTemplate {
 			<?php
 				$personalTools = $this->getPersonalTools();
 				foreach ( $personalTools as $key => $item ) {
-					echo $this->makeListItem( $key, $item );
+			?>
+				<li id="<?php echo Sanitizer::escapeId( "pt-$key" ) ?>" class="<?php
+					if ( $item['active'] ) { ?>active <?php } ?>top-nav-element">
+					<span class="top-nav-left">&nbsp;</span>
+					<?php
+					// Crappy hack for Echo
+					// Without this the Echo links will generate an E_NOTICE:
+					// Notice: Array to string conversion in ../includes/skins/BaseTemplate.php on line 410
+					if ( isset( $item['links'][0]['class'] ) && is_array( $item['links'][0]['class'] ) ) {
+						$classHTML = '';
+						foreach ( $item['links'][0]['class'] as $class ) {
+							$classHTML .= $class . ' ';
+						}
+						$item['links'][0]['class'] = $classHTML;
+					}
+					echo $this->makeLink( $key, $item['links'][0], array( 'link-class' => 'top-nav-mid' ) ); ?>
+					<span class="top-nav-right">&nbsp;</span></li>
+					<?php
 				}
 			?>
 			</ul>
