@@ -180,33 +180,6 @@ input.createboxInput {
 	padding: 4px;
 }
 
-/* Liquid Threads */
-div.lqt-thread-toolbar {
-	right: 3em;
-}
-
-.lqt-thread-toolbar-command-list {
-	display: inline;	
-}
-
-.lqt-talkpage-header {
-	border-radius: 6px;
-	border-width: 1px;
-}
-
-.lqt_header_content {
-	border-bottom-right-radius: 6px;
-	border-width: 1px;
-}
-
-body.skin-cavendish a.lqt_watchlist_messages_notice {
-	border-radius: 6px;
-	background-color: #F2DEDE;
-	border-color: #EED3D7;
-	color: #B94A48;
-	padding: 0.5em 1.5em;
-}
-
 /* Flagged Revisions */
 div.flaggedrevs_basic, div.flaggedrevs_quality, div.flaggedrevs_pristine, div.flaggedrevs_notice {
  	border-radius: 6px;
@@ -231,12 +204,6 @@ table.flaggedrevs_editnotice {
 }
 #provider_form_openid input {
 	margin-top: 5px;
-}
-
-/* Input Box */
-.inputbox-element {
-	white-space: nowrap;
-	display: inline-block;
 }
 
 /* 4sq */

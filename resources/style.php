@@ -1,5 +1,8 @@
-<?php header("Content-type: text/css");
-include('config.php');
+<?php
+// @todo FIXME: This file is a massive hack and should be rewritten as a ResourceLoader
+// module or something so that we can finally remove config.php for good.
+header( 'Content-type: text/css' );
+include 'config.php';
 ?>
 #header h6 a { 
 	background-color: transparent; 
@@ -10,27 +13,26 @@ include('config.php');
 	margin-top: <?php echo $cavendishLogoMargin ?>px;
 }
 <?php
-if ($cavendishSiteWith) { ?>
+if ( $cavendishSiteWidth ) { ?>
 #globalWrapper {
-	width: <?php echo $cavendishSiteWith ?>px;
+	width: <?php echo $cavendishSiteWidth ?>px;
 }
 <?php
 }
-if ($cavendishSidebarSearchbox)	{ ?>
+if ( $cavendishSidebarSearchbox ) { ?>
 	#nav #p-search {
-		display:none;
+		display: none;
 	}<?php
 }
-if ($cavendishQRCodeMode=='all'){ ?>
+if ( $cavendishQRCodeMode == 'all' ) { ?>
 #f-poweredbyico {
-	display:none;
+	display: none;
 }
 <?php
 }
-if ($cavendishQRCodeMode=='print'){ ?>
+if ( $cavendishQRCodeMode == 'print' ) { ?>
 #qrcode {
-	display:none;
+	display: none;
 }
 <?php
 }
-?>

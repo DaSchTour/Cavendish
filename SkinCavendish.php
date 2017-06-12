@@ -1,7 +1,17 @@
 <?php
+
 class SkinCavendish extends SkinTemplate {
 	public $skinname = 'cavendish', $stylename = 'cavendish',
 		$template = 'CavendishTemplate', $useHeadElement = true;
+
+	/**
+	 * @var Config
+	 */
+	private $cavendishConfig;
+
+	public function __construct() {
+		$this->cavendishConfig = ConfigFactory::getDefaultInstance()->makeConfig( 'cavendish' );
+	}
 
 	/**
 	 * @param $out OutputPage object
@@ -11,17 +21,17 @@ class SkinCavendish extends SkinTemplate {
 
 		$out->addModuleStyles( 'skins.cavendish' );
 
+		$out->addStyle( 'Cavendish/resources/colors/' . $this->cavendishConfig->get( 'CavendishColor' ) . '.css', 'screen' );
+
+		if ( $this->cavendishConfig->get( 'CavendishExtensionCSS' ) ) {
+			$out->addStyle( 'Cavendish/resources/extensions.css', 'screen' );
+		}
+
 		/* README for details */
 		include 'resources/config.php';
 
-		$out->addStyle( 'Cavendish/resources/colors/'. $cavendishColor .'.css', 'screen' );
-
-		if ( $cavendishExtensionCSS ) {
-			$out->addStyle( 'Cavendish/resources/extensions.css', 'screen' );
-		}
 		$out->addStyle( 'Cavendish/resources/style.php', 'screen' );
 	}
-
 }
 
 class CavendishTemplate extends MonoBookTemplate {
@@ -33,10 +43,8 @@ class CavendishTemplate extends MonoBookTemplate {
 	 * outputs a formatted page.
 	 */
 	function execute() {
-		include 'resources/config.php';
-
 		$this->skin = $skin = $this->data['skin'];
-		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $cavendishQRurladd;
+		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $this->config->get( 'CavendishQRUrlAdd' );
 		$styleversion = '2.3.5';
 		$action = $skin->getRequest()->getText( 'action', 'view' );
 
@@ -120,7 +128,7 @@ class CavendishTemplate extends MonoBookTemplate {
 			<tr>
 				<td rowspan="2" class="f-iconsection">
 		<?php // copyright icon
-		if ( $this->data['copyrightico'] ) { ?><div id="f-copyrightico"><?php $this->html( 'copyrightico' ) ?></div><?php } ?>
+		if ( $this->data['copyrightico'] ) { ?><div id="f-copyrightico"><?php $this->skin->makeFooterIcon( $this->data['copyrightico'] ) ?></div><?php } ?>
 				</td>
 				<td align="center">
 <?php	// Generate additional footer links
@@ -155,10 +163,12 @@ class CavendishTemplate extends MonoBookTemplate {
 					}
 					?></div>
 					<?php
-					// QR-Code added on option
-					if ( $cavendishQRCode ) { ?>
+					// Show a Quick Response (QR) code if enabled in configuration
+					if ( $this->config->get( 'CavendishQRCode' ) ) { ?>
 					<div id="qrcode">
-						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;"><img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height=80 width=80 alt="QR Code generator" title="" /></a>
+						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;">
+							<img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height="80" width="80" alt="QR Code generator" title="" />
+						</a>
 					</div>
 					<?php } ?>
 				</td>

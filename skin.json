@@ -12,6 +12,15 @@
 	"requires": {
 		"MediaWiki": ">= 1.25.0"
 	},
+	"ConfigRegistry": {
+		"cavendish": "GlobalVarConfig::newInstance"
+	},
+	"config": {
+		"CavendishColor": "blue",
+		"CavendishExtensionCSS": true,
+		"CavendishQRUrlAdd": "?pk_campaign=qr-code",
+		"CavendishQRCode": true
+	},
 	"ValidSkinNames": {
 		"cavendish": "Cavendish"
 	},
@@ -45,6 +54,8 @@
 		"cavendish": {
 			"+ext.babel": "resources/babel.css",
 			"+ext.cite.style": "resources/ext.cite.style.css",
+			"+ext.inputBox.styles": "resources/ext.inputBox.styles.css",
+			"+ext.liquidThreads": "resources/ext.liquidThreads.css",
 			"+jquery.wikiEditor": "resources/jquery.wikiEditor.css",
 			"+mediawiki.special.preferences.styles": "resources/mediawiki.special.preferences.styles.css",
 			"+mediawiki.special.version": "resources/mediawiki.special.version.css"
