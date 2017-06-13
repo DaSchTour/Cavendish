@@ -79,8 +79,9 @@ class CavendishTemplate extends MonoBookTemplate {
 						$item['links'][0]['class'] = $classHTML;
 					}
 					echo $this->makeLink( $key, $item['links'][0], array( 'link-class' => 'top-nav-mid' ) ); ?>
-					<span class="top-nav-right">&nbsp;</span></li>
-					<?php
+					<span class="top-nav-right">&nbsp;</span>
+				</li>
+				<?php
 				}
 			?>
 			</ul>
@@ -89,9 +90,8 @@ class CavendishTemplate extends MonoBookTemplate {
 	<div id="header">
 		<a name="top" id="contentTop"></a>
 		<h6>
-		<a
-		href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
-		title="<?php $this->msg( 'mainpage' ) ?>"><?php $this->text( 'pagetitle' ) ?></a></h6>
+		<a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
+			title="<?php $this->msg( 'mainpage' ) ?>"><?php $this->text( 'pagetitle' ) ?></a></h6>
 		<div id="p-cactions" class="portlet">
 			<ul>
 			<?php
@@ -112,44 +112,45 @@ class CavendishTemplate extends MonoBookTemplate {
 				<?php $this->renderPortals( $this->data['sidebar'] ); ?>
 			</div>
 		</div>
-		</div><!-- end of SIDE div -->
-		<div id="column-content">
-			<div id="content">
-				<a id="top"></a>
-				<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
-				<h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
-				<div id="bodyContent">
-					<h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3>
-					<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
-					<?php if ( $this->data['undelete'] ) { ?><div id="contentSub2"><?php $this->html( 'undelete' ) ?></div><?php } ?>
-					<?php if ( $this->data['newtalk'] ) { ?><div class="usermessage"><?php $this->html( 'newtalk' ) ?></div><?php } ?>
-					<div id="jump-to-nav" class="mw-jump"><?php $this->msg( 'jumpto' ) ?> <a href="#column-one"><?php $this->msg( 'jumptonavigation' ) ?></a>, <a href="#searchInput"><?php $this->msg( 'jumptosearch' ) ?></a></div>
-					<!-- start content -->
-					<?php
-						$this->html( 'bodytext' );
-						if ( $this->data['catlinks'] ) {
-							$this->html( 'catlinks' );
-						}
-					?>
-					<!-- end content -->
-					<?php
-					if ( $this->data['dataAfterContent'] ) {
-						$this->html( 'dataAfterContent' );
+	</div><!-- end of #mBody div -->
+	<div id="column-content">
+		<div id="content">
+			<a id="top"></a>
+			<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
+			<h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
+			<div id="bodyContent">
+				<h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3>
+				<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
+				<?php if ( $this->data['undelete'] ) { ?><div id="contentSub2"><?php $this->html( 'undelete' ) ?></div><?php } ?>
+				<?php if ( $this->data['newtalk'] ) { ?><div class="usermessage"><?php $this->html( 'newtalk' ) ?></div><?php } ?>
+				<div id="jump-to-nav" class="mw-jump"><?php $this->msg( 'jumpto' ) ?> <a href="#column-one"><?php $this->msg( 'jumptonavigation' ) ?></a>, <a href="#searchInput"><?php $this->msg( 'jumptosearch' ) ?></a></div>
+				<!-- start content -->
+				<?php
+					$this->html( 'bodytext' );
+					if ( $this->data['catlinks'] ) {
+						$this->html( 'catlinks' );
 					}
-					?>
-				</div>
-			</div><!-- end of MAINCONTENT div -->
-		</div>
-	</div><!-- end of MBODY div -->
-	<div class="visualClear"></div>
-	<div id="footer">
-		<table>
-			<tr>
-				<td rowspan="2" class="f-iconsection">
-		<?php // copyright icon
-		if ( $this->data['copyrightico'] ) { ?><div id="f-copyrightico"><?php echo $this->skin->makeFooterIcon( $this->data['copyrightico'] ) ?></div><?php } ?>
-				</td>
-				<td align="center">
+				?>
+				<!-- end content -->
+				<?php
+				if ( $this->data['dataAfterContent'] ) {
+					$this->html( 'dataAfterContent' );
+				}
+				?>
+			</div>
+		</div><!-- end of #content div -->
+	</div>
+</div><!-- end of #globalWrapper div -->
+<div class="visualClear"></div>
+<div id="footer">
+	<table>
+		<tr>
+			<td rowspan="2" class="f-iconsection">
+			<?php if ( $this->data['copyrightico'] ) { ?>
+				<div id="f-copyrightico"><?php echo $this->skin->makeFooterIcon( $this->data['copyrightico'] ) ?></div>
+			<?php } ?>
+			</td>
+			<td align="center">
 <?php	// Generate additional footer links
 		$footerLinks = array(
 			'lastmod', 'viewcount', 'credits', 'copyright',
@@ -164,7 +165,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		}
 
 		if ( count( $validFooterLinks ) > 0 ) {
-?>			<ul id="f-list">
+?>				<ul id="f-list">
 <?php
 			foreach ( $validFooterLinks as $aLink ) {
 				if ( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
@@ -172,38 +173,39 @@ class CavendishTemplate extends MonoBookTemplate {
 <?php 			}
 			}
 		}
-?></ul></td>
-				<td rowspan="2" class="f-iconsection">
-					<?php
-					$validFooterIcons = $this->getFooterIcons( 'nocopyright' );
-					foreach ( $validFooterIcons as $blockName => $footerIcons ) { ?>
-							<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico"><?php
-						foreach ( $footerIcons as $icon ) {
-							echo $this->skin->makeFooterIcon( $icon );
-						}
+?>
+				</ul>
+			</td>
+			<td rowspan="2" class="f-iconsection">
+				<?php
+				$validFooterIcons = $this->getFooterIcons( 'nocopyright' );
+				foreach ( $validFooterIcons as $blockName => $footerIcons ) { ?>
+						<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico"><?php
+					foreach ( $footerIcons as $icon ) {
+						echo $this->skin->makeFooterIcon( $icon );
 					}
-					?></div>
-					<?php
-					// Show a Quick Response (QR) code if enabled in configuration
-					if ( $this->config->get( 'CavendishQRCode' ) ) { ?>
-					<div id="qrcode">
-						<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;">
-							<img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height="80" width="80" alt="QR Code generator" title="" />
-						</a>
-					</div>
-					<?php } ?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<div id="skin-info">
-						<?php echo $skin->msg( 'cavendish-skin-info', '2.4.0' )->parse() ?>
-					</div>
-				</td>
-			</tr>
-		</table>
-	</div><!-- end of the FOOTER div -->
-</div><!-- end of the CONTAINER div -->
+				?></div>
+				<?php
+				}
+				// Show a Quick Response (QR) code if enabled in configuration
+				if ( $this->config->get( 'CavendishQRCode' ) ) { ?>
+				<div id="qrcode">
+					<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;">
+						<img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height="80" width="80" alt="QR Code generator" title="" />
+					</a>
+				</div>
+				<?php } ?>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<div id="skin-info">
+					<?php echo $skin->msg( 'cavendish-skin-info', '2.4.0' )->parse() ?>
+				</div>
+			</td>
+		</tr>
+	</table>
+</div><!-- end of the FOOTER div -->
 <!-- scripts and debugging information -->
 <?php
 		$this->printTrail();
