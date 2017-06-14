@@ -8,25 +8,22 @@ This version of the skin is compatible with MW 1.28+
 The Cavendish skin requires the [MonoBook skin](https://www.mediawiki.org/wiki/Skin:MonoBook) to be installed as the `CavendishTemplate` class extends MonoBook's `MonoBookTemplate` class.
 
 ## Customization
-There are different options that can be set, either in `LocalSettings.php` as usual or in `resources/config.php`.
-The old configuration variables (which do not have the `wg` prefix) are being phased out.
+There are different options that can be set in `LocalSettings.php`.
 
-`$cavendishLogoURL`
+`$wgCavendishLogoURL`
 URL to the logo image that should be displayed in the header
 
-`$cavendishLogoWidth`
+`$wgCavendishLogoWidth`
 width of the logo as a number in px
 
-`$cavendishLogoHeight`
+`$wgCavendishLogoHeight`
 height of the logo as a number in px
 
-`$cavendishLogoMargin`
+`$wgCavendishLogoMargin`
 offset on top of the logo
 
-`$cavendishSiteWidth`
+`$wgCavendishSiteWidth`
 fixed width of the content area, if not set it's dynamic (default is false, that means dynamic)
-
-The following options can be customized in `LocalSettings.php`:
 
 `$wgCavendishExtensionCSS`
 DEPRECATED. Set this to false if you do not want to use Cavendish CSS for certain extensions (default is true). As of 12 June 2017 Cavendish automatically uses its own CSS for the following extensions if and when said extensions are installed: Babel, Cite, InputBox, LiquidThread, WikiEditor

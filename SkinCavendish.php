@@ -22,18 +22,15 @@ class SkinCavendish extends SkinTemplate {
 		// Base CSS modules
 		$modules = array(
 			'skins.cavendish',
-			'skins.cavendish.' . $this->cavendishConfig->get( 'CavendishColor' )
+			'skins.cavendish.' . $this->cavendishConfig->get( 'CavendishColor' ),
+			'skins.cavendish.dynamic'
 		);
 
 		if ( $this->cavendishConfig->get( 'CavendishExtensionCSS' ) ) {
 			$modules[] = 'skins.cavendish.extensions';
 		}
+
 		$out->addModuleStyles( $modules );
-
-		/* See README for details */
-		include 'resources/config.php';
-
-		$out->addStyle( 'Cavendish/resources/style.php', 'screen' );
 	}
 }
 
