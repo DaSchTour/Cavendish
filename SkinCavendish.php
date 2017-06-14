@@ -48,6 +48,9 @@ class CavendishTemplate extends MonoBookTemplate {
 		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $this->config->get( 'CavendishQRUrlAdd' );
 		$action = $skin->getRequest()->getText( 'action', 'view' );
 
+		$this->data['pageLanguage'] =
+			$this->getSkin()->getTitle()->getPageViewLanguage()->getHtmlCode();
+
 		// HTML starts here
 		$this->html( 'headelement' );
 ?>
@@ -89,7 +92,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		<h6>
 		<a href="<?php echo htmlspecialchars( $this->data['nav_urls']['mainpage']['href'] ) ?>"
 			title="<?php $this->msg( 'mainpage' ) ?>"><?php $this->text( 'pagetitle' ) ?></a></h6>
-		<div id="p-cactions" class="portlet">
+		<div id="p-cactions" class="portlet" role="navigation">
 			<ul>
 			<?php
 			foreach ( $this->data['content_actions'] as $key => $tab ) {
@@ -111,13 +114,13 @@ class CavendishTemplate extends MonoBookTemplate {
 		</div>
 	</div><!-- end of #mBody div -->
 	<div id="column-content">
-		<div id="content">
+		<div id="content" class="mw-body">
 			<a id="top"></a>
 			<?php if ( $this->data['sitenotice'] ) { ?><div id="siteNotice"><?php $this->html( 'sitenotice' ) ?></div><?php } ?>
-			<h1 id="firstHeading" class="firstHeading"><?php $this->html( 'title' ) ?></h1>
-			<div id="bodyContent">
+			<h1 id="firstHeading" class="firstHeading" lang="<?php $this->text( 'pageLanguage' ); ?>"><?php $this->html( 'title' ) ?></h1>
+			<div id="bodyContent" class="mw-body-content">
 				<h3 id="siteSub"><?php $this->msg( 'tagline' ) ?></h3>
-				<div id="contentSub"><?php $this->html( 'subtitle' ) ?></div>
+				<div id="contentSub"<?php $this->html( 'userlangattributes' ) ?>><?php $this->html( 'subtitle' ) ?></div>
 				<?php if ( $this->data['undelete'] ) { ?><div id="contentSub2"><?php $this->html( 'undelete' ) ?></div><?php } ?>
 				<?php if ( $this->data['newtalk'] ) { ?><div class="usermessage"><?php $this->html( 'newtalk' ) ?></div><?php } ?>
 				<div id="jump-to-nav" class="mw-jump"><?php $this->msg( 'jumpto' ) ?> <a href="#column-one"><?php $this->msg( 'jumptonavigation' ) ?></a>, <a href="#searchInput"><?php $this->msg( 'jumptosearch' ) ?></a></div>
@@ -139,7 +142,7 @@ class CavendishTemplate extends MonoBookTemplate {
 	</div>
 </div><!-- end of #globalWrapper div -->
 <div class="visualClear"></div>
-<div id="footer">
+<div id="footer" role="contentinfo"<?php $this->html( 'userlangattributes' ) ?>>
 	<table>
 		<tr>
 			<td rowspan="2" class="f-iconsection">
