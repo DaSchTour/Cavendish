@@ -124,7 +124,6 @@ h1 {
 #firstHeading {
 	margin-top: 0.1em;
 	padding-top: 0.2em;
-	text-shadow: 0.1em 0.1em 0.2em gray;
 }
 
 h2 {
@@ -670,7 +669,6 @@ div#header {
 	margin-left: -4px;
 	margin-right: -4px;
 	font-size: 10px;
-	text-shadow: 0.1em 0.1em 0.1em gray;
 }
 
 #pt-userpage a, #pt-mytalk a {
@@ -1434,7 +1432,6 @@ table.rimage {
 	padding: 6px 10px;
 	font-weight: bold;
 	color: #666;
-	text-shadow: 0.1em 0.1em 0.1em gray;
 }
 
 #nav div h5, #nav div h3 {
@@ -1442,7 +1439,6 @@ table.rimage {
 	padding: 0.5em 1.0em;
 	font-weight: bold;
 	color: #666;
-	text-shadow: 0.1em 0.1em 0.1em gray;
 	font-size: 8.5pt;
 }
 
@@ -1515,7 +1511,6 @@ table.rimage {
 	display: block;
 	padding: 8px 10px;
 	text-decoration: none;
-	text-shadow: 0.1em 0.1em 0.1em gray;
 	font-size: 8pt;
 }
 
