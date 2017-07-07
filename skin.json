@@ -2,7 +2,8 @@
 	"name": "Cavendish",
 	"author": [
 		"Daniel Schuba",
-		"..."
+		"Jack Phoenix",
+		"Samantha Nguyen"
 	],
 	"version": "2.4.0",
 	"@note": "Remember to update the version number in SkinCavendish.php, too, since it's passed to the \"cavendish-skin-info\" i18n message!",
@@ -57,7 +58,7 @@
 		"skins.cavendish.extensions": {
 			"position": "top",
 			"styles": {
-				"resources/extensions.css": {
+				"resources/extensions/extensions.css": {
 					"media": "screen"
 				}
 			}
@@ -98,20 +99,21 @@
 	},
 	"ResourceModuleSkinStyles": {
 		"cavendish": {
-			"+ext.babel": "resources/babel.css",
-			"+ext.cite.style": "resources/ext.cite.style.css",
-			"+ext.inputBox.styles": "resources/ext.inputBox.styles.css",
-			"+ext.liquidThreads": "resources/ext.liquidThreads.css",
-			"+jquery.wikiEditor": "resources/jquery.wikiEditor.css",
-			"+mediawiki.action.edit": "resources/mediawiki.action.edit.css",
-			"+mediawiki.action.history.styles": "resources/mediawiki.action.history.styles.css",
-			"+mediawiki.action.view.filepage": "resources/mediawiki.action.view.filepage.css",
-			"+mediawiki.action.view.redirectPage": "resources/mediawiki.action.view.redirectPage.css",
-			"+mediawiki.diff.styles": "resources/mediawiki.diff.styles.css",
-			"+mediawiki.page.gallery.styles": "resources/mediawiki.page.gallery.styles.css",
-			"+mediawiki.special.changeslist.enhanced": "resources/mediawiki.special.changeslist.enhanced.css",
-			"+mediawiki.special.preferences.styles": "resources/mediawiki.special.preferences.styles.css",
-			"+mediawiki.special.version": "resources/mediawiki.special.version.css"
+			"+ext.babel": "resources/extensions/babel.css",
+			"+ext.cite.style": "resources/extensions/ext.cite.style.css",
+			"+ext.inputBox.styles": "resources/extensions/ext.inputBox.styles.css",
+			"+ext.liquidThreads": "resources/extensions/ext.liquidThreads.css",
+			"+jquery.wikiEditor": "resources/extensions/jquery.wikiEditor.css",
+			"+mediawiki.action.edit": "resources/mediawiki/action.edit.css",
+			"+mediawiki.action.history.styles": "resources/mediawiki/action.history.styles.css",
+			"+mediawiki.action.view.filepage": "resources/mediawiki/action.view.filepage.css",
+			"+mediawiki.action.view.redirectPage": "resources/mediawiki/action.view.redirectPage.css",
+			"+mediawiki.diff.styles": "resources/mediawiki/diff.styles.css",
+			"+mediawiki.page.gallery.styles": "resources/mediawiki/page.gallery.styles.css",
+			"+mediawiki.special.changeslist.enhanced": "resources/mediawiki/special.changeslist.enhanced.css",
+			"+mediawiki.special.preferences.styles": "resources/mediawiki/special.preferences.styles.css",
+			"+mediawiki.special.version": "resources/mediawiki/special.version.css",
+			"+mediawiki.toc": "resources/mediawiki/toc.css"
 		}
 	},
 	"manifest_version": 1
