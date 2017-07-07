@@ -11,7 +11,8 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#379940', endColorstr='#216d2b',GradientType=0 ); /* IE6-9 */
 }
 
-#header form label, #header label {
+#header form label,
+#header label {
 	color: #89cc92;
 }
 
@@ -45,7 +46,8 @@
 	background: #379940;
 }
 
-#nav div a, #nav div span.social {
+#nav div a,
+#nav div span.social {
 	background: #89cc92;
 	border-bottom: 1px solid #ddd;
 	border-top: 1px solid #fff;

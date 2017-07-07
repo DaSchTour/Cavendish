@@ -11,25 +11,26 @@
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e3cead', endColorstr='#c5aa7d',GradientType=0 ); /* IE6-9 */
 }
 
-#header form label, #header label {
-	color: #774F03;
+#header form label,
+#header label {
+	color: #774f03;
 }
 
 #header form #searchInput {
-	border: 1px solid #774F03;
-    background-color: #FBF4E8;
+	border: 1px solid #774f03;
+	background-color: #fbf4e8;
 }
 
 /* p-cactions */
 #p-cactions li {
-	border-bottom: 1px solid #B48A48;
-	background-color: #885E1B;
-	border-top-color: #885E1B;
+	border-bottom: 1px solid #b48a48;
+	background-color: #885e1b;
+	border-top-color: #885e1b;
 }
 
 #p-cactions li:hover {
-	border-top-color: #B48A48;
-	background-color: #B48A48;
+	border-top-color: #b48a48;
+	background-color: #b48a48;
 }
 
 #p-cactions li.selected a {
@@ -38,24 +39,26 @@
 
 /* NAV */
 #nav {
-	background: #E8DDCA;
+	background: #e8ddca;
 }
 
 #nav div a:hover {
-	background: #E8DDCA;
+	background: #e8ddca;
 }
 
-#nav div a, #nav div span.social {
-	background-color:#FBF4E8;
-	border-bottom: 1px solid #DDD;
-	border-right: 1px solid #DDD;
-	border-top: 1px solid #FFF;
+#nav div a,
+#nav div span.social {
+	background-color:#fbf4e8;
+	border-bottom: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+	border-top: 1px solid #fff;
 }
 
 /* preftoc */
-#preftoc li:hover,#preftoc li:focus,
+#preftoc li:hover,
+#preftoc li:focus,
 #preftoc li.selected {
-	background-color: #E8DDCA;
+	background-color: #e8ddca;
 }
 
 /* fieldset */
@@ -64,7 +67,7 @@ fieldset {
 }
 
 fieldset fieldset {
-	background-color: #E8DDCA;
+	background-color: #e8ddca;
 }
 
 /* mw-line */
@@ -73,7 +76,7 @@ fieldset fieldset {
 }
 
 .mw-line-even {
-	background-color: #E8DDCA;
+	background-color: #e8ddca;
 }
 
 /* different from blue.css */
@@ -83,6 +86,6 @@ fieldset fieldset {
 }
 
 .portlet li a:visited {
-	color: #774F03;
+	color: #774f03;
 	text-decoration: none;
 }

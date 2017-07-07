@@ -16,7 +16,7 @@ table.mw-babel-wrapper {
 	border-style: solid;
 	margin-right: 0;
 	border-width: 1px;
-	border-color: #99B3FF;
+	border-color: #99b3ff;
 }
 
 /* Babel box layout. */
@@ -46,87 +46,87 @@ div.mw-babel-box table td {
 
 /* Babel box colours. */
 div.mw-babel-box-0 {
-	border: solid #B7B7B7 1px;
+	border: solid #b7b7b7 1px;
 }
 
 div.mw-babel-box-1 {
-	border: solid #C0C8FF 1px;
+	border: solid #c0c8ff 1px;
 }
 
 div.mw-babel-box-2 {
-	border: solid #77E0E8 1px;
+	border: solid #77e0e8 1px;
 }
 
 div.mw-babel-box-3 {
-	border: solid #99B3FF 1px;
+	border: solid #99b3ff 1px;
 }
 
 div.mw-babel-box-4 {
-	border: solid #CCCC00 1px;
+	border: solid #cc0 1px;
 }
 
 div.mw-babel-box-5 {
-	border: solid #F99C99 1px;
+	border: solid #f99c99 1px;
 }
 
 div.mw-babel-box-N {
-	border: solid #6EF7A7 1px;
+	border: solid #6ef7a7 1px;
 }
 
 div.mw-babel-box-0 table th {
-	background-color: #B7B7B7;
+	background-color: #b7b7b7;
 }
 
 div.mw-babel-box-1 table th {
-	background-color: #C0C8FF;
+	background-color: #c0c8ff;
 }
 
 div.mw-babel-box-2 table th {
-	background-color: #77E0E8;
+	background-color: #77e0e8;
 }
 
 div.mw-babel-box-3 table th {
-	background-color: #99B3FF;
+	background-color: #99b3ff;
 }
 
 div.mw-babel-box-4 table th {
-	background-color: #CCCC00;
+	background-color: #cc0;
 }
 
 div.mw-babel-box-5 table th {
-	background-color: #F99C99;
+	background-color: #f99c99;
 }
 
 div.mw-babel-box-N table th{
-	background-color: #6EF7A7;
+	background-color: #6ef7a7;
 }
 
 div.mw-babel-box-0 table {
-	background-color: #E8E8E8;
+	background-color: #e8e8e8;
 }
 
 div.mw-babel-box-1 table {
-	background-color: #F0F8FF;
+	background-color: #f0f8ff;
 }
 
 div.mw-babel-box-2 table {
-	background-color: #D0F8FF;
+	background-color: #d0f8ff;
 }
 
 div.mw-babel-box-3 table {
-	background-color: #E0E8FF;
+	background-color: #e0e8ff;
 }
 
 div.mw-babel-box-4 table {
-	background-color: #FFFF99;
+	background-color: #ff9;
 }
 
 div.mw-babel-box-5 table {
-	background-color: #F9CBC9;
+	background-color: #f9cbc9;
 }
 
 div.mw-babel-box-N table {
-	background-color: #C5FCDC;
+	background-color: #c5fcdc;
 }
 
 .babel-box td.babel-footer {

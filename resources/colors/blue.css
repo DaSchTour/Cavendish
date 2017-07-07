@@ -45,7 +45,8 @@
 	background: #e0e9e9;
 }
 
-#nav div a, #nav div span.social {
+#nav div a,
+#nav div span.social {
 	background: #edf2f2;
 	border-bottom: 1px solid #ddd;
 	border-top: 1px solid #fff;

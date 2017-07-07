@@ -11,12 +11,12 @@ td.diff-ntitle {
 }
 
 td.diff-addedline {
-	background: #ccffcc;
+	background: #cfc;
 	font-size: smaller;
 }
 
 td.diff-deletedline {
-	background: #ffffaa;
+	background: #ffa;
 	font-size: smaller;
 }
 
@@ -26,6 +26,6 @@ td.diff-context {
 }
 
 span.diffchange {
-	color: red;
+	color: #f00;
 	font-weight: bold;
 }

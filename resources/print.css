@@ -5,7 +5,15 @@ body {
 	font-size: 11pt;
 }
 
-#p-personal, #side, #header, #skin-info, #f-numberofwatchingusers, #f-viewcount, #f-privacy, #f-about, #f-disclaimer {
+#p-personal,
+#side,
+#header,
+#skin-info,
+#f-numberofwatchingusers,
+#f-viewcount,
+#f-privacy,
+#f-about,
+#f-disclaimer {
 	display: none;
 }
 
@@ -41,7 +49,10 @@ body {
 	font-style: italic;
 }
 
-table.float-right, table.floatright, div.float-right, div.floatright {
+table.float-right,
+table.floatright,
+div.float-right,
+div.floatright {
 	clear: right;
 	float: right;
 	margin-left: 0.7em;
@@ -49,7 +60,10 @@ table.float-right, table.floatright, div.float-right, div.floatright {
 	position: relative;
 }
 
-table.float-left, table.floatleft, div.float-left, div.floatleft {
+table.float-left,
+table.floatleft,
+div.float-left,
+div.floatleft {
 	clear: left;
 	float: left;
 	margin-right: 0.7em;
