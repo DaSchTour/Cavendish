@@ -1,12 +1,20 @@
-/* Stylesheet for Printing*/
+/* Stylesheet for printing */
 body {
 	margin-left: 5em;
 	margin-right: 5em;
 	font-size: 11pt;
 }
 
-#p-personal, #side, #header, #skin-info, #f-numberofwatchingusers, #f-viewcount, #f-privacy, #f-about, #f-disclaimer{
-	display:none;
+#p-personal,
+#side,
+#header,
+#skin-info,
+#f-numberofwatchingusers,
+#f-viewcount,
+#f-privacy,
+#f-about,
+#f-disclaimer {
+	display: none;
 }
 
 .f-iconsection #f-copyrightico {
@@ -14,13 +22,13 @@ body {
 }
 
 #qrcode {
-	display:block;
+	display: block;
 	margin-left: 10px;
 	text-align:right;
 }
 
 #footer #f-list li {
-	white-space:normal;
+	white-space: normal;
 }
 
 #footer li {
@@ -31,17 +39,20 @@ body {
 	width: 100%;
 }
 
-#catlinks  {
-	border-top: 1px solid #AAAAAA;
+#catlinks {
+	border-top: 1px solid #aaa;
 	margin-top: 1em;
 	padding-top: 1em;
 }
 
 #catlinks ul li {
-	font-style:italic;
+	font-style: italic;
 }
 
-table.float-right, table.floatright, div.float-right, div.floatright {
+table.float-right,
+table.floatright,
+div.float-right,
+div.floatright {
 	clear: right;
 	float: right;
 	margin-left: 0.7em;
@@ -49,7 +60,10 @@ table.float-right, table.floatright, div.float-right, div.floatright {
 	position: relative;
 }
 
-table.float-left, table.floatleft, div.float-left, div.floatleft{
+table.float-left,
+table.floatleft,
+div.float-left,
+div.floatleft {
 	clear: left;
 	float: left;
 	margin-right: 0.7em;

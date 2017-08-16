@@ -1,0 +1,36 @@
+/* the auto-generated edit comments */
+.autocomment {
+	color: #808080;
+}
+
+#pagehistory span.user {
+	margin-left: 1.4em;
+	margin-right: 0.4em;
+}
+
+#pagehistory span.minor {
+	font-weight: bold;
+}
+
+#pagehistory li {
+	border: 1px solid #fff;
+	padding: 2px;
+	border-radius: 6px;
+}
+
+#pagehistory li:focus,
+#pagehistory li:hover {
+	box-shadow: 0 0 2px inset;
+}
+
+#pagehistory li.selected {
+	background-color: #f9f9f9;
+	border: 1px dashed #aaa;
+	border-radius: 6px;
+	position: relative;
+}
+
+span.updatedmarker {
+	/* color: black; */
+	color: #00ff00;
+}

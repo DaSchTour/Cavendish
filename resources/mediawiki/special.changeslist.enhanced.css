@@ -1,0 +1,19 @@
+#content table.mw-enhanced-rc {
+	margin-bottom: 0.1em;
+}
+
+td.mw-enhanced-rc {
+	font-family: Verdana, "DejaVu Sans", sans-serif;
+	font-weight: normal;
+}
+
+table.mw-enhanced-rc th,
+table.mw-enhanced-rc td {
+	vertical-align: middle;
+}
+
+td.mw-enhanced-rc .newpage,
+td.mw-enhanced-rc .minoredit,
+td.mw-enhanced-rc .botedit {
+	font-weight: normal;
+}

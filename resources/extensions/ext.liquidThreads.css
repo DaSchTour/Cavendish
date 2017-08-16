@@ -1,0 +1,25 @@
+div.lqt-thread-toolbar {
+	right: 3em;
+}
+
+.lqt-thread-toolbar-command-list {
+	display: inline;
+}
+
+.lqt-talkpage-header {
+	border-radius: 6px;
+	border-width: 1px;
+}
+
+.lqt_header_content {
+	border-bottom-right-radius: 6px;
+	border-width: 1px;
+}
+
+a.lqt_watchlist_messages_notice {
+	border-radius: 6px;
+	background-color: #f2dede;
+	border-color: #eed3d7;
+	color: #b94a48;
+	padding: 0.5em 1.5em;
+}

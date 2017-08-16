@@ -1,0 +1,28 @@
+ul#filetoc {
+	text-align: center;
+	border: 1px solid #aaa;
+	background-color: #f9f9f9;
+	padding: 5px;
+	font-size: 95%;
+	margin-bottom: 0.5em;
+	margin-left: 0;
+	margin-right: 0;
+	border-radius: 6px;
+}
+
+#filetoc li {
+	display: inline;
+	list-style-type: none;
+	padding-right: 2em;
+}
+
+table.filehistory {
+	overflow: scroll;
+	width: 100%;
+	font-size: 0.9em;
+}
+
+table.mw_metadata {
+	margin-left: 0;
+	margin-top: 1em;
+}

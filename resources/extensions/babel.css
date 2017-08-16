@@ -1,0 +1,134 @@
+/**
+ * Stylesheet for Babel extension.
+ *
+ * This should be added to your MediaWiki:Common.css page when installing this
+ * extension and should not be modified. You may modify the CSS code on the
+ * MediaWiki:Common.css page to adjust colours etc.
+ *
+ * @addtogroup Extensions
+ */
+
+/* Babel wrapper layout. */
+table.mw-babel-wrapper {
+	width: 238px;
+	float: right;
+	clear: right;
+	border-style: solid;
+	margin-right: 0;
+	border-width: 1px;
+	border-color: #99b3ff;
+}
+
+/* Babel box layout. */
+div.mw-babel-box {
+	float: left;
+	clear: left;
+	margin: 1px;
+}
+
+div.mw-babel-box table {
+	width: 238px;
+}
+
+div.mw-babel-box table th {
+	width: 238px;
+	width: 45px;
+	height: 45px;
+	font-size: 14pt;
+	font-family: monospace;
+}
+
+div.mw-babel-box table td {
+	font-size: 8pt;
+	padding: 4pt;
+	line-height: 1.25em;
+}
+
+/* Babel box colours. */
+div.mw-babel-box-0 {
+	border: solid #b7b7b7 1px;
+}
+
+div.mw-babel-box-1 {
+	border: solid #c0c8ff 1px;
+}
+
+div.mw-babel-box-2 {
+	border: solid #77e0e8 1px;
+}
+
+div.mw-babel-box-3 {
+	border: solid #99b3ff 1px;
+}
+
+div.mw-babel-box-4 {
+	border: solid #cc0 1px;
+}
+
+div.mw-babel-box-5 {
+	border: solid #f99c99 1px;
+}
+
+div.mw-babel-box-N {
+	border: solid #6ef7a7 1px;
+}
+
+div.mw-babel-box-0 table th {
+	background-color: #b7b7b7;
+}
+
+div.mw-babel-box-1 table th {
+	background-color: #c0c8ff;
+}
+
+div.mw-babel-box-2 table th {
+	background-color: #77e0e8;
+}
+
+div.mw-babel-box-3 table th {
+	background-color: #99b3ff;
+}
+
+div.mw-babel-box-4 table th {
+	background-color: #cc0;
+}
+
+div.mw-babel-box-5 table th {
+	background-color: #f99c99;
+}
+
+div.mw-babel-box-N table th{
+	background-color: #6ef7a7;
+}
+
+div.mw-babel-box-0 table {
+	background-color: #e8e8e8;
+}
+
+div.mw-babel-box-1 table {
+	background-color: #f0f8ff;
+}
+
+div.mw-babel-box-2 table {
+	background-color: #d0f8ff;
+}
+
+div.mw-babel-box-3 table {
+	background-color: #e0e8ff;
+}
+
+div.mw-babel-box-4 table {
+	background-color: #ff9;
+}
+
+div.mw-babel-box-5 table {
+	background-color: #f9cbc9;
+}
+
+div.mw-babel-box-N table {
+	background-color: #c5fcdc;
+}
+
+.babel-box td.babel-footer {
+	text-align: center;
+}

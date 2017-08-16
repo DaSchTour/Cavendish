@@ -1,0 +1,10 @@
+#editpage-copywarn {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	border-radius: 6px;
+	padding: 0.5em;
+}
+
+input#wpSummary {
+	width: 80%;
+}

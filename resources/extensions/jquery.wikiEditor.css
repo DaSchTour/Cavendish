@@ -1,0 +1,12 @@
+div.wikiEditor-ui div.section {
+	padding-left: 0;
+}
+
+div.wikiEditor-ui div.wikiEditor-ui-top {
+	font-size: 8.5pt;
+}
+
+div.wikiEditor-ui div.wikiEditor-ui-tabs div {
+	font-size: 9pt;
+	padding-bottom: 1px;
+}
