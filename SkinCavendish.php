@@ -103,7 +103,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		</div>
 		<?php
 			// TODO Searchbox Handling
-			$this->searchBox();
+			echo $this->getSearchBox();
 		?>
 	</div>
 	<div id="mBody">
@@ -239,13 +239,13 @@ class CavendishTemplate extends MonoBookTemplate {
 
 			if ( $boxName == 'SEARCH' ) {
 				// @todo FIXME: search box handling
-				// $this->searchBox();
+				// echo $this->getSearchBox();
 			} elseif ( $boxName == 'TOOLBOX' ) {
-				$this->toolbox();
+				echo $this->getToolboxBox();
 			} elseif ( $boxName == 'LANGUAGES' ) {
-				$this->languageBox();
+				$this->getLanguageBox();
 			} else {
-				$this->customBox( $boxName, $content );
+				echo $this->getBox( $boxName, $content );
 			}
 		}
 	}
