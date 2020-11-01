@@ -20,11 +20,11 @@ class SkinCavendish extends SkinTemplate {
 		parent::setupSkinUserCss( $out );
 
 		// Base CSS modules
-		$modules = array(
+		$modules = [
 			'skins.cavendish',
 			'skins.cavendish.' . $this->cavendishConfig->get( 'CavendishColor' ),
 			'skins.cavendish.dynamic'
-		);
+		];
 
 		if ( $this->cavendishConfig->get( 'CavendishExtensionCSS' ) ) {
 			$modules[] = 'skins.cavendish.extensions';
@@ -78,7 +78,7 @@ class CavendishTemplate extends MonoBookTemplate {
 						}
 						$item['links'][0]['class'] = $classHTML;
 					}
-					echo $this->makeLink( $key, $item['links'][0], array( 'link-class' => 'top-nav-mid' ) ); ?>
+					echo $this->makeLink( $key, $item['links'][0], [ 'link-class' => 'top-nav-mid' ] ); ?>
 					<span class="top-nav-right">&nbsp;</span>
 				</li>
 				<?php
@@ -153,12 +153,12 @@ class CavendishTemplate extends MonoBookTemplate {
 			</td>
 			<td align="center">
 <?php	// Generate additional footer links
-		$footerLinks = array(
+		$footerLinks = [
 			'lastmod', 'viewcount', 'credits', 'copyright',
 			'privacy', 'about', 'disclaimer', 'tagline',
-		);
+		];
 
-		$validFooterLinks = array();
+		$validFooterLinks = [];
 		foreach ( $footerLinks as $aLink ) {
 			if ( isset( $this->data[$aLink] ) && $this->data[$aLink] ) {
 				$validFooterLinks[] = $aLink;
