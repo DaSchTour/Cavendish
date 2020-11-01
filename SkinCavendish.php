@@ -2,7 +2,7 @@
 
 class SkinCavendish extends SkinTemplate {
 	public $skinname = 'cavendish', $stylename = 'cavendish',
-		$template = 'CavendishTemplate', $useHeadElement = true;
+		$template = 'CavendishTemplate';
 
 	/**
 	 * @var Config
