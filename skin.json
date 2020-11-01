@@ -5,7 +5,7 @@
 		"Jack Phoenix",
 		"Samantha Nguyen"
 	],
-	"version": "2.4.0",
+	"version": "2.5.0",
 	"@note": "Remember to update the version number in SkinCavendish.php, too, since it's passed to the \"cavendish-skin-info\" i18n message!",
 	"url": "https://www.mediawiki.org/wiki/Skin:Cavendish",
 	"descriptionmsg": "cavendish-desc",
@@ -13,7 +13,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "skin",
 	"requires": {
-		"MediaWiki": ">= 1.25.0"
+		"MediaWiki": ">= 1.35.0"
 	},
 	"ConfigRegistry": {
 		"cavendish": "GlobalVarConfig::newInstance"
@@ -41,6 +41,14 @@
 	},
 	"ResourceModules": {
 		"skins.cavendish": {
+			"class": "ResourceLoaderSkinModule",
+			"features": [
+				"elements",
+				"content",
+				"interface",
+				"logo",
+				"legacy"
+			],
 			"styles": {
 				"resources/cavendish.css": {
 					"media": "screen"
@@ -111,7 +119,6 @@
 			"+mediawiki.diff.styles": "resources/mediawiki/diff.styles.css",
 			"+mediawiki.page.gallery.styles": "resources/mediawiki/page.gallery.styles.css",
 			"+mediawiki.special.changeslist.enhanced": "resources/mediawiki/special.changeslist.enhanced.css",
-			"+mediawiki.special.preferences.styles": "resources/mediawiki/special.preferences.styles.css",
 			"+mediawiki.special.version": "resources/mediawiki/special.version.css",
 			"+mediawiki.toc": "resources/mediawiki/toc.css"
 		}

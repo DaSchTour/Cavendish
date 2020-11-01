@@ -1,8 +1,8 @@
 # Cavendish
-Cavendish MediaWiki skin version 2.4.0
+Cavendish MediaWiki skin version 2.5.0
 
 ## Compatibility
-This version of the skin is compatible with MW 1.28+
+This version of the skin is compatible with MW 1.35+
 
 ## Dependencies
 The Cavendish skin requires the [MonoBook skin](https://www.mediawiki.org/wiki/Skin:MonoBook) to be installed as the `CavendishTemplate` class extends MonoBook's `MonoBookTemplate` class.

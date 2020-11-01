@@ -64,7 +64,7 @@ class CavendishTemplate extends MonoBookTemplate {
 				$personalTools = $this->getPersonalTools();
 				foreach ( $personalTools as $key => $item ) {
 			?>
-				<li id="<?php echo Sanitizer::escapeId( "pt-$key" ) ?>" class="<?php
+				<li id="<?php echo Sanitizer::escapeIdForAttribute( "pt-$key" ) ?>" class="<?php
 					if ( $item['active'] ) { ?>active <?php } ?>top-nav-element">
 					<span class="top-nav-left">&nbsp;</span>
 					<?php
@@ -109,7 +109,7 @@ class CavendishTemplate extends MonoBookTemplate {
 	<div id="mBody">
 		<div id="side">
 			<div id="nav">
-				<?php $this->renderPortals( $this->data['sidebar'] ); ?>
+				<?php echo $this->renderPortals( $this->data['sidebar'] ); ?>
 			</div>
 		</div>
 	</div><!-- end of #mBody div -->
@@ -201,7 +201,7 @@ class CavendishTemplate extends MonoBookTemplate {
 		<tr>
 			<td>
 				<div id="skin-info">
-					<?php echo $skin->msg( 'cavendish-skin-info', '2.4.0' )->parse() ?>
+					<?php echo $skin->msg( 'cavendish-skin-info', '2.5.0' )->parse() ?>
 				</div>
 			</td>
 		</tr>
@@ -220,6 +220,9 @@ class CavendishTemplate extends MonoBookTemplate {
 	 * @param array $sidebar
 	 */
 	protected function renderPortals( $sidebar ) {
+		$html = '';
+		$languagesHTML = '';
+
 		if ( !isset( $sidebar['SEARCH'] ) ) {
 			$sidebar['SEARCH'] = true;
 		}
@@ -240,14 +243,23 @@ class CavendishTemplate extends MonoBookTemplate {
 
 			if ( $boxName == 'SEARCH' ) {
 				// @todo FIXME: search box handling
-				// echo $this->getSearchBox();
+				// $html .= $this->getSearchBox( $content );
 			} elseif ( $boxName == 'TOOLBOX' ) {
-				echo $this->getToolboxBox();
+				$html .= $this->getToolboxBox( $content );
 			} elseif ( $boxName == 'LANGUAGES' ) {
-				$this->getLanguageBox();
+				$languagesHTML = $this->getLanguageBox( $content );
 			} else {
-				echo $this->getBox( $boxName, $content );
+				$html .= $this->getBox(
+					$boxName,
+					$content,
+					null,
+					[ 'extra-classes' => 'generated-sidebar' ]
+				);
 			}
 		}
+
+		// Output language portal last given it can be long
+		// on articles which support multiple languages (T254546)
+		return $html . $languagesHTML;
 	}
 } // end of class
