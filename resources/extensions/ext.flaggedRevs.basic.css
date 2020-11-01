@@ -1,0 +1,10 @@
+div.flaggedrevs_basic,
+div.flaggedrevs_quality,
+div.flaggedrevs_pristine,
+div.flaggedrevs_notice {
+ 	border-radius: 6px;
+}
+
+table.flaggedrevs_editnotice {
+	margin-bottom: 1em;
+}

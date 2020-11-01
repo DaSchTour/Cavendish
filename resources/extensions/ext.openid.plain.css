@@ -1,0 +1,17 @@
+#p-personal .pBody li#pt-openidlogin {
+	background: none;
+	padding-left: 0;
+}
+
+.openid_large_link {
+	border-radius: 6px;
+	border-width: 1px;
+}
+
+.openid_small_providers_block {
+	padding-right: 5em;
+}
+
+#provider_form_openid input {
+	margin-top: 5px;
+}

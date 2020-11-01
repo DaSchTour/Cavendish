@@ -1,0 +1,69 @@
+table.smwtable tr.smwfooter td.sortbottom {
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+table.smwtable {
+	margin: 1em 1em 1em 0;
+	border: 1px #aaa solid;
+	border-collapse: collapse;
+	empty-cells: show;
+	border-radius: 6px;
+}
+
+table.smwtable th {
+	background-color: #e0e9e9;
+	border: 1px #aaa solid;
+	padding: 0.2em;
+	white-space: nowrap;
+	padding: 0.2em;
+}
+
+table.smwtable td {
+	border: 1px #aaa solid;
+	padding: 0.2em;
+}
+
+table.smwtable caption {
+	margin-left: inherit;
+	margin-right: inherit;
+	font-weight: bold;
+}
+
+table.smwtable tr.row-odd {
+	background-color: #f9f9f9;
+}
+table.smwtable tr.row-odd td {
+	border-top: none;
+	border-bottom: none;
+}
+
+table.smwtable tr.row-even {
+	background-color: #f1f1f1;
+}
+table.smwtable tr.row-even td {
+	border-top: none;
+	border-bottom: none;
+}
+
+.smwttactiveinline {
+	white-space: nowrap;
+}
+
+.smwfact {
+	border-radius: 6px;
+	box-shadow: 2px 2px 2px #808080;
+}
+
+#content div.smwfact table.smwfacttable {
+	border-radius: 0;
+}
+
+.smwtt {
+	font-size: 10pt;
+}
+
+#content table.smwb-factbox,
+#content table.smwb-ifactbox {
+	border-radius: 0;
+}

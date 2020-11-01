@@ -1,0 +1,37 @@
+input.createboxInput {
+	margin-top: 1px;
+	margin-bottom: 1px;
+}
+/*
+.mandatoryFieldSpan {
+	border: 1px solid #8B0000;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	background: #FFA07A;
+}
+
+.inputSpan {
+	padding-top: 5px;
+	padding-bottom: 7px;
+}
+*/
+
+.formtable td {
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+
+.formtable th {
+	padding-top: 7px;
+	padding-bottom: 7px;
+	padding-right: 4px;
+}
+
+#pfForm div.warningbox {
+	border: 1px solid #ff8c00 !important;
+}
+
+.checkboxLabel, .ui-widget {
+	white-space: nowrap;
+}
