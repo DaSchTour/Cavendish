@@ -41,7 +41,6 @@
 	},
 	"ResourceModules": {
 		"skins.cavendish": {
-			"position": "top",
 			"styles": {
 				"resources/cavendish.css": {
 					"media": "screen"
@@ -52,11 +51,9 @@
 			}
 		},
 		"skins.cavendish.dynamic": {
-			"class": "ResourceLoaderCavendishSkinModule",
-			"position": "top"
+			"class": "ResourceLoaderCavendishSkinModule"
 		},
 		"skins.cavendish.extensions": {
-			"position": "top",
 			"styles": {
 				"resources/extensions/extensions.css": {
 					"media": "screen"
@@ -64,7 +61,6 @@
 			}
 		},
 		"skins.cavendish.blue": {
-			"position": "top",
 			"styles": {
 				"resources/colors/blue.css": {
 					"media": "screen"
@@ -72,7 +68,6 @@
 			}
 		},
 		"skins.cavendish.brown": {
-			"position": "top",
 			"styles": {
 				"resources/colors/brown.css": {
 					"media": "screen"
@@ -80,7 +75,6 @@
 			}
 		},
 		"skins.cavendish.green": {
-			"position": "top",
 			"styles": {
 				"resources/colors/green.css": {
 					"media": "screen"
