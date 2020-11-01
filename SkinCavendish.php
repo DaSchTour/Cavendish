@@ -45,7 +45,6 @@ class CavendishTemplate extends MonoBookTemplate {
 	 */
 	function execute() {
 		$this->skin = $skin = $this->data['skin'];
-		$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $this->config->get( 'CavendishQRUrlAdd' );
 		$action = $skin->getRequest()->getText( 'action', 'view' );
 
 		$this->data['pageLanguage'] =
@@ -189,7 +188,9 @@ class CavendishTemplate extends MonoBookTemplate {
 				<?php
 				}
 				// Show a Quick Response (QR) code if enabled in configuration
-				if ( $this->config->get( 'CavendishQRCode' ) ) { ?>
+				if ( $this->config->get( 'CavendishQRCode' ) ) {
+					$QRURL = htmlentities( $skin->getTitle()->getFullURL() ) . $this->config->get( 'CavendishQRUrlAdd' );
+				?>
 				<div id="qrcode">
 					<a href="http://goqr.me/" style="border:0 none;cursor:default;text-decoration:none;">
 						<img src="http://api.qrserver.com/v1/create-qr-code/?data=<?php echo $QRURL; ?>&#38;size=160x160" height="80" width="80" alt="QR Code generator" title="" />

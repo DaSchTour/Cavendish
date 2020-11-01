@@ -26,7 +26,7 @@
 		"CavendishLogoHeight": 53,
 		"CavendishLogoMargin": 10,
 		"CavendishQRUrlAdd": "?pk_campaign=qr-code",
-		"CavendishQRCode": true,
+		"CavendishQRCode": false,
 		"CavendishQRCodeMode": "all",
 		"CavendishSiteWidth": false,
 		"CavendishSidebarSearchbox": false
