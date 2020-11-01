@@ -442,6 +442,18 @@ address {
 	text-align: left;
 }
 
+/* [[mw:Help:Page status indicators]]; styles copied from MonoBook */
+.mw-indicators {
+	float: right;
+	line-height: 1.5em;
+	font-size: 95%;
+}
+
+.mw-indicator {
+	display: -moz-inline-block;
+	display: inline-block;
+}
+
 #globalWrapper {
 	margin: 0 auto;
 	font-size: 9.5pt;
