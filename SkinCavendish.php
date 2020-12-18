@@ -182,7 +182,12 @@ class CavendishTemplate extends MonoBookTemplate {
 				foreach ( $validFooterIcons as $blockName => $footerIcons ) { ?>
 						<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico"><?php
 					foreach ( $footerIcons as $icon ) {
-						echo $this->skin->makeFooterIcon( $icon );
+						// Need to check emptiness before rendering to prevent core from throwing
+						// an E_NOTICE:
+						// PHP Notice:  Undefined index: alt in <path to MW>/includes/skins/Skin.php on line 1007
+						if ( !empty( $icon ) ) {
+							echo $this->skin->makeFooterIcon( $icon );
+						}
 					}
 				?></div>
 				<?php
