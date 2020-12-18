@@ -103,6 +103,7 @@
 		"cavendish": {
 			"+ext.babel": "resources/extensions/babel.css",
 			"+ext.cite.style": "resources/extensions/ext.cite.style.css",
+			"+ext.echo.styles.badge": "resources/extensions/ext.echo.styles.badge.css",
 			"+ext.flaggedRevs.basic": "resources/extensions/ext.flaggedRevs.basic.css",
 			"+ext.inputBox.styles": "resources/extensions/ext.inputBox.styles.css",
 			"+ext.liquidThreads": "resources/extensions/ext.liquidThreads.css",

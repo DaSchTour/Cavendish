@@ -1,0 +1,12 @@
+/* Hide Echo's colorful little boxes indicating how many new alerts/notices
+ * the user has, because:
+ * 1) the data is already shown on the personal tools area, and thus
+ * 2) these visual indicators conflict with the above and look messy since
+ *    Cavendish does not render the icons (should it? IMHO, yes. But I was
+ *    unable to figure out how to get it to render the Echo icons, so this'll
+ *    have to do for the time being.)
+ */
+li#pt-notifications-alert .mw-echo-notifications-badge::after,
+li#pt-notifications-notice .mw-echo-notifications-badge::after {
+	display: none;
+}
