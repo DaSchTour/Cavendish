@@ -16,9 +16,7 @@ class SkinCavendish extends SkinTemplate {
 	/**
 	 * @param $out OutputPage object
 	 */
-	function setupSkinUserCss( OutputPage $out ) {
-		parent::setupSkinUserCss( $out );
-
+	function initPage( OutputPage $out ) {
 		// Base CSS modules
 		$modules = [
 			'skins.cavendish',
