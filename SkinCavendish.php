@@ -176,7 +176,8 @@ class CavendishTemplate extends MonoBookTemplate {
 			</td>
 			<td rowspan="2" class="f-iconsection">
 				<?php
-				$validFooterIcons = $this->getFooterIcons( 'nocopyright' );
+				$validFooterIcons = $this->get( 'footericons' );
+				unset( $validFooterIcons['copyright'] );
 				foreach ( $validFooterIcons as $blockName => $footerIcons ) { ?>
 						<div id="f-<?php echo htmlspecialchars( $blockName ); ?>ico"><?php
 					foreach ( $footerIcons as $icon ) {
