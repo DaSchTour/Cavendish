@@ -3,6 +3,245 @@ class CavendishTemplate extends BaseTemplate {
 	public $skin;
 
 	/**
+	 * Generate the toolbox, complete with all three old hooks
+	 *
+	 * @return string html
+	 */
+	protected function getToolboxBox() {
+		$html = '';
+		$template = $this;
+
+		return $this->getBox( 'tb',
+			$this->data['sidebar']['TOOLBOX'],
+			'toolbox'
+		);
+	}
+
+	/**
+	 * Generate the languages box
+	 *
+	 * @return string html
+	 */
+	protected function getLanguageBox() {
+		$html = '';
+
+		if ( $this->data['language_urls'] !== false ) {
+			$html .= $this->getBox( 'lang', $this->data['language_urls'], 'otherlanguages' );
+		}
+
+		return $html;
+	}
+
+	/**
+	 * Helper function for getPortlet
+	 *
+	 * Merge all provided css classes into a single array
+	 * Account for possible different input methods matching what Html::element stuff takes
+	 *
+	 * @param string|array $class base portlet/body class
+	 * @param string|array $extraClasses any extra classes to also include
+	 *
+	 * @return array all classes to apply
+	 */
+	protected function mergeClasses( $class, $extraClasses ) {
+		if ( !is_array( $class ) ) {
+			$class = [ $class ];
+		}
+		if ( !is_array( $extraClasses ) ) {
+			$extraClasses = [ $extraClasses ];
+		}
+
+		return array_merge( $class, $extraClasses );
+	}
+
+	/**
+	 * Generates a block of navigation links with a header
+	 *
+	 * @param string $name
+	 * @param array|string $content array of links for use with makeListItem, or a block of text
+	 * @param null|string|array $msg
+	 * @param array $setOptions random crap to rename/do/whatever
+	 *
+	 * @return string html
+	 */
+	protected function getPortlet( $name, $content, $msg = null, $setOptions = [] ) {
+		// random stuff to override with any provided options
+		$options = array_merge( [
+			// handle role=search a little differently
+			'role' => 'navigation',
+			'search-input-id' => 'searchInput',
+			// extra classes/ids
+			'id' => 'p-' . $name,
+			'class' => 'mw-portlet',
+			'extra-classes' => '',
+			'body-id' => null,
+			'body-class' => 'mw-portlet-body',
+			'body-extra-classes' => '',
+			// wrapper for individual list items
+			'text-wrapper' => [ 'tag' => 'span' ],
+			// old toolbox hook support (use: [ 'SkinTemplateToolboxEnd' => [ &$skin, true ] ])
+			'hooks' => '',
+			// option to stick arbitrary stuff at the beginning of the ul
+			'list-prepend' => ''
+		], $setOptions );
+
+		// Handle the different $msg possibilities
+		if ( $msg === null ) {
+			$msg = $name;
+			$msgParams = [];
+		} elseif ( is_array( $msg ) ) {
+			$msgString = array_shift( $msg );
+			$msgParams = $msg;
+			$msg = $msgString;
+		} else {
+			$msgParams = [];
+		}
+		$msgObj = $this->getMsg( $msg, $msgParams );
+		if ( $msgObj->exists() ) {
+			$msgString = $msgObj->parse();
+		} else {
+			$msgString = htmlspecialchars( $msg );
+		}
+
+		$labelId = Sanitizer::escapeIdForAttribute( "p-$name-label" );
+
+		if ( is_array( $content ) ) {
+			$contentText = Html::openElement( 'ul',
+				[ 'lang' => $this->get( 'userlang' ), 'dir' => $this->get( 'dir' ) ]
+			);
+			$contentText .= $options['list-prepend'];
+			foreach ( $content as $key => $item ) {
+				if ( is_array( $options['text-wrapper'] ) ) {
+					$contentText .= $this->makeListItem(
+						$key,
+						$item,
+						[ 'text-wrapper' => $options['text-wrapper'] ]
+					);
+				} else {
+					$contentText .= $this->makeListItem(
+						$key,
+						$item
+					);
+				}
+			}
+
+			$contentText .= Html::closeElement( 'ul' );
+		} else {
+			$contentText = $content;
+		}
+
+		// Special handling for role=search
+		$divOptions = [
+			'role' => $options['role'],
+			'class' => $this->mergeClasses( $options['class'], $options['extra-classes'] ),
+			'id' => Sanitizer::escapeIdForAttribute( $options['id'] ),
+			'title' => Linker::titleAttrib( $options['id'] )
+		];
+		if ( $options['role'] !== 'search' ) {
+			$divOptions['aria-labelledby'] = $labelId;
+		}
+		$labelOptions = [
+			'id' => $labelId,
+			'lang' => $this->get( 'userlang' ),
+			'dir' => $this->get( 'dir' )
+		];
+		if ( $options['role'] == 'search' ) {
+			$msgString = Html::rawElement( 'label', [ 'for' => $options['search-input-id'] ], $msgString );
+		}
+
+		$bodyDivOptions = [
+			'class' => $this->mergeClasses( $options['body-class'], $options['body-extra-classes'] )
+		];
+		if ( is_string( $options['body-id'] ) ) {
+			$bodyDivOptions['id'] = $options['body-id'];
+		}
+
+		$html = Html::rawElement( 'div', $divOptions,
+			Html::rawElement( 'h3', $labelOptions, $msgString ) .
+			Html::rawElement( 'div', $bodyDivOptions,
+				$contentText .
+				$this->getSkin()->getAfterPortlet( $name )
+			)
+		);
+
+		return $html;
+	}
+
+	/**
+	 * Generate a sidebar box using getPortlet(); prefill some common stuff
+	 *
+	 * @param string $name
+	 * @param array|string $contents
+	 * @param-taint $contents escapes_htmlnoent
+	 * @param null|string|array|bool $msg
+	 * @param array $setOptions
+	 *
+	 * @return string html
+	 */
+	protected function getBox( $name, $contents, $msg = null, $setOptions = [] ) {
+		$options = array_merge( [
+			'class' => 'portlet',
+			'body-class' => 'pBody',
+			'text-wrapper' => ''
+		], $setOptions );
+
+		// Do some special stuff for the personal menu
+		if ( $name == 'personal' ) {
+			$prependiture = '';
+
+			// Extension:UniversalLanguageSelector order - T121793
+			if ( array_key_exists( 'uls', $contents ) ) {
+				$prependiture .= $this->makeListItem( 'uls', $contents['uls'] );
+				unset( $contents['uls'] );
+			}
+			if ( !$this->getSkin()->getUser()->isLoggedIn() &&
+				User::groupHasPermission( '*', 'edit' )
+			) {
+				$prependiture .= Html::rawElement(
+					'li',
+					[ 'id' => 'pt-anonuserpage' ],
+					$this->getMsg( 'notloggedin' )->escaped()
+				);
+			}
+			$options['list-prepend'] = $prependiture;
+		}
+
+		return $this->getPortlet( $name, $contents, $msg, $options );
+	}
+
+	/**
+	 * Generate the search, using config options for buttons (?)
+	 *
+	 * @return string html
+	 */
+	protected function getSearchBox() {
+		$html = '';
+
+		$optionButtons = "\u{00A0} " . $this->makeSearchButton(
+			'fulltext',
+			[ 'id' => 'mw-searchButton', 'class' => 'searchButton' ]
+		);
+		$searchInputId = 'searchInput';
+		$searchForm = Html::rawElement( 'form', [
+			'action' => $this->get( 'wgScript' ),
+			'id' => 'searchform'
+		],
+			Html::hidden( 'title', $this->get( 'searchtitle' ) ) .
+			$this->makeSearchInput( [ 'id' => $searchInputId ] ) .
+			$this->makeSearchButton( 'go', [ 'id' => 'searchGoButton', 'class' => 'searchButton' ] ) .
+			$optionButtons
+		);
+
+		$html .= $this->getBox( 'search', $searchForm, null, [
+			'search-input-id' => $searchInputId,
+			'role' => 'search',
+			'body-id' => 'searchBody'
+		] );
+
+		return $html;
+	}
+
+	/**
 	 * Template filter callback for Cavendish skin.
 	 * Takes an associative array of data set from a SkinTemplate-based
 	 * class, and a wrapper for MediaWiki's localization database, and
@@ -214,8 +453,7 @@ class CavendishTemplate extends BaseTemplate {
 			$boxName = (string)$boxName;
 
 			if ( $boxName == 'SEARCH' ) {
-				// @todo FIXME: search box handling
-				// $html .= $this->getSearchBox( $content );
+				// ignore.
 			} elseif ( $boxName == 'TOOLBOX' ) {
 				$html .= $this->getToolboxBox( $content );
 			} elseif ( $boxName == 'LANGUAGES' ) {
