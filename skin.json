@@ -97,7 +97,7 @@
 	"AutoloadClasses": {
 		"ResourceLoaderCavendishSkinModule": "ResourceLoaderCavendishSkinModule.php",
 		"SkinCavendish": "SkinCavendish.php",
-		"CavendishTemplate": "SkinCavendish.php"
+		"CavendishTemplate": "CavendishTemplate.php"
 	},
 	"ResourceModuleSkinStyles": {
 		"cavendish": {
